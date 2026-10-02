@@ -1,0 +1,44 @@
+deputy-2026:tyumen-regional:
+  id: deputy-2026:tyumen-regional
+  kind: IKSRF
+  title: Избирательная комиссия Тюменской области
+  parentId: null
+
+deputy-2026:tyumen-eastern-district:
+  id: deputy-2026:tyumen-eastern-district
+  kind: OIK
+  title: Восточный г. Тюмени
+  parentId: deputy-2026:tyumen-regional
+
+deputy-2026:tyumen-eastern-territorial:
+  id: deputy-2026:tyumen-eastern-territorial
+  kind: TIK
+  title: Восточная ТИК-22
+  parentId: deputy-2026:tyumen-eastern-district
+
+deputy-2026:uik-2909:
+  id: deputy-2026:uik-2909
+  kind: UIK
+  title: УИК №2909
+  parentId: deputy-2026:tyumen-eastern-territorial
+  number: "2909"
+  region: Тюменская область
+  address: Тюменская область, г. Тюмень, ул. Моторостроителей, д. 2Б
+  electionId: deputy-2026
+  hqId: deputy-2026:hq
+  demo: false
+  members: []
+
+deputy-2026:uik-2917:
+  id: deputy-2026:uik-2917
+  kind: UIK
+  title: УИК №2917
+  parentId: deputy-2026:tyumen-eastern-territorial
+  number: "2917"
+  region: Тюменская область
+  address: Тюменская область, г. Тюмень, Широтная улица, 116
+  electionId: deputy-2026
+  hqId: deputy-2026:hq
+  demo: false
+  members: []
+

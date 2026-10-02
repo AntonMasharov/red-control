@@ -1,0 +1,40 @@
+cik-voter-lists-2026:
+  id: cik-voter-lists-2026
+  title: 'Инструкция по составлению, уточнению и использованию списков избирателей на выборах депутатов Государственной Думы Федерального Собрания Российской Федерации девятого созыва (утверждена постановлением ЦИК России от 20 мая 2026 г. № 6/66-9)'
+  purpose: raw-law
+  name: pril-6-66-9.1.docx
+  mime: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+  assetKey: cik-voter-lists-2026
+
+complaint-source:
+  id: complaint-source
+  title: 'Шаблон жалобы'
+  purpose: template
+  name: Жалоба.docx
+  mime: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+  assetKey: complaint-template
+
+cik-multiday-voting:
+  id: cik-multiday-voting
+  title: 'Постановление ЦИК России от 08.06.2022 № 86/718-8 (ред. от 24.06.2026) «Об особенностях голосования, установления итогов голосования в случае принятия решения о проведении голосования на выборах, референдумах в течение нескольких дней подряд»'
+  purpose: raw-law
+  name: cik-08_06_2022_N_86_718_8.rtf
+  mime: application/rtf
+  assetKey: cik-multiday-voting
+
+fz67-original:
+  id: fz67-original
+  title: 'Федеральный закон от 12.06.2002 № 67-ФЗ «Об основных гарантиях избирательных прав и права на участие в референдуме граждан Российской Федерации»'
+  purpose: raw-law
+  name: fz-67.docx
+  mime: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+  assetKey: fz67
+
+fz67-2026-excerpts:
+  id: fz67-2026-excerpts
+  title: '67-ФЗ (ред. от 26.07.2026): выдержки из 13 статей, цитируемых в дорожной карте 2026'
+  purpose: raw-law
+  name: fz67-2026-cited-articles.txt
+  mime: text/plain
+  assetKey: fz67-2026-excerpts
+

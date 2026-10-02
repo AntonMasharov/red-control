@@ -1,0 +1,23 @@
+node_modules/
+.expo/
+dist/
+dist-android/
+web-build/
+*.tsbuildinfo
+*.log
+.env
+.env.*
+!.env.example
+android/
+ios/
+qa/
+__pycache__/
+
+dist-native/
+cypress/screenshots/
+cypress/videos/
+.tmp/
+
+# Local editor settings and repository backups
+.idea/
+.history-backup/

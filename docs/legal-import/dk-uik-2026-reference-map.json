@@ -1,0 +1,1813 @@
+{
+  "provenance": [
+    {
+      "filename": "dk-uik-2026.docx",
+      "sha256": "424b1cf37ebd5ffdee1223b3409ebc0009c50060de047c89b1f31834253ca99c"
+    },
+    {
+      "filename": "fz-67.docx",
+      "sha256": "64b368c159b8d69ab8744d69d60dc2094f14f17fee9a68af98825f51aaff26ca"
+    },
+    {
+      "filename": "cik-08_06_2022_N_86_718_8.rtf",
+      "sha256": "1836282b88361c9a040f2f5fedc9f08ea65238fb69d1b21eaa78d04d4a9c322d"
+    },
+    {
+      "filename": "fz67-2026-cited-articles.txt",
+      "sha256": "a8c1059c4fb4f240adf29b98d057b95a4220f4d89404a7444af35519a74f2d30"
+    }
+  ],
+  "retrievedAt": "2026-10-02",
+  "currentFzEdition": "2026-07-26",
+  "currentFzArticleUrls": [
+    {
+      "article": "3",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_37119/bd263f61eaf68bb21a5e2f07a9343f9df3eed719/"
+    },
+    {
+      "article": "17",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_37119/1ec07ae488cc52f723de033cfb526070706083f0/"
+    },
+    {
+      "article": "20",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_37119/8f8aab26ecdfdb07161aebe2f7be6ec43962d8fc/"
+    },
+    {
+      "article": "21",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_37119/fd0df9a51ab9cef22e50ec0cb752aecec0ed6a05/"
+    },
+    {
+      "article": "28",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_37119/87b6284088c2159c0a4d8d71ee0432848e088780/"
+    },
+    {
+      "article": "30",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_37119/823a1b0a46314286135ca4559b73121a927fd163/"
+    },
+    {
+      "article": "54",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_37119/01f8dbc11660bb722dd51556fe593d5855bb69f3/"
+    },
+    {
+      "article": "61",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_37119/6f003f9ff8a1816de9d0fbc3ff263d7643e0b3ea/"
+    },
+    {
+      "article": "64",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_37119/22a78fa701a7800e0ecb87a4097c4de1a1f4e3eb/"
+    },
+    {
+      "article": "66",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_37119/6bf357c6a23085bad2ba06ad2bd3274b8bed6131/"
+    },
+    {
+      "article": "67",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_37119/fb0c4bc4e56988e8b45c439581e8bf39599c30a2/"
+    },
+    {
+      "article": "68",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_37119/e40e308a0b88d293673776ebf7b28cd149e57012/"
+    },
+    {
+      "article": "69",
+      "url": "https://www.consultant.ru/document/cons_doc_LAW_37119/72ba6394ff3cf58a724412583c54d61ff6da295e/"
+    }
+  ],
+  "mappings": [
+    {
+      "paragraph": 16,
+      "citation": "ФЗ: п. 3, 5 ст. 30, п. 1 ст. 64;",
+      "lawIds": [
+        "fz67:article-30:clause-3",
+        "fz67:article-30:clause-5",
+        "fz67:article-64:clause-1"
+      ]
+    },
+    {
+      "paragraph": 19,
+      "citation": "ФЗ: п. 3, 7, 8 ст. 30",
+      "lawIds": [
+        "fz67:article-30:clause-3",
+        "fz67:article-30:clause-7",
+        "fz67:article-30:clause-8"
+      ]
+    },
+    {
+      "paragraph": 22,
+      "citation": "ФЗ: п/п «к» п. 9 ст. 30, п. 29 ст. 68;",
+      "lawIds": [
+        "fz67:article-30:clause-9:subclause-к",
+        "fz67:article-68:clause-29"
+      ]
+    },
+    {
+      "paragraph": 25,
+      "citation": "ФЗ: п. 11.2 ст. 64;",
+      "lawIds": [
+        "fz67:article-64:clause-11.2"
+      ]
+    },
+    {
+      "paragraph": 32,
+      "citation": "ФЗ: п. 3 ст. 64;",
+      "lawIds": [
+        "fz67:article-64:clause-3"
+      ]
+    },
+    {
+      "paragraph": 35,
+      "citation": "ФЗ: п. 3 ст. 64; ТРИ: п. 3.2, 1.9",
+      "lawIds": [
+        "fz67:article-64:clause-3",
+        "cik86:clause-3.2",
+        "cik86:clause-1.9"
+      ]
+    },
+    {
+      "paragraph": 38,
+      "citation": "ФЗ: п. 8, 8.1 ст. 66;",
+      "lawIds": [
+        "fz67:article-66:clause-8",
+        "fz67:article-66:clause-8.1"
+      ]
+    },
+    {
+      "paragraph": 41,
+      "citation": "ФЗ: п. 3 ст. 64; ТРИ: п. 1.15",
+      "lawIds": [
+        "fz67:article-64:clause-3",
+        "cik86:clause-1.15"
+      ]
+    },
+    {
+      "paragraph": 50,
+      "citation": "ФЗ: п. 1 ст. 64;",
+      "lawIds": [
+        "fz67:article-64:clause-1"
+      ]
+    },
+    {
+      "paragraph": 55,
+      "citation": "ФЗ: п. 3 ст. 64; ТРИ: п. 3.2, 1.9",
+      "lawIds": [
+        "fz67:article-64:clause-3",
+        "cik86:clause-3.2",
+        "cik86:clause-1.9"
+      ]
+    },
+    {
+      "paragraph": 58,
+      "citation": "ФЗ: п. 3 ст. 64;",
+      "lawIds": [
+        "fz67:article-64:clause-3"
+      ]
+    },
+    {
+      "paragraph": 61,
+      "citation": "ФЗ: п. 8, 8.1 ст. 66;",
+      "lawIds": [
+        "fz67:article-66:clause-8",
+        "fz67:article-66:clause-8.1"
+      ]
+    },
+    {
+      "paragraph": 70,
+      "citation": "ФЗ: п. 1 ст. 64;",
+      "lawIds": [
+        "fz67:article-64:clause-1"
+      ]
+    },
+    {
+      "paragraph": 77,
+      "citation": "ФЗ: п. 3 ст. 64;",
+      "lawIds": [
+        "fz67:article-64:clause-3"
+      ]
+    },
+    {
+      "paragraph": 80,
+      "citation": "ФЗ: п/п «б» п. 9 ст. 21; ТРИ: п. 1.9;",
+      "lawIds": [
+        "fz67:article-21:clause-9:subclause-б",
+        "cik86:clause-1.9"
+      ]
+    },
+    {
+      "paragraph": 83,
+      "citation": "ФЗ: п. 3 ст. 64;",
+      "lawIds": [
+        "fz67:article-64:clause-3"
+      ]
+    },
+    {
+      "paragraph": 86,
+      "citation": "ФЗ: п. 8, 8.1 ст. 66;",
+      "lawIds": [
+        "fz67:article-66:clause-8",
+        "fz67:article-66:clause-8.1"
+      ]
+    },
+    {
+      "paragraph": 95,
+      "citation": "ФЗ: п. 1 ст. 64;",
+      "lawIds": [
+        "fz67:article-64:clause-1"
+      ]
+    },
+    {
+      "paragraph": 101,
+      "citation": "ФЗ: п. 10 ст. 54;",
+      "lawIds": [
+        "fz67:article-54:clause-10"
+      ]
+    },
+    {
+      "paragraph": 104,
+      "citation": "ФЗ: п. 12 ст. 61;",
+      "lawIds": [
+        "fz67:article-61:clause-12"
+      ]
+    },
+    {
+      "paragraph": 107,
+      "citation": "ФЗ: п/п «а» п. 9 ст. 30;",
+      "lawIds": [
+        "fz67:article-30:clause-9:subclause-а"
+      ]
+    },
+    {
+      "paragraph": 110,
+      "citation": "ФЗ: п. 13 ст. 17;",
+      "lawIds": [
+        "fz67:article-17:clause-13"
+      ]
+    },
+    {
+      "paragraph": 113,
+      "citation": "ФЗ: п. 17 ст. 17;",
+      "lawIds": [
+        "fz67:article-17:clause-17"
+      ]
+    },
+    {
+      "paragraph": 116,
+      "citation": "ТРИ: п. 1.10, 2.7",
+      "lawIds": [
+        "cik86:clause-1.10",
+        "cik86:clause-2.7"
+      ]
+    },
+    {
+      "paragraph": 119,
+      "citation": "ФЗ: п. 16 ст. 64;",
+      "lawIds": [
+        "fz67:article-64:clause-16"
+      ]
+    },
+    {
+      "paragraph": 122,
+      "citation": "ФЗ: п/п «а» п. 9 ст. 30, п. 2-5 ст. 66;",
+      "lawIds": [
+        "fz67:article-30:clause-9:subclause-а",
+        "fz67:article-66:clause-2",
+        "fz67:article-66:clause-3",
+        "fz67:article-66:clause-4",
+        "fz67:article-66:clause-5"
+      ]
+    },
+    {
+      "paragraph": 125,
+      "citation": "ФЗ: п. 11 ст. 61;",
+      "lawIds": [
+        "fz67:article-61:clause-11"
+      ]
+    },
+    {
+      "paragraph": 128,
+      "citation": "ФЗ: п. 3−8 ст. 61;",
+      "lawIds": [
+        "fz67:article-61:clause-3",
+        "fz67:article-61:clause-3.1",
+        "fz67:article-61:clause-4",
+        "fz67:article-61:clause-5",
+        "fz67:article-61:clause-6",
+        "fz67:article-61:clause-7",
+        "fz67:article-61:clause-7.1",
+        "fz67:article-61:clause-8"
+      ]
+    },
+    {
+      "paragraph": 131,
+      "citation": "ТРИ: п. 1.15",
+      "lawIds": [
+        "cik86:clause-1.15"
+      ]
+    },
+    {
+      "paragraph": 134,
+      "citation": "ФЗ: п. 9 ст. 61;",
+      "lawIds": [
+        "fz67:article-61:clause-9"
+      ]
+    },
+    {
+      "paragraph": 141,
+      "citation": "ФЗ: п. 4, 5 ст. 64;",
+      "lawIds": [
+        "fz67:article-64:clause-4",
+        "fz67:article-64:clause-5"
+      ]
+    },
+    {
+      "paragraph": 144,
+      "citation": "ФЗ: п. 4, 5 ст. 64;",
+      "lawIds": [
+        "fz67:article-64:clause-4",
+        "fz67:article-64:clause-5"
+      ]
+    },
+    {
+      "paragraph": 147,
+      "citation": "ФЗ: п. 16 ст. 17, п. 16 ст. 64",
+      "lawIds": [
+        "fz67:article-17:clause-16",
+        "fz67:article-64:clause-16"
+      ]
+    },
+    {
+      "paragraph": 150,
+      "citation": "ФЗ: п. 16 ст. 64, п. 16 ст. 66;",
+      "lawIds": [
+        "fz67:article-64:clause-16",
+        "fz67:article-66:clause-16"
+      ]
+    },
+    {
+      "paragraph": 153,
+      "citation": "ФЗ: п. 16 ст. 64",
+      "lawIds": [
+        "fz67:article-64:clause-16"
+      ]
+    },
+    {
+      "paragraph": 156,
+      "citation": "ФЗ: п. 6 ст. 64;",
+      "lawIds": [
+        "fz67:article-64:clause-6"
+      ]
+    },
+    {
+      "paragraph": 159,
+      "citation": "ФЗ: п. 6 ст. 64;",
+      "lawIds": [
+        "fz67:article-64:clause-6"
+      ]
+    },
+    {
+      "paragraph": 162,
+      "citation": "ФЗ: п. 8, 10 ст. 64,",
+      "lawIds": [
+        "fz67:article-64:clause-8",
+        "fz67:article-64:clause-10"
+      ]
+    },
+    {
+      "paragraph": 165,
+      "citation": "ТРИ: п. 1.10",
+      "lawIds": [
+        "cik86:clause-1.10"
+      ]
+    },
+    {
+      "paragraph": 168,
+      "citation": "ФЗ: п. 9 ст. 64;",
+      "lawIds": [
+        "fz67:article-64:clause-9"
+      ]
+    },
+    {
+      "paragraph": 175,
+      "citation": "ФЗ: п. 5 ст. 66;",
+      "lawIds": [
+        "fz67:article-66:clause-5"
+      ]
+    },
+    {
+      "paragraph": 178,
+      "citation": "ФЗ: п/п «а» п. 9 ст. 30;",
+      "lawIds": [
+        "fz67:article-30:clause-9:subclause-а"
+      ]
+    },
+    {
+      "paragraph": 181,
+      "citation": "ФЗ: п. 6 ст. 66;",
+      "lawIds": [
+        "fz67:article-66:clause-6"
+      ]
+    },
+    {
+      "paragraph": 184,
+      "citation": "ФЗ: п. 9 ст. 66;",
+      "lawIds": [
+        "fz67:article-66:clause-9"
+      ]
+    },
+    {
+      "paragraph": 187,
+      "citation": "ФЗ: п. 14 ст. 66;",
+      "lawIds": [
+        "fz67:article-66:clause-14"
+      ]
+    },
+    {
+      "paragraph": 190,
+      "citation": "ФЗ: п. 9 ст. 66;",
+      "lawIds": [
+        "fz67:article-66:clause-9"
+      ]
+    },
+    {
+      "paragraph": 193,
+      "citation": "ФЗ: п. 9 ст. 66;",
+      "lawIds": [
+        "fz67:article-66:clause-9"
+      ]
+    },
+    {
+      "paragraph": 196,
+      "citation": "ФЗ: п. 9 ст. 66;",
+      "lawIds": [
+        "fz67:article-66:clause-9"
+      ]
+    },
+    {
+      "paragraph": 199,
+      "citation": "ФЗ: п. 9 ст. 66;",
+      "lawIds": [
+        "fz67:article-66:clause-9"
+      ]
+    },
+    {
+      "paragraph": 202,
+      "citation": "ФЗ: п. 9 ст. 66;",
+      "lawIds": [
+        "fz67:article-66:clause-9"
+      ]
+    },
+    {
+      "paragraph": 205,
+      "citation": "ФЗ: п. 2 ст. 66, п. 3 ст. 3;",
+      "lawIds": [
+        "fz67:article-66:clause-2",
+        "fz67:article-3:clause-3"
+      ]
+    },
+    {
+      "paragraph": 208,
+      "citation": "ФЗ: п. 10-11.1 ст. 66;",
+      "lawIds": [
+        "fz67:article-66:clause-10",
+        "fz67:article-66:clause-11",
+        "fz67:article-66:clause-11.1"
+      ]
+    },
+    {
+      "paragraph": 211,
+      "citation": "ТРИ: п. 3.3, 3.5, 3.6, 3.7, прил. 1",
+      "lawIds": [
+        "cik86:clause-3.3",
+        "cik86:clause-3.5",
+        "cik86:clause-3.6",
+        "cik86:clause-3.7",
+        "cik86:annex-1"
+      ]
+    },
+    {
+      "paragraph": 214,
+      "citation": "ФЗ: п. 13 ст. 66; ТРИ: п. 1.11, 2.7;",
+      "lawIds": [
+        "fz67:article-66:clause-13",
+        "cik86:clause-1.11",
+        "cik86:clause-2.7"
+      ]
+    },
+    {
+      "paragraph": 217,
+      "citation": "ТРИ: п. 3.8",
+      "lawIds": [
+        "cik86:clause-3.8"
+      ]
+    },
+    {
+      "paragraph": 220,
+      "citation": "ФЗ: п. 17 ст.66;",
+      "lawIds": [
+        "fz67:article-66:clause-17"
+      ]
+    },
+    {
+      "paragraph": 223,
+      "citation": "ФЗ: п. 12, 9 ст. 66;",
+      "lawIds": [
+        "fz67:article-66:clause-12",
+        "fz67:article-66:clause-9"
+      ]
+    },
+    {
+      "paragraph": 230,
+      "citation": "ТРИ: п. 3.11, прил. 2",
+      "lawIds": [
+        "cik86:clause-3.11",
+        "cik86:annex-2"
+      ]
+    },
+    {
+      "paragraph": 233,
+      "citation": "ТРИ: п. 3.11",
+      "lawIds": [
+        "cik86:clause-3.11"
+      ]
+    },
+    {
+      "paragraph": 236,
+      "citation": "ТРИ: п. 5.2",
+      "lawIds": [
+        "cik86:clause-5.2"
+      ]
+    },
+    {
+      "paragraph": 239,
+      "citation": "ТРИ: п. 3.14, 3.15",
+      "lawIds": [
+        "cik86:clause-3.14",
+        "cik86:clause-3.15"
+      ]
+    },
+    {
+      "paragraph": 246,
+      "citation": "ФЗ: п. 2 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-2"
+      ]
+    },
+    {
+      "paragraph": 249,
+      "citation": "ФЗ: п. 10, 1 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-10",
+        "fz67:article-68:clause-1"
+      ]
+    },
+    {
+      "paragraph": 252,
+      "citation": "ФЗ: п/п «г» п. 9 ст. 30;",
+      "lawIds": [
+        "fz67:article-30:clause-9:subclause-г"
+      ]
+    },
+    {
+      "paragraph": 255,
+      "citation": "ФЗ: п. 4 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-4"
+      ]
+    },
+    {
+      "paragraph": 262,
+      "citation": "ФЗ: п. 5-6 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-5",
+        "fz67:article-68:clause-6"
+      ]
+    },
+    {
+      "paragraph": 265,
+      "citation": "ФЗ: п. 6 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-6"
+      ]
+    },
+    {
+      "paragraph": 280,
+      "citation": "ФЗ: п. 6 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-6"
+      ]
+    },
+    {
+      "paragraph": 286,
+      "citation": "ФЗ: п. 7 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-7"
+      ]
+    },
+    {
+      "paragraph": 289,
+      "citation": "ФЗ: п. 10 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-10"
+      ]
+    },
+    {
+      "paragraph": 296,
+      "citation": "ФЗ: п. 12 ст. 68; ТРИ: п. 4.2, 4.3;",
+      "lawIds": [
+        "fz67:article-68:clause-12",
+        "cik86:clause-4.2",
+        "cik86:clause-4.3"
+      ]
+    },
+    {
+      "paragraph": 299,
+      "citation": "ФЗ: п. 12 ст. 68; ТРИ: п. 4.4;",
+      "lawIds": [
+        "fz67:article-68:clause-12",
+        "cik86:clause-4.4"
+      ]
+    },
+    {
+      "paragraph": 302,
+      "citation": "ТРИ: п. 4.4",
+      "lawIds": [
+        "cik86:clause-4.4"
+      ]
+    },
+    {
+      "paragraph": 305,
+      "citation": "ФЗ: п. 12 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-12"
+      ]
+    },
+    {
+      "paragraph": 308,
+      "citation": "ТРИ: п. 4.5",
+      "lawIds": [
+        "cik86:clause-4.5"
+      ]
+    },
+    {
+      "paragraph": 311,
+      "citation": "ТРИ: п. 4.6",
+      "lawIds": [
+        "cik86:clause-4.6"
+      ]
+    },
+    {
+      "paragraph": 314,
+      "citation": "ФЗ: п. 12 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-12"
+      ]
+    },
+    {
+      "paragraph": 317,
+      "citation": "ФЗ: п. 12 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-12"
+      ]
+    },
+    {
+      "paragraph": 320,
+      "citation": "ТРИ: п. 4.10",
+      "lawIds": [
+        "cik86:clause-4.10"
+      ]
+    },
+    {
+      "paragraph": 323,
+      "citation": "ТРИ: п. 4.10, 4.4",
+      "lawIds": [
+        "cik86:clause-4.10",
+        "cik86:clause-4.4"
+      ]
+    },
+    {
+      "paragraph": 326,
+      "citation": "ТРИ: п. 4.10, 4.5",
+      "lawIds": [
+        "cik86:clause-4.10",
+        "cik86:clause-4.5"
+      ]
+    },
+    {
+      "paragraph": 329,
+      "citation": "ТРИ: п. 4.10, 4.6",
+      "lawIds": [
+        "cik86:clause-4.10",
+        "cik86:clause-4.6"
+      ]
+    },
+    {
+      "paragraph": 332,
+      "citation": "ФЗ: п. 13 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-13"
+      ]
+    },
+    {
+      "paragraph": 335,
+      "citation": "ФЗ: п. 14 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-14"
+      ]
+    },
+    {
+      "paragraph": 338,
+      "citation": "ФЗ: п. 14 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-14"
+      ]
+    },
+    {
+      "paragraph": 341,
+      "citation": "ФЗ: п. 14 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-14"
+      ]
+    },
+    {
+      "paragraph": 344,
+      "citation": "ФЗ: п. 14 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-14"
+      ]
+    },
+    {
+      "paragraph": 347,
+      "citation": "ФЗ: п. 17 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-17"
+      ]
+    },
+    {
+      "paragraph": 350,
+      "citation": "ФЗ: п. 17 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-17"
+      ]
+    },
+    {
+      "paragraph": 353,
+      "citation": "ФЗ: п. 18 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-18"
+      ]
+    },
+    {
+      "paragraph": 356,
+      "citation": "ФЗ: п. 18 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-18"
+      ]
+    },
+    {
+      "paragraph": 359,
+      "citation": "ФЗ: п. 19 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-19"
+      ]
+    },
+    {
+      "paragraph": 362,
+      "citation": "ФЗ: п. 20 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-20"
+      ]
+    },
+    {
+      "paragraph": 365,
+      "citation": "ФЗ: п. 21 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-21"
+      ]
+    },
+    {
+      "paragraph": 370,
+      "citation": "ФЗ: п. 22 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-22"
+      ]
+    },
+    {
+      "paragraph": 373,
+      "citation": "ФЗ: п. 22 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-22"
+      ]
+    },
+    {
+      "paragraph": 376,
+      "citation": "ФЗ: п. 22 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-22"
+      ]
+    },
+    {
+      "paragraph": 382,
+      "citation": "ФЗ: п. 23 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-23"
+      ]
+    },
+    {
+      "paragraph": 385,
+      "citation": "ФЗ: п. 23 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-23"
+      ]
+    },
+    {
+      "paragraph": 392,
+      "citation": "ФЗ: п. 26 ст. 68, п. 13 ст. 28;",
+      "lawIds": [
+        "fz67:article-68:clause-26",
+        "fz67:article-28:clause-13"
+      ]
+    },
+    {
+      "paragraph": 395,
+      "citation": "ФЗ: п. 26 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-26"
+      ]
+    },
+    {
+      "paragraph": 398,
+      "citation": "ФЗ: п. 26−28 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-26",
+        "fz67:article-68:clause-27",
+        "fz67:article-68:clause-28"
+      ]
+    },
+    {
+      "paragraph": 401,
+      "citation": "ФЗ: п. 2, 3 ст. 67, п. 26, 27 ст. 68;",
+      "lawIds": [
+        "fz67:article-67:clause-2",
+        "fz67:article-67:clause-3",
+        "fz67:article-68:clause-26",
+        "fz67:article-68:clause-27"
+      ]
+    },
+    {
+      "paragraph": 407,
+      "citation": "ФЗ: п. 29 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-29"
+      ]
+    },
+    {
+      "paragraph": 410,
+      "citation": "ФЗ: п. 29 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-29"
+      ]
+    },
+    {
+      "paragraph": 413,
+      "citation": "ФЗ: п. 12 ст. 30, п. 29 ст. 68;",
+      "lawIds": [
+        "fz67:article-30:clause-12",
+        "fz67:article-68:clause-29"
+      ]
+    },
+    {
+      "paragraph": 416,
+      "citation": "ФЗ: п. 29, 30 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-29",
+        "fz67:article-68:clause-30"
+      ]
+    },
+    {
+      "paragraph": 419,
+      "citation": "ФЗ: п/п «е» п. 2 ст. 67;",
+      "lawIds": [
+        "fz67:article-67:clause-2:subclause-е"
+      ]
+    },
+    {
+      "paragraph": 422,
+      "citation": "ФЗ: п. 30 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-30"
+      ]
+    },
+    {
+      "paragraph": 425,
+      "citation": "ФЗ: п. 31 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-31"
+      ]
+    },
+    {
+      "paragraph": 428,
+      "citation": "ФЗ: п. 31 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-31"
+      ]
+    },
+    {
+      "paragraph": 431,
+      "citation": "ФЗ: п. 2 ст. 68;",
+      "lawIds": [
+        "fz67:article-68:clause-2"
+      ]
+    },
+    {
+      "paragraph": 434,
+      "citation": "ФЗ: п. 11.2 ст. 64, п. 1, 3, 8 ст. 30;",
+      "lawIds": [
+        "fz67:article-64:clause-11.2",
+        "fz67:article-30:clause-1",
+        "fz67:article-30:clause-3",
+        "fz67:article-30:clause-8"
+      ]
+    },
+    {
+      "paragraph": 437,
+      "citation": "ФЗ: п. 30 ст. 68, п. 1, 2 ст. 69;",
+      "lawIds": [
+        "fz67:article-68:clause-30",
+        "fz67:article-69:clause-1",
+        "fz67:article-69:clause-2"
+      ]
+    },
+    {
+      "paragraph": 474,
+      "citation": "В соответствии с п. 4 ст. 20 федерального закона от 12.06.2002 № 67-ФЗ прошу комиссию рассмотреть данное заявление немедленно, принять мотивированное решение по существу вопроса, выдать мне заверенную копию решения и приложить обращение и решение к протоколу об итогах голосования.",
+      "lawIds": [
+        "fz67:article-20:clause-4"
+      ]
+    },
+    {
+      "paragraph": 488,
+      "citation": "СТАТУС НАБЛЮДАТЕЛЯ (статья 30 ФЗ, пункты 9 и 10)",
+      "lawIds": [
+        "fz67:article-30:clause-9",
+        "fz67:article-30:clause-10"
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "id": "fz67:article-30:clause-3",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 3 ст. 30",
+      "paragraphStart": 124,
+      "paragraphEnd": 124,
+      "textSha256": "180d747216d271337eb5fc604cb29ad93b6ea889aac340a506a40a0a805bf6af"
+    },
+    {
+      "id": "fz67:article-30:clause-5",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 5 ст. 30",
+      "paragraphStart": 127,
+      "paragraphEnd": 127,
+      "textSha256": "e83b67405e7a2c6289ae3002d29cb87fc23625adc535f20d5f93c11a36a9f05c"
+    },
+    {
+      "id": "fz67:article-64:clause-1",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 1 ст. 64",
+      "paragraphStart": 200,
+      "paragraphEnd": 200,
+      "textSha256": "34df04dcfa964bfa45cf0cfec98541fa43704d68de24f9caf0275df3cdafe570"
+    },
+    {
+      "id": "fz67:article-30:clause-7",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 7 ст. 30",
+      "paragraphStart": 129,
+      "paragraphEnd": 129,
+      "textSha256": "d70b8d8a4e67e4615e988b71e5ab5b51ccc8a488a740e0fa7171cf6f9a3f1ed8"
+    },
+    {
+      "id": "fz67:article-30:clause-8",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 8 ст. 30",
+      "paragraphStart": 131,
+      "paragraphEnd": 131,
+      "textSha256": "714944c47a4d1384252ab803ca2d01e95b0aa13e769808abeeeaf0bd7955a430"
+    },
+    {
+      "id": "fz67:article-30:clause-9:subclause-к",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "подп. «к» п. 9 ст. 30",
+      "paragraphStart": 132,
+      "paragraphEnd": 143,
+      "textSha256": "18845f245cd04dc589c429b1dc07d962ebe06d0f34c1265ed80ec9468fd87c53"
+    },
+    {
+      "id": "fz67:article-68:clause-29",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 29 ст. 68",
+      "paragraphStart": 327,
+      "paragraphEnd": 327,
+      "textSha256": "7e8b3c9521e4024f73861f947698fb4540d8a82794f24686c22ef6e65a9773ac"
+    },
+    {
+      "id": "fz67:article-64:clause-11.2",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 11.2 ст. 64",
+      "paragraphStart": 213,
+      "paragraphEnd": 213,
+      "textSha256": "0470d333c7e2f20d93b28e6b36dac03014aa5dda152b4a9adad7db0bbc3d22b0"
+    },
+    {
+      "id": "fz67:article-64:clause-3",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 3 ст. 64",
+      "paragraphStart": 203,
+      "paragraphEnd": 203,
+      "textSha256": "32433a4624c764a3b4160a4b341d869816682f3fea2f2c9c8bc0d64a9d2d305e"
+    },
+    {
+      "id": "cik86:clause-3.2",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 3.2 к Положению",
+      "paragraphStart": 153,
+      "paragraphEnd": 153,
+      "textSha256": "814ce251623b9c37be798bbaf415edbd9a28559446f65458fcb49ee666ac8794"
+    },
+    {
+      "id": "cik86:clause-1.9",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 1.9 к Положению",
+      "paragraphStart": 93,
+      "paragraphEnd": 98,
+      "textSha256": "51df3bdbfbe5f4039b1c122eb1b7d91926b4c6cae119308fb79d1dd4707d7c7b"
+    },
+    {
+      "id": "fz67:article-66:clause-8",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 8 ст. 66",
+      "paragraphStart": 229,
+      "paragraphEnd": 232,
+      "textSha256": "d534f45b1e0a6cfc61274ebacf28e466dc192ac1b1044afc4c66a45d3bc20d57"
+    },
+    {
+      "id": "fz67:article-66:clause-8.1",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 8.1 ст. 66",
+      "paragraphStart": 233,
+      "paragraphEnd": 237,
+      "textSha256": "aae8f33d0a94fcf4963df179ee7d4dceec25ba9f246c11723fa7a4652cb8c91b"
+    },
+    {
+      "id": "cik86:clause-1.15",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 1.15 к Положению",
+      "paragraphStart": 112,
+      "paragraphEnd": 112,
+      "textSha256": "a7927bb725be272452fc2b092e14bf3e0943eaa4b418801ba89dfe70b6b62ab9"
+    },
+    {
+      "id": "fz67:article-21:clause-9:subclause-б",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "подп. «б» п. 9 ст. 21",
+      "paragraphStart": 78,
+      "paragraphEnd": 89,
+      "textSha256": "4df723f7124dda40df6c407f41ba67f7408cd7b873e10f74715d571210ae8fdb"
+    },
+    {
+      "id": "fz67:article-54:clause-10",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 10 ст. 54",
+      "paragraphStart": 176,
+      "paragraphEnd": 176,
+      "textSha256": "3a521a75f135fbf4cdc76ee20dd2a931ee1701a3078dadd5ac4666b42b2cbb33"
+    },
+    {
+      "id": "fz67:article-61:clause-12",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 12 ст. 61",
+      "paragraphStart": 198,
+      "paragraphEnd": 198,
+      "textSha256": "f111862dbb33c961bf5346df8e893b09d523eb8b0d2f06f9bce19a602f00f351"
+    },
+    {
+      "id": "fz67:article-30:clause-9:subclause-а",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "подп. «а» п. 9 ст. 30",
+      "paragraphStart": 132,
+      "paragraphEnd": 143,
+      "textSha256": "bdcfcb46b5944be539d337d25d2c1641e6eef20f0e449c2ddfe83b8b890347af"
+    },
+    {
+      "id": "fz67:article-17:clause-13",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 13 ст. 17",
+      "paragraphStart": 23,
+      "paragraphEnd": 23,
+      "textSha256": "7b2930bde574846443356f7a5d8a56bf49157eb3224b017e96af90b2ef569c92"
+    },
+    {
+      "id": "fz67:article-17:clause-17",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 17 ст. 17",
+      "paragraphStart": 30,
+      "paragraphEnd": 30,
+      "textSha256": "994809d87e795cff33808b3275aeaa6843ab4d606b98ead1ec1dff44562dd387"
+    },
+    {
+      "id": "cik86:clause-1.10",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 1.10 к Положению",
+      "paragraphStart": 99,
+      "paragraphEnd": 99,
+      "textSha256": "0ee37e6de1dbf548eac628411ebafc4d42f32dd1d4d62a46bdd54794a814fc2e"
+    },
+    {
+      "id": "cik86:clause-2.7",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 2.7 к Положению",
+      "paragraphStart": 141,
+      "paragraphEnd": 145,
+      "textSha256": "729474351406214747784189d5ea3d17b5eb05f310d972b7799ca173cb740efb"
+    },
+    {
+      "id": "fz67:article-64:clause-16",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 16 ст. 64",
+      "paragraphStart": 218,
+      "paragraphEnd": 218,
+      "textSha256": "55d76ef9b7b3980844c30f1618d69165be8778e1afa42683dacd1cdd16aadada"
+    },
+    {
+      "id": "fz67:article-66:clause-2",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 2 ст. 66",
+      "paragraphStart": 222,
+      "paragraphEnd": 222,
+      "textSha256": "983f70f7a66c7eacdfcc4a19852894c39ba308bedb30bed0ee6c7a0fac6c1703"
+    },
+    {
+      "id": "fz67:article-66:clause-3",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 3 ст. 66",
+      "paragraphStart": 223,
+      "paragraphEnd": 223,
+      "textSha256": "1d0c2b464bb5b3f92fef2351d5ad04baf2299d500659c72a942a3ca7fc3c9e9c"
+    },
+    {
+      "id": "fz67:article-66:clause-4",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 4 ст. 66",
+      "paragraphStart": 224,
+      "paragraphEnd": 224,
+      "textSha256": "4954947425dec4368f9a54b6d62db0371b59cefb5eadb024948b311eed66a090"
+    },
+    {
+      "id": "fz67:article-66:clause-5",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 5 ст. 66",
+      "paragraphStart": 225,
+      "paragraphEnd": 225,
+      "textSha256": "d525c8534c355fc414df62c882c5aee93bf897d9e5b6046d1619e54f8c072a8f"
+    },
+    {
+      "id": "fz67:article-61:clause-11",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 11 ст. 61",
+      "paragraphStart": 197,
+      "paragraphEnd": 197,
+      "textSha256": "3636b6a18e90d27979660ecbf88410f2e9131b630a4971f81a545979d0a10260"
+    },
+    {
+      "id": "fz67:article-61:clause-3",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 3 ст. 61",
+      "paragraphStart": 181,
+      "paragraphEnd": 187,
+      "textSha256": "b9a36e4de74e1811a3f0a6f3d385019d899dd3285215ea4eb09e1093bae085e6"
+    },
+    {
+      "id": "fz67:article-61:clause-3.1",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 3.1 ст. 61",
+      "paragraphStart": 188,
+      "paragraphEnd": 188,
+      "textSha256": "1004849f9c69e6fbb8171d2d5dbab2351f8c3f1dca3a4befe7174da97a03fecf"
+    },
+    {
+      "id": "fz67:article-61:clause-4",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 4 ст. 61",
+      "paragraphStart": 189,
+      "paragraphEnd": 189,
+      "textSha256": "13054fd840b8b8d7149f9b02ee5d5b82fb77d1bd9c5a80108d10509f1e625854"
+    },
+    {
+      "id": "fz67:article-61:clause-5",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 5 ст. 61",
+      "paragraphStart": 190,
+      "paragraphEnd": 190,
+      "textSha256": "1e532fae6b7e74754915e1e22e136d6167855b860b3043996556ecbdad164370"
+    },
+    {
+      "id": "fz67:article-61:clause-6",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 6 ст. 61",
+      "paragraphStart": 191,
+      "paragraphEnd": 191,
+      "textSha256": "600521439fcb63d0500c571205ee8f14347e77fbafccd7460fec974014ee6726"
+    },
+    {
+      "id": "fz67:article-61:clause-7",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 7 ст. 61",
+      "paragraphStart": 192,
+      "paragraphEnd": 192,
+      "textSha256": "daad950dacfc6677c4332588f132ea08d9d67417e0339d37506bc2557baaa691"
+    },
+    {
+      "id": "fz67:article-61:clause-7.1",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 7.1 ст. 61",
+      "paragraphStart": 193,
+      "paragraphEnd": 193,
+      "textSha256": "756612dd99d1949146f3ad2247297e583414395adb8de2cca8b9e043789ebd5a"
+    },
+    {
+      "id": "fz67:article-61:clause-8",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 8 ст. 61",
+      "paragraphStart": 194,
+      "paragraphEnd": 194,
+      "textSha256": "80373ed88a5a8630cb7c36ef92f3383b28211e3ce3923d882a5a183ab43fa118"
+    },
+    {
+      "id": "fz67:article-61:clause-9",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 9 ст. 61",
+      "paragraphStart": 195,
+      "paragraphEnd": 195,
+      "textSha256": "8c1286891b86c2e03e625e4465b567647f7cf6307724086ee8ffd909ef7260fc"
+    },
+    {
+      "id": "fz67:article-64:clause-4",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 4 ст. 64",
+      "paragraphStart": 204,
+      "paragraphEnd": 204,
+      "textSha256": "ef2e5009ec11f1588485a96c7497ae28fbc18de7c97244832dd35ba3273e1d6d"
+    },
+    {
+      "id": "fz67:article-64:clause-5",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 5 ст. 64",
+      "paragraphStart": 205,
+      "paragraphEnd": 205,
+      "textSha256": "8d3b4f3999062ef8f1594a3038686d66a1c906f8d4f7f3963604e0651b4f63b8"
+    },
+    {
+      "id": "fz67:article-17:clause-16",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 16 ст. 17",
+      "paragraphStart": 29,
+      "paragraphEnd": 29,
+      "textSha256": "935b50c591536b8a965a95752c20ef40b8c3a99896a49dae1735e781b9768f24"
+    },
+    {
+      "id": "fz67:article-66:clause-16",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 16 ст. 66",
+      "paragraphStart": 246,
+      "paragraphEnd": 246,
+      "textSha256": "cf7d4ec193a08a820eec165d315d4adb4310a900b9ff05f9ea198b790951ce0b"
+    },
+    {
+      "id": "fz67:article-64:clause-6",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 6 ст. 64",
+      "paragraphStart": 206,
+      "paragraphEnd": 206,
+      "textSha256": "46cfb92d1ad73a3f23982b136b0216b2172e6652acd790e725990a350fe51d1c"
+    },
+    {
+      "id": "fz67:article-64:clause-8",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 8 ст. 64",
+      "paragraphStart": 208,
+      "paragraphEnd": 208,
+      "textSha256": "e934f43d0e091fe65f2fdeef60a9ff69baae3be677a05587446f377b66e09d73"
+    },
+    {
+      "id": "fz67:article-64:clause-10",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 10 ст. 64",
+      "paragraphStart": 210,
+      "paragraphEnd": 210,
+      "textSha256": "71a672eeaae7c77f14f2701f0e84233fa7c4103046fad5f8646f938ea4a33b66"
+    },
+    {
+      "id": "fz67:article-64:clause-9",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 9 ст. 64",
+      "paragraphStart": 209,
+      "paragraphEnd": 209,
+      "textSha256": "719fc79861d4cc9a9c7a5240449370197991cd1861ece2d1f7060bbd559df161"
+    },
+    {
+      "id": "fz67:article-66:clause-6",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 6 ст. 66",
+      "paragraphStart": 227,
+      "paragraphEnd": 227,
+      "textSha256": "a5f8ae032b98eefdabe93f3d8ff2fbf3ec92065d206b90f2d51a700b15d71db1"
+    },
+    {
+      "id": "fz67:article-66:clause-9",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 9 ст. 66",
+      "paragraphStart": 238,
+      "paragraphEnd": 238,
+      "textSha256": "43e1597599158b73e89bb2dffc47e363fc39ea6e1a617ec5535ca9759e6b4025"
+    },
+    {
+      "id": "fz67:article-66:clause-14",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 14 ст. 66",
+      "paragraphStart": 244,
+      "paragraphEnd": 244,
+      "textSha256": "f38922177a9647eb1722a9f4600bae31b10092dce2b20b365dfbfdc0269f2ebf"
+    },
+    {
+      "id": "fz67:article-3:clause-3",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 3 ст. 3",
+      "paragraphStart": 4,
+      "paragraphEnd": 4,
+      "textSha256": "795808d6a08e841f96828f5ab20abc4f2d4804bc41cf0afbb300578afc640fd9"
+    },
+    {
+      "id": "fz67:article-66:clause-10",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 10 ст. 66",
+      "paragraphStart": 239,
+      "paragraphEnd": 239,
+      "textSha256": "1adba047b7185befa4965eec9942d0a91330fb9543345a65313e5e747c591858"
+    },
+    {
+      "id": "fz67:article-66:clause-11",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 11 ст. 66",
+      "paragraphStart": 240,
+      "paragraphEnd": 240,
+      "textSha256": "1cd98400fb07d3e965d2fc7d65957c3c049a7fbb99c24b0b70e9f8ac710ecef8"
+    },
+    {
+      "id": "fz67:article-66:clause-11.1",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 11.1 ст. 66",
+      "paragraphStart": 241,
+      "paragraphEnd": 241,
+      "textSha256": "a02f2f123e304e6393f2499c1e4da862ea0b01b9052de4fc24a5785e512e8b62"
+    },
+    {
+      "id": "cik86:clause-3.3",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 3.3 к Положению",
+      "paragraphStart": 154,
+      "paragraphEnd": 157,
+      "textSha256": "4022d42f416a339ea0ff8a0a562cda0256eb7424db0647978b8499b3a714499a"
+    },
+    {
+      "id": "cik86:clause-3.5",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 3.5 к Положению",
+      "paragraphStart": 163,
+      "paragraphEnd": 169,
+      "textSha256": "8afbf69895d48e8658d4b6767a41257dc773949b5e92c572767152c78edd1a0e"
+    },
+    {
+      "id": "cik86:clause-3.6",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 3.6 к Положению",
+      "paragraphStart": 170,
+      "paragraphEnd": 176,
+      "textSha256": "2557587d8b2d080972f6d2a5a444b1bc0b5c76e04fadb9a4423233da752b53d0"
+    },
+    {
+      "id": "cik86:clause-3.7",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 3.7 к Положению",
+      "paragraphStart": 177,
+      "paragraphEnd": 182,
+      "textSha256": "8ac2480d1ee346eaa781f17b77bc7f6a6aa4d7bdbad9a79e70552e18cd9b4df6"
+    },
+    {
+      "id": "cik86:annex-1",
+      "sourceId": "cik-multiday-voting",
+      "locator": "Приложение 1 к Положению",
+      "paragraphStart": 275,
+      "paragraphEnd": 339,
+      "textSha256": "9080a385aac650d9e408aee7f3fca6a733c01f615a2afabec78e6009d024852b"
+    },
+    {
+      "id": "fz67:article-66:clause-13",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 13 ст. 66",
+      "paragraphStart": 243,
+      "paragraphEnd": 243,
+      "textSha256": "0cbde34b23d28c94bb0d37647032e9a7b8a6872ec05fd7bf1871b1d3abdefd9f"
+    },
+    {
+      "id": "cik86:clause-1.11",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 1.11 к Положению",
+      "paragraphStart": 100,
+      "paragraphEnd": 101,
+      "textSha256": "8694672b51889a559d50cbe9971fcf98657f9e326d5593e7f91683756a90c39c"
+    },
+    {
+      "id": "cik86:clause-3.8",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 3.8 к Положению",
+      "paragraphStart": 183,
+      "paragraphEnd": 188,
+      "textSha256": "b9028321f3754d9d5b66147c5045c9596a8765c9076f5656400209cbd55cf86d"
+    },
+    {
+      "id": "fz67:article-66:clause-17",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 17 ст. 66",
+      "paragraphStart": 247,
+      "paragraphEnd": 247,
+      "textSha256": "11eef477d4e371f056329fc604ebebeb8d4c39f646f473f906b8be03ab2b4939"
+    },
+    {
+      "id": "fz67:article-66:clause-12",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 12 ст. 66",
+      "paragraphStart": 242,
+      "paragraphEnd": 242,
+      "textSha256": "d23feb33bf63fc29fe564f2809251aba5982cf38cbc37e15ed1eeca7e62efe35"
+    },
+    {
+      "id": "cik86:clause-3.11",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 3.11 к Положению",
+      "paragraphStart": 200,
+      "paragraphEnd": 201,
+      "textSha256": "28f06c779ebacf1cfd6a8ecb032049986d504ce6703a3753e52c83134699dbc5"
+    },
+    {
+      "id": "cik86:annex-2",
+      "sourceId": "cik-multiday-voting",
+      "locator": "Приложение 2 к Положению",
+      "paragraphStart": 398,
+      "paragraphEnd": 452,
+      "textSha256": "ee4f5f7a44ed6780cce8308cc4f440140e796a4efde35b666ede4e7bc2e7281a"
+    },
+    {
+      "id": "cik86:clause-5.2",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 5.2 к Положению",
+      "paragraphStart": 261,
+      "paragraphEnd": 261,
+      "textSha256": "46024f629a9489ef781a8e2542a2f3db51b78dc2e6bdb53f5f087d2d4d703054"
+    },
+    {
+      "id": "cik86:clause-3.14",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 3.14 к Положению",
+      "paragraphStart": 217,
+      "paragraphEnd": 217,
+      "textSha256": "0bddae89164fab0677e58ec90130748f3590b234da7cc4be321e4c7de5f1abe8"
+    },
+    {
+      "id": "cik86:clause-3.15",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 3.15 к Положению",
+      "paragraphStart": 218,
+      "paragraphEnd": 219,
+      "textSha256": "794649681daea14883b264d6255665ce5132d89d60e0c5a360dec9c53301e71e"
+    },
+    {
+      "id": "fz67:article-68:clause-2",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 2 ст. 68",
+      "paragraphStart": 281,
+      "paragraphEnd": 281,
+      "textSha256": "017695f23b0757fdc435e160fedb9dc54bd1f7793643f076e03d07513223f4a0"
+    },
+    {
+      "id": "fz67:article-68:clause-10",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 10 ст. 68",
+      "paragraphStart": 302,
+      "paragraphEnd": 302,
+      "textSha256": "a6df76f50445a10e8517b354180bb26f9f39aafe32144ad613ecdacc06d6a946"
+    },
+    {
+      "id": "fz67:article-68:clause-1",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 1 ст. 68",
+      "paragraphStart": 280,
+      "paragraphEnd": 280,
+      "textSha256": "823593e7a2b2941d7cdf73e0f4c3d69b050f68d9890dbe0f40c5ba3e66453eab"
+    },
+    {
+      "id": "fz67:article-30:clause-9:subclause-г",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "подп. «г» п. 9 ст. 30",
+      "paragraphStart": 132,
+      "paragraphEnd": 143,
+      "textSha256": "edf8dc8817e5dcf0e6164827945c36160a57fa7144d0f546e7a07365af909521"
+    },
+    {
+      "id": "fz67:article-68:clause-4",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 4 ст. 68",
+      "paragraphStart": 283,
+      "paragraphEnd": 283,
+      "textSha256": "5157c2c6e0ec0dbb1c76158541cf9f4153ff8045dd2daa378e3c9217271013b1"
+    },
+    {
+      "id": "fz67:article-68:clause-5",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 5 ст. 68",
+      "paragraphStart": 284,
+      "paragraphEnd": 289,
+      "textSha256": "0686a426f6f2272c3f83da28c2d50c619cc691a4aa3dc3916def84a9adaf03ab"
+    },
+    {
+      "id": "fz67:article-68:clause-6",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 6 ст. 68",
+      "paragraphStart": 290,
+      "paragraphEnd": 297,
+      "textSha256": "c04b77c0d94f96639dba8cc4c8f363ab08a5155913886ae338283ea9844aa997"
+    },
+    {
+      "id": "fz67:article-68:clause-7",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 7 ст. 68",
+      "paragraphStart": 299,
+      "paragraphEnd": 299,
+      "textSha256": "08b4cf30a52828383911635f4f01cde1a56e49b302055a18b370ae8012a7e6c4"
+    },
+    {
+      "id": "fz67:article-68:clause-12",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 12 ст. 68",
+      "paragraphStart": 304,
+      "paragraphEnd": 304,
+      "textSha256": "81b9c3b9edfd4f2affe5eafbb36c84d85b8c3c89d98199ee6c4e04a2314afb4c"
+    },
+    {
+      "id": "cik86:clause-4.2",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 4.2 к Положению",
+      "paragraphStart": 229,
+      "paragraphEnd": 229,
+      "textSha256": "b98833f7808d06fb40f1bdd64685f886e651827cd96cdee34b08a191820ac4de"
+    },
+    {
+      "id": "cik86:clause-4.3",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 4.3 к Положению",
+      "paragraphStart": 230,
+      "paragraphEnd": 230,
+      "textSha256": "e6ccf2902a4bde21f614c8b5e0a042da99d572c011147472511d659215f2b4b4"
+    },
+    {
+      "id": "cik86:clause-4.4",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 4.4 к Положению",
+      "paragraphStart": 231,
+      "paragraphEnd": 241,
+      "textSha256": "e98c6a664b5cfef4dc512086bd2dbf71551b3f576b0c6e78be6ffff4314f8c75"
+    },
+    {
+      "id": "cik86:clause-4.5",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 4.5 к Положению",
+      "paragraphStart": 242,
+      "paragraphEnd": 242,
+      "textSha256": "066badab0cd205f6632ddc6eb171a8f167106203f82ddc1ab26fbe190bddd28e"
+    },
+    {
+      "id": "cik86:clause-4.6",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 4.6 к Положению",
+      "paragraphStart": 243,
+      "paragraphEnd": 246,
+      "textSha256": "c649a829cf20b78792b066ff35e1c4c33ec470b1814a483674561fdf73ae6f48"
+    },
+    {
+      "id": "cik86:clause-4.10",
+      "sourceId": "cik-multiday-voting",
+      "locator": "п. 4.10 к Положению",
+      "paragraphStart": 251,
+      "paragraphEnd": 253,
+      "textSha256": "7f54923df2523ce384f3a2eeaa83dc5b82d5d60e8712749d6f28c1402ba7250d"
+    },
+    {
+      "id": "fz67:article-68:clause-13",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 13 ст. 68",
+      "paragraphStart": 305,
+      "paragraphEnd": 305,
+      "textSha256": "1049c7ae737e9e1a8d78248215bb6ab64244d3bdddf9a1b8e29efe0d320d539e"
+    },
+    {
+      "id": "fz67:article-68:clause-14",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 14 ст. 68",
+      "paragraphStart": 306,
+      "paragraphEnd": 306,
+      "textSha256": "42f8028bc81bc1744235d0a58362188226324cb361e0bdc300e736e17e30c82d"
+    },
+    {
+      "id": "fz67:article-68:clause-17",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 17 ст. 68",
+      "paragraphStart": 309,
+      "paragraphEnd": 309,
+      "textSha256": "938abfc73061dff390757c656f699dd8b72f998bf13329ddc46a8f8d14774cab"
+    },
+    {
+      "id": "fz67:article-68:clause-18",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 18 ст. 68",
+      "paragraphStart": 310,
+      "paragraphEnd": 310,
+      "textSha256": "3169c18b607225fedd2d0d5b10b64dd80cae94f0cb2e0c5196415efdf1780fef"
+    },
+    {
+      "id": "fz67:article-68:clause-19",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 19 ст. 68",
+      "paragraphStart": 311,
+      "paragraphEnd": 311,
+      "textSha256": "5ed4a08fbc41cb3df243f604efac02a268f9984fb9773a93d60e9d3f6b1d1f13"
+    },
+    {
+      "id": "fz67:article-68:clause-20",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 20 ст. 68",
+      "paragraphStart": 312,
+      "paragraphEnd": 312,
+      "textSha256": "0ab36438e1eab482f09d95b8d31ec8dd221485b5c37b87258653866e6e0e8a62"
+    },
+    {
+      "id": "fz67:article-68:clause-21",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 21 ст. 68",
+      "paragraphStart": 313,
+      "paragraphEnd": 313,
+      "textSha256": "5e3a8643a7701db5252248f1b60b08d1f45644c1dea3e943e7497c6bcd380b27"
+    },
+    {
+      "id": "fz67:article-68:clause-22",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 22 ст. 68",
+      "paragraphStart": 314,
+      "paragraphEnd": 314,
+      "textSha256": "7acb1c5915d50eeeae567b1a79dabd81e5945eb19eb789ec633bb827eb4b864d"
+    },
+    {
+      "id": "fz67:article-68:clause-23",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 23 ст. 68",
+      "paragraphStart": 315,
+      "paragraphEnd": 315,
+      "textSha256": "614d4381ceee6234b57ddfc61201774a0d3109c0c3df530a803d716f03088400"
+    },
+    {
+      "id": "fz67:article-68:clause-26",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 26 ст. 68",
+      "paragraphStart": 324,
+      "paragraphEnd": 324,
+      "textSha256": "a23944d38725246fe617262a07022b083923205e69eb9d591c6bf69f2dcde12e"
+    },
+    {
+      "id": "fz67:article-28:clause-13",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 13 ст. 28",
+      "paragraphStart": 111,
+      "paragraphEnd": 111,
+      "textSha256": "86fe454de9da9e4301978deef3368e68b7d223343c271faf83847cb1ade79ad1"
+    },
+    {
+      "id": "fz67:article-68:clause-27",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 27 ст. 68",
+      "paragraphStart": 325,
+      "paragraphEnd": 325,
+      "textSha256": "40c5452f19516a3d95d816a4334828c270b9451b3a00f4a853ee79839b5783c5"
+    },
+    {
+      "id": "fz67:article-68:clause-28",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 28 ст. 68",
+      "paragraphStart": 326,
+      "paragraphEnd": 326,
+      "textSha256": "40aa1b144b60115f821d3bb9c19d4daee95b66fc0af247087b8c05c68c9f2f25"
+    },
+    {
+      "id": "fz67:article-67:clause-2",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 2 ст. 67",
+      "paragraphStart": 253,
+      "paragraphEnd": 277,
+      "textSha256": "23890f377403d250f8e7c439791cba3fa420423a2f018a4597f517c080766cb5"
+    },
+    {
+      "id": "fz67:article-67:clause-3",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 3 ст. 67",
+      "paragraphStart": 278,
+      "paragraphEnd": 278,
+      "textSha256": "c52fb9070e042bee65d33035c556773b6de8074d67b8b7549701e64fc4fcb1a5"
+    },
+    {
+      "id": "fz67:article-30:clause-12",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 12 ст. 30",
+      "paragraphStart": 161,
+      "paragraphEnd": 161,
+      "textSha256": "ce68dc06b4dfff3e6dc100dbda3cc86e634e5068aef8863e8f7e620894141ddc"
+    },
+    {
+      "id": "fz67:article-68:clause-30",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 30 ст. 68",
+      "paragraphStart": 328,
+      "paragraphEnd": 328,
+      "textSha256": "7a68c2db0288ffbd7eec62b546943d015244cac50fe1134fc52218d992b73737"
+    },
+    {
+      "id": "fz67:article-67:clause-2:subclause-е",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "подп. «е» п. 2 ст. 67",
+      "paragraphStart": 253,
+      "paragraphEnd": 277,
+      "textSha256": "3bba6fde7af527d13d2d267a51f458f4ea68e7639b04a4f1ccee41bfad6d09dd"
+    },
+    {
+      "id": "fz67:article-68:clause-31",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 31 ст. 68",
+      "paragraphStart": 329,
+      "paragraphEnd": 329,
+      "textSha256": "80f3d5f90ca9403213206cbcd30082c8cbe8b0dc9d036bd24166877f055ee611"
+    },
+    {
+      "id": "fz67:article-30:clause-1",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 1 ст. 30",
+      "paragraphStart": 119,
+      "paragraphEnd": 119,
+      "textSha256": "e5d58e7ad2100631577b7b892014c0e510fa03aefbcdb066046d34455b8d1b01"
+    },
+    {
+      "id": "fz67:article-69:clause-1",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 1 ст. 69",
+      "paragraphStart": 341,
+      "paragraphEnd": 341,
+      "textSha256": "a0417b506d70adf42c85caa4ca79f09145656efedeaac9f9de60563aa56f0496"
+    },
+    {
+      "id": "fz67:article-69:clause-2",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 2 ст. 69",
+      "paragraphStart": 342,
+      "paragraphEnd": 347,
+      "textSha256": "113c26a49a1d384f2b6773e7a72e68ee26f325858656ecd11093f635c9ebf18a"
+    },
+    {
+      "id": "fz67:article-20:clause-4",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 4 ст. 20",
+      "paragraphStart": 45,
+      "paragraphEnd": 45,
+      "textSha256": "8b5bd4ae43b4695f8c766c78269ca9b14be44607f2cefd34c7cc708301073e1f"
+    },
+    {
+      "id": "fz67:article-30:clause-9",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 9 ст. 30",
+      "paragraphStart": 132,
+      "paragraphEnd": 143,
+      "textSha256": "9c64662e98a2f48582039bd93e567b47ab2a9a4065deaa6f54396d2e1b69e5d0"
+    },
+    {
+      "id": "fz67:article-30:clause-10",
+      "sourceId": "fz67-2026-excerpts",
+      "locator": "п. 10 ст. 30",
+      "paragraphStart": 144,
+      "paragraphEnd": 152,
+      "textSha256": "27f2781b84324bcea99ffcedc54853bddacab0019d70c51d72dcb66673101c46"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+wheatley-crab:
+  id: wheatley-crab
+  title: Wheatley Crab
+  purpose: procedure-video
+  name: Wheatley Crab.mp4
+  file: global/videos/Wheatley Crab.mp4
+  mime: video/mp4
+  assetKey: wheatley-crab

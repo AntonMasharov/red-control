@@ -1,0 +1,137 @@
+roadmap-morning:
+  id: roadmap-morning
+  title: Утренний приход
+  time: До 08:00
+  sourceHeading: 📋 ЧЕК-ЛИСТ 1. УТРЕННИЙ ПРИХОД (ПТ, СБ, ВС до 08:00)
+  taskIds:
+    - roadmap-morning:item-01
+    - roadmap-morning:item-02
+    - roadmap-morning:item-03
+    - roadmap-morning:item-04
+    - roadmap-morning:item-05
+    - roadmap-morning:item-06
+    - roadmap-morning:item-07
+    - roadmap-morning:item-09
+    - roadmap-morning:item-10
+    - roadmap-morning:item-11
+roadmap-evidence:
+  id: roadmap-evidence
+  title: Что сфотографировать и записать
+  time: В течение дня
+  sourceHeading: 📸 ЧЕК-ЛИСТ 2. ЧТО ОБЯЗАТЕЛЬНО СФОТОГРАФИРОВАТЬ И ЗАПИСАТЬ
+  taskIds:
+    - roadmap-evidence:item-01
+    - roadmap-evidence:item-02
+    - roadmap-evidence:item-03
+    - roadmap-evidence:item-04
+    - roadmap-evidence:item-05
+    - roadmap-evidence:item-06
+    - roadmap-evidence:item-07
+    - roadmap-evidence:item-08
+    - roadmap-evidence:item-09
+    - roadmap-evidence:item-10
+    - roadmap-evidence:item-11
+    - roadmap-evidence:item-12
+    - roadmap-evidence:item-13
+    - roadmap-evidence:item-14
+    - roadmap-evidence:item-15
+    - roadmap-evidence:item-16
+roadmap-voting:
+  id: roadmap-voting
+  title: Голосование в помещении
+  time: 08:00–20:00
+  sourceHeading: 🗳️ ЧЕК-ЛИСТ 3. ГОЛОСОВАНИЕ В ПОМЕЩЕНИИ (08:00 – 20:00)
+  taskIds:
+    - roadmap-voting:item-01
+    - roadmap-voting:item-02
+    - roadmap-voting:item-03
+    - roadmap-voting:item-04
+    - roadmap-voting:item-05
+roadmap-home:
+  id: roadmap-home
+  title: Надомное голосование — выезд
+  time: В течение дня
+  sourceHeading: 🚗 ЧЕК-ЛИСТ 4. НАДОМНОЕ ГОЛОСОВАНИЕ (ВЫЕЗД)
+  taskIds:
+    - roadmap-home:item-01
+    - roadmap-home:item-02
+    - roadmap-home:item-03
+    - roadmap-home:item-04
+    - roadmap-home:item-05
+    - roadmap-home:item-06
+    - roadmap-home:item-08
+    - roadmap-home:item-09
+    - roadmap-home:item-10
+    - roadmap-home:item-11
+roadmap-evening:
+  id: roadmap-evening
+  title: Вечер пятницы и субботы — сейф-пакеты
+  time: С 20:00
+  sourceHeading: 🔒 ЧЕК-ЛИСТ 5. ВЕЧЕР ПЯТНИЦЫ И СУББОТЫ (СЕЙФ-ПАКЕТЫ)
+  taskIds:
+    - roadmap-evening:item-01
+    - roadmap-evening:item-03
+    - roadmap-evening:item-04
+    - roadmap-evening:item-05
+    - roadmap-evening:item-06
+    - roadmap-evening:item-07
+    - roadmap-evening:item-08
+    - roadmap-evening:item-09
+    - roadmap-evening:item-10
+    - roadmap-evening:item-11
+    - roadmap-evening:item-12
+roadmap-counting:
+  id: roadmap-counting
+  title: Подсчёт голосов
+  time: Воскресенье, с 20:00
+  sourceHeading: ⏱️ ЧЕК-ЛИСТ 6. ПОДСЧЕТ ГОЛОСОВ В ВОСКРЕСЕНЬЕ (С 20:00)
+  taskIds:
+    - roadmap-counting:item-01
+    - roadmap-counting:item-02
+    - roadmap-counting:item-03
+    - roadmap-counting:item-05
+    - roadmap-counting:item-06
+    - roadmap-counting:item-07
+    - roadmap-counting:item-08
+    - roadmap-counting:item-09
+    - roadmap-counting:item-10
+    - roadmap-counting:item-12
+    - roadmap-counting:item-13
+    - roadmap-counting:item-15
+    - roadmap-counting:item-16
+    - roadmap-counting:item-17
+    - roadmap-counting:item-18
+    - roadmap-counting:item-19
+    - roadmap-counting:item-20
+    - roadmap-counting:item-21
+roadmap-protocol:
+  id: roadmap-protocol
+  title: Итоговое заседание и копия протокола
+  time: После подсчёта голосов
+  sourceHeading: 📄 ЧЕК-ЛИСТ 7. ИТОГОВОЕ ЗАСЕДАНИЕ И ПРОВЕРКА КОПИИ ПРОТОКОЛА
+  taskIds:
+    - roadmap-protocol:item-01
+    - roadmap-protocol:item-02
+    - roadmap-protocol:item-03
+    - roadmap-protocol:item-04
+    - roadmap-protocol:item-05
+    - roadmap-protocol:item-06
+    - roadmap-protocol:item-07
+    - roadmap-protocol:item-09
+    - roadmap-protocol:item-10
+    - roadmap-protocol:item-11
+    - roadmap-protocol:item-12
+    - roadmap-protocol:item-13
+    - roadmap-protocol:item-14
+    - roadmap-protocol:item-15
+    - roadmap-protocol:item-16
+roadmap-violations:
+  id: roadmap-violations
+  title: Что делать при нарушении
+  time: В любое время
+  sourceHeading: "🚨 МИНИ-ПАМЯТКА: ЧТО ДЕЛАТЬ ПРИ НАРУШЕНИИ"
+  taskIds:
+    - roadmap-violations:item-01
+    - roadmap-violations:item-02
+    - roadmap-violations:item-03
+    - roadmap-violations:item-04

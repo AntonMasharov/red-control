@@ -1,0 +1,24 @@
+schemaVersion: 1
+election:
+  id: deputy-2026
+  title: Депутатские выборы 2026
+  dates:
+    - "2026-09-18"
+    - "2026-09-19"
+    - "2026-09-20"
+  roadmapConfigId: observer-multiday-route
+  status: draft
+  infoId: deputy-2026:info
+  topicIds:
+    - theory-general
+    - theory-arrival
+    - theory-home-voting
+    - theory-counting
+    - theory-protocol-copy
+  documentIds: []
+info:
+  id: deputy-2026:info
+  title: Депутатские выборы 2026
+  markdown: |-
+    Голосование: **18, 19 и 20 сентября 2026 года**.
+commissionsFile: commissions.yaml

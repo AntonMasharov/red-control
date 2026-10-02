@@ -1,0 +1,1417 @@
+{
+  "googleDocUrl": "https://docs.google.com/document/d/1SM58QzuWTpygzH_jHyAblsd__kxxEuvhfhhEP1VKRE0/edit?tab=t.0",
+  "googleTextSha256": "803284187dac6e88415368fdedd590f398a88e4f47b0f2d8d79959e3250863f2",
+  "lawReferenceDocument": "dk-uik-2026.docx",
+  "entries": [
+    {
+      "taskId": "roadmap-morning:item-01",
+      "googleHeading": "📋 ЧЕК-ЛИСТ 1. УТРЕННИЙ ПРИХОД (ПТ, СБ, ВС до 08:00)",
+      "googleItem": 1,
+      "googleText": "07:00–07:30 — Прибыл на участок.",
+      "context": [],
+      "docxCitationParagraphs": [
+        16
+      ],
+      "lawIds": [
+        "fz67:article-30:clause-3",
+        "fz67:article-30:clause-5",
+        "fz67:article-64:clause-1"
+      ]
+    },
+    {
+      "taskId": "roadmap-morning:item-02",
+      "googleHeading": "📋 ЧЕК-ЛИСТ 1. УТРЕННИЙ ПРИХОД (ПТ, СБ, ВС до 08:00)",
+      "googleItem": 2,
+      "googleText": "Документы в комиссию: Отдал Паспорт и Направление.",
+      "context": [],
+      "docxCitationParagraphs": [
+        19
+      ],
+      "lawIds": [
+        "fz67:article-30:clause-3",
+        "fz67:article-30:clause-7",
+        "fz67:article-30:clause-8"
+      ]
+    },
+    {
+      "taskId": "roadmap-morning:item-03",
+      "googleHeading": "📋 ЧЕК-ЛИСТ 1. УТРЕННИЙ ПРИХОД (ПТ, СБ, ВС до 08:00)",
+      "googleItem": 3,
+      "googleText": "Отметка на копиях: На моих копиях Направления и Требования о выдаче протокола комиссия поставила подпись, дату, время и печать/штамп!",
+      "context": [],
+      "docxCitationParagraphs": [
+        19,
+        22,
+        413
+      ],
+      "lawIds": [
+        "fz67:article-30:clause-3",
+        "fz67:article-30:clause-7",
+        "fz67:article-30:clause-8",
+        "fz67:article-30:clause-9:subclause-к",
+        "fz67:article-68:clause-29",
+        "fz67:article-30:clause-12"
+      ]
+    },
+    {
+      "taskId": "roadmap-morning:item-04",
+      "googleHeading": "📋 ЧЕК-ЛИСТ 1. УТРЕННИЙ ПРИХОД (ПТ, СБ, ВС до 08:00)",
+      "googleItem": 4,
+      "googleText": "Список присутствующих: Проверил, что меня внесли в реестр (указали время прихода и мой мобильный телефон).",
+      "context": [],
+      "docxCitationParagraphs": [
+        25
+      ],
+      "lawIds": [
+        "fz67:article-64:clause-11.2"
+      ]
+    },
+    {
+      "taskId": "roadmap-morning:item-05",
+      "googleHeading": "📋 ЧЕК-ЛИСТ 1. УТРЕННИЙ ПРИХОД (ПТ, СБ, ВС до 08:00)",
+      "googleItem": 5,
+      "googleText": "Уведомление о съёмке: Заявил председателю/секретарю о ведении фото-/видеосъёмки.",
+      "context": [],
+      "docxCitationParagraphs": [
+        22
+      ],
+      "lawIds": [
+        "fz67:article-30:clause-9:subclause-к",
+        "fz67:article-68:clause-29"
+      ]
+    },
+    {
+      "taskId": "roadmap-morning:item-06",
+      "googleHeading": "📋 ЧЕК-ЛИСТ 1. УТРЕННИЙ ПРИХОД (ПТ, СБ, ВС до 08:00)",
+      "googleItem": 6,
+      "googleText": "Обзор: Убедился, что с моего места видны столы выдачи, кабины и все ящики.",
+      "context": [],
+      "docxCitationParagraphs": [
+        125
+      ],
+      "lawIds": [
+        "fz67:article-61:clause-11"
+      ]
+    },
+    {
+      "taskId": "roadmap-morning:item-07",
+      "googleHeading": "📋 ЧЕК-ЛИСТ 1. УТРЕННИЙ ПРИХОД (ПТ, СБ, ВС до 08:00)",
+      "googleItem": 7,
+      "googleText": "Стенд и УФП: Сфотографировал стенд. В УФП заполнены только номер УИК и адрес!",
+      "context": [],
+      "docxCitationParagraphs": [
+        128,
+        134
+      ],
+      "lawIds": [
+        "fz67:article-61:clause-3",
+        "fz67:article-61:clause-3.1",
+        "fz67:article-61:clause-4",
+        "fz67:article-61:clause-5",
+        "fz67:article-61:clause-6",
+        "fz67:article-61:clause-7",
+        "fz67:article-61:clause-7.1",
+        "fz67:article-61:clause-8",
+        "fz67:article-61:clause-9"
+      ]
+    },
+    {
+      "taskId": "roadmap-morning:item-09",
+      "googleHeading": "📋 ЧЕК-ЛИСТ 1. УТРЕННИЙ ПРИХОД (ПТ, СБ, ВС до 08:00)",
+      "googleItem": 9,
+      "googleText": "Осмотрел ПУСТЫЕ переносные и стационарные ящики.",
+      "context": [
+        "Опечатывание ящиков (до 08:00):"
+      ],
+      "docxCitationParagraphs": [
+        32,
+        35
+      ],
+      "lawIds": [
+        "fz67:article-64:clause-3",
+        "cik86:clause-3.2",
+        "cik86:clause-1.9"
+      ]
+    },
+    {
+      "taskId": "roadmap-morning:item-10",
+      "googleHeading": "📋 ЧЕК-ЛИСТ 1. УТРЕННИЙ ПРИХОД (ПТ, СБ, ВС до 08:00)",
+      "googleItem": 10,
+      "googleText": "Сфотографировал пломбы.",
+      "context": [
+        "Опечатывание ящиков (до 08:00):"
+      ],
+      "docxCitationParagraphs": [
+        32,
+        35
+      ],
+      "lawIds": [
+        "fz67:article-64:clause-3",
+        "cik86:clause-3.2",
+        "cik86:clause-1.9"
+      ]
+    },
+    {
+      "taskId": "roadmap-morning:item-11",
+      "googleHeading": "📋 ЧЕК-ЛИСТ 1. УТРЕННИЙ ПРИХОД (ПТ, СБ, ВС до 08:00)",
+      "googleItem": 11,
+      "googleText": "Записал в Дорожную Карту число стационарных и переносных ящиков.",
+      "context": [
+        "Опечатывание ящиков (до 08:00):"
+      ],
+      "docxCitationParagraphs": [
+        38
+      ],
+      "lawIds": [
+        "fz67:article-66:clause-8",
+        "fz67:article-66:clause-8.1"
+      ]
+    },
+    {
+      "taskId": "roadmap-evidence:item-01",
+      "googleHeading": "📸 ЧЕК-ЛИСТ 2. ЧТО ОБЯЗАТЕЛЬНО СФОТОГРАФИРОВАТЬ И ЗАПИСАТЬ",
+      "googleItem": 1,
+      "googleText": "Пломбы и номера всех ящиков (до 08:00).",
+      "context": [
+        "📸 Обязательные фото/видео:"
+      ],
+      "docxCitationParagraphs": [
+        32,
+        35
+      ],
+      "lawIds": [
+        "fz67:article-64:clause-3",
+        "cik86:clause-3.2",
+        "cik86:clause-1.9"
+      ]
+    },
+    {
+      "taskId": "roadmap-evidence:item-02",
+      "googleHeading": "📸 ЧЕК-ЛИСТ 2. ЧТО ОБЯЗАТЕЛЬНО СФОТОГРАФИРОВАТЬ И ЗАПИСАТЬ",
+      "googleItem": 2,
+      "googleText": "Информационный стенд в помещении.",
+      "context": [
+        "📸 Обязательные фото/видео:"
+      ],
+      "docxCitationParagraphs": [
+        128
+      ],
+      "lawIds": [
+        "fz67:article-61:clause-3",
+        "fz67:article-61:clause-3.1",
+        "fz67:article-61:clause-4",
+        "fz67:article-61:clause-5",
+        "fz67:article-61:clause-6",
+        "fz67:article-61:clause-7",
+        "fz67:article-61:clause-7.1",
+        "fz67:article-61:clause-8"
+      ]
+    },
+    {
+      "taskId": "roadmap-evidence:item-03",
+      "googleHeading": "📸 ЧЕК-ЛИСТ 2. ЧТО ОБЯЗАТЕЛЬНО СФОТОГРАФИРОВАТЬ И ЗАПИСАТЬ",
+      "googleItem": 3,
+      "googleText": "УФП — пустая с утра и заполненная вечером.",
+      "context": [
+        "📸 Обязательные фото/видео:"
+      ],
+      "docxCitationParagraphs": [
+        134,
+        356
+      ],
+      "lawIds": [
+        "fz67:article-61:clause-9",
+        "fz67:article-68:clause-18"
+      ]
+    },
+    {
+      "taskId": "roadmap-evidence:item-04",
+      "googleHeading": "📸 ЧЕК-ЛИСТ 2. ЧТО ОБЯЗАТЕЛЬНО СФОТОГРАФИРОВАТЬ И ЗАПИСАТЬ",
+      "googleItem": 4,
+      "googleText": "Видео запечатывания сейф-пакетов (пт, сб в 20:00 и после надомного выезда).",
+      "context": [
+        "📸 Обязательные фото/видео:"
+      ],
+      "docxCitationParagraphs": [
+        22,
+        211,
+        230
+      ],
+      "lawIds": [
+        "fz67:article-30:clause-9:subclause-к",
+        "fz67:article-68:clause-29",
+        "cik86:clause-3.3",
+        "cik86:clause-3.5",
+        "cik86:clause-3.6",
+        "cik86:clause-3.7",
+        "cik86:annex-1",
+        "cik86:clause-3.11",
+        "cik86:annex-2"
+      ]
+    },
+    {
+      "taskId": "roadmap-evidence:item-05",
+      "googleHeading": "📸 ЧЕК-ЛИСТ 2. ЧТО ОБЯЗАТЕЛЬНО СФОТОГРАФИРОВАТЬ И ЗАПИСАТЬ",
+      "googleItem": 5,
+      "googleText": "Сейф-пакеты (номер, пломбы, подписи).",
+      "context": [
+        "📸 Обязательные фото/видео:"
+      ],
+      "docxCitationParagraphs": [
+        211,
+        230
+      ],
+      "lawIds": [
+        "cik86:clause-3.3",
+        "cik86:clause-3.5",
+        "cik86:clause-3.6",
+        "cik86:clause-3.7",
+        "cik86:annex-1",
+        "cik86:clause-3.11",
+        "cik86:annex-2"
+      ]
+    },
+    {
+      "taskId": "roadmap-evidence:item-06",
+      "googleHeading": "📸 ЧЕК-ЛИСТ 2. ЧТО ОБЯЗАТЕЛЬНО СФОТОГРАФИРОВАТЬ И ЗАПИСАТЬ",
+      "googleItem": 6,
+      "googleText": "Подписанный оригинал протокола УИК (Экземпляр №1).",
+      "context": [
+        "📸 Обязательные фото/видео:"
+      ],
+      "docxCitationParagraphs": [
+        398
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-26",
+        "fz67:article-68:clause-27",
+        "fz67:article-68:clause-28"
+      ]
+    },
+    {
+      "taskId": "roadmap-evidence:item-07",
+      "googleHeading": "📸 ЧЕК-ЛИСТ 2. ЧТО ОБЯЗАТЕЛЬНО СФОТОГРАФИРОВАТЬ И ЗАПИСАТЬ",
+      "googleItem": 7,
+      "googleText": "Опечатанный общий мешок/коробка с бюллетенями.",
+      "context": [
+        "📸 Обязательные фото/видео:"
+      ],
+      "docxCitationParagraphs": [
+        385
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-23"
+      ]
+    },
+    {
+      "taskId": "roadmap-evidence:item-08",
+      "googleHeading": "📸 ЧЕК-ЛИСТ 2. ЧТО ОБЯЗАТЕЛЬНО СФОТОГРАФИРОВАТЬ И ЗАПИСАТЬ",
+      "googleItem": 8,
+      "googleText": "Повешенная на стену заверенная копия протокола (Экземпляр №2).",
+      "context": [
+        "📸 Обязательные фото/видео:"
+      ],
+      "docxCitationParagraphs": [
+        428
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-31"
+      ]
+    },
+    {
+      "taskId": "roadmap-evidence:item-09",
+      "googleHeading": "📸 ЧЕК-ЛИСТ 2. ЧТО ОБЯЗАТЕЛЬНО СФОТОГРАФИРОВАТЬ И ЗАПИСАТЬ",
+      "googleItem": 9,
+      "googleText": "ФИО председателя, зам. председателя и секретаря.",
+      "context": [
+        "📝 Что записать:"
+      ],
+      "docxCitationParagraphs": [],
+      "lawIds": []
+    },
+    {
+      "taskId": "roadmap-evidence:item-10",
+      "googleHeading": "📸 ЧЕК-ЛИСТ 2. ЧТО ОБЯЗАТЕЛЬНО СФОТОГРАФИРОВАТЬ И ЗАПИСАТЬ",
+      "googleItem": 10,
+      "googleText": "Точное время своего прибытия на участок.",
+      "context": [
+        "📝 Что записать:"
+      ],
+      "docxCitationParagraphs": [
+        19
+      ],
+      "lawIds": [
+        "fz67:article-30:clause-3",
+        "fz67:article-30:clause-7",
+        "fz67:article-30:clause-8"
+      ]
+    },
+    {
+      "taskId": "roadmap-evidence:item-11",
+      "googleHeading": "📸 ЧЕК-ЛИСТ 2. ЧТО ОБЯЗАТЕЛЬНО СФОТОГРАФИРОВАТЬ И ЗАПИСАТЬ",
+      "googleItem": 11,
+      "googleText": "Количество стационарных и переносных ящиков.",
+      "context": [
+        "📝 Что записать:"
+      ],
+      "docxCitationParagraphs": [
+        38
+      ],
+      "lawIds": [
+        "fz67:article-66:clause-8",
+        "fz67:article-66:clause-8.1"
+      ]
+    },
+    {
+      "taskId": "roadmap-evidence:item-12",
+      "googleHeading": "📸 ЧЕК-ЛИСТ 2. ЧТО ОБЯЗАТЕЛЬНО СФОТОГРАФИРОВАТЬ И ЗАПИСАТЬ",
+      "googleItem": 12,
+      "googleText": "Данные явки на 10:00, 12:00, 15:00, 18:00.",
+      "context": [
+        "📝 Что записать:"
+      ],
+      "docxCitationParagraphs": [],
+      "lawIds": []
+    },
+    {
+      "taskId": "roadmap-evidence:item-13",
+      "googleHeading": "📸 ЧЕК-ЛИСТ 2. ЧТО ОБЯЗАТЕЛЬНО СФОТОГРАФИРОВАТЬ И ЗАПИСАТЬ",
+      "googleItem": 13,
+      "googleText": "Количество заявленников в реестре надомного голосования.",
+      "context": [
+        "📝 Что записать:"
+      ],
+      "docxCitationParagraphs": [
+        122
+      ],
+      "lawIds": [
+        "fz67:article-30:clause-9:subclause-а",
+        "fz67:article-66:clause-2",
+        "fz67:article-66:clause-3",
+        "fz67:article-66:clause-4",
+        "fz67:article-66:clause-5"
+      ]
+    },
+    {
+      "taskId": "roadmap-evidence:item-14",
+      "googleHeading": "📸 ЧЕК-ЛИСТ 2. ЧТО ОБЯЗАТЕЛЬНО СФОТОГРАФИРОВАТЬ И ЗАПИСАТЬ",
+      "googleItem": 14,
+      "googleText": "Номера всех сейф-пакетов и Актов к ним.",
+      "context": [
+        "📝 Что записать:"
+      ],
+      "docxCitationParagraphs": [
+        211,
+        230
+      ],
+      "lawIds": [
+        "cik86:clause-3.3",
+        "cik86:clause-3.5",
+        "cik86:clause-3.6",
+        "cik86:clause-3.7",
+        "cik86:annex-1",
+        "cik86:clause-3.11",
+        "cik86:annex-2"
+      ]
+    },
+    {
+      "taskId": "roadmap-evidence:item-15",
+      "googleHeading": "📸 ЧЕК-ЛИСТ 2. ЧТО ОБЯЗАТЕЛЬНО СФОТОГРАФИРОВАТЬ И ЗАПИСАТЬ",
+      "googleItem": 15,
+      "googleText": "Число рассмотренных УИК жалоб.",
+      "context": [
+        "📝 Что записать:"
+      ],
+      "docxCitationParagraphs": [
+        395
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-26"
+      ]
+    },
+    {
+      "taskId": "roadmap-evidence:item-16",
+      "googleHeading": "📸 ЧЕК-ЛИСТ 2. ЧТО ОБЯЗАТЕЛЬНО СФОТОГРАФИРОВАТЬ И ЗАПИСАТЬ",
+      "googleItem": 16,
+      "googleText": "Номер полученной копии протокола и время её выдачи.",
+      "context": [
+        "📝 Что записать:"
+      ],
+      "docxCitationParagraphs": [
+        410
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-29"
+      ]
+    },
+    {
+      "taskId": "roadmap-voting:item-01",
+      "googleHeading": "🗳️ ЧЕК-ЛИСТ 3. ГОЛОСОВАНИЕ В ПОМЕЩЕНИИ (08:00 – 20:00)",
+      "googleItem": 1,
+      "googleText": "Выдача бюллетеней строго по паспорту.",
+      "context": [],
+      "docxCitationParagraphs": [
+        141
+      ],
+      "lawIds": [
+        "fz67:article-64:clause-4",
+        "fz67:article-64:clause-5"
+      ]
+    },
+    {
+      "taskId": "roadmap-voting:item-02",
+      "googleHeading": "🗳️ ЧЕК-ЛИСТ 3. ГОЛОСОВАНИЕ В ПОМЕЩЕНИИ (08:00 – 20:00)",
+      "googleItem": 2,
+      "googleText": "Подпись в списке ставит ТОЛЬКО сам избиратель (помощник — только по устной просьбе, не член УИК/не наблюдатель, с внесением данных паспорта помощника).",
+      "context": [],
+      "docxCitationParagraphs": [
+        159,
+        162
+      ],
+      "lawIds": [
+        "fz67:article-64:clause-6",
+        "fz67:article-64:clause-8",
+        "fz67:article-64:clause-10"
+      ]
+    },
+    {
+      "taskId": "roadmap-voting:item-03",
+      "googleHeading": "🗳️ ЧЕК-ЛИСТ 3. ГОЛОСОВАНИЕ В ПОМЕЩЕНИИ (08:00 – 20:00)",
+      "googleItem": 3,
+      "googleText": "В списке НЕТ карандашных пометок или вложенных листов.",
+      "context": [],
+      "docxCitationParagraphs": [
+        107,
+        110
+      ],
+      "lawIds": [
+        "fz67:article-30:clause-9:subclause-а",
+        "fz67:article-17:clause-13"
+      ]
+    },
+    {
+      "taskId": "roadmap-voting:item-04",
+      "googleHeading": "🗳️ ЧЕК-ЛИСТ 3. ГОЛОСОВАНИЕ В ПОМЕЩЕНИИ (08:00 – 20:00)",
+      "googleItem": 4,
+      "googleText": "При ошибке: испорченный бюллетень гасится отрезанием угла, взамен выдаётся новый.",
+      "context": [],
+      "docxCitationParagraphs": [
+        168
+      ],
+      "lawIds": [
+        "fz67:article-64:clause-9"
+      ]
+    },
+    {
+      "taskId": "roadmap-voting:item-05",
+      "googleHeading": "🗳️ ЧЕК-ЛИСТ 3. ГОЛОСОВАНИЕ В ПОМЕЩЕНИИ (08:00 – 20:00)",
+      "googleItem": 5,
+      "googleText": "Голосование не по прописке — ТОЛЬКО если человек есть в списке «Мобильный избиратель».",
+      "context": [],
+      "docxCitationParagraphs": [
+        119,
+        153
+      ],
+      "lawIds": [
+        "fz67:article-64:clause-16"
+      ]
+    },
+    {
+      "taskId": "roadmap-home:item-01",
+      "googleHeading": "🚗 ЧЕК-ЛИСТ 4. НАДОМНОЕ ГОЛОСОВАНИЕ (ВЫЕЗД)",
+      "googleItem": 1,
+      "googleText": "Реестр: Все графы заполнены. Массовые списки (>30 чел.) — сигнал в штаб, +7(3452)69-64-64 (доб. 1, либо доб. 3).",
+      "context": [],
+      "docxCitationParagraphs": [
+        122
+      ],
+      "lawIds": [
+        "fz67:article-30:clause-9:subclause-а",
+        "fz67:article-66:clause-2",
+        "fz67:article-66:clause-3",
+        "fz67:article-66:clause-4",
+        "fz67:article-66:clause-5"
+      ]
+    },
+    {
+      "taskId": "roadmap-home:item-02",
+      "googleHeading": "🚗 ЧЕК-ЛИСТ 4. НАДОМНОЕ ГОЛОСОВАНИЕ (ВЫЕЗД)",
+      "googleItem": 2,
+      "googleText": "За 30 минут: Председатель объявил о выезде. Запросил выписку из реестра.",
+      "context": [],
+      "docxCitationParagraphs": [
+        181,
+        178
+      ],
+      "lawIds": [
+        "fz67:article-66:clause-6",
+        "fz67:article-30:clause-9:subclause-а"
+      ]
+    },
+    {
+      "taskId": "roadmap-home:item-03",
+      "googleHeading": "🚗 ЧЕК-ЛИСТ 4. НАДОМНОЕ ГОЛОСОВАНИЕ (ВЫЕЗД)",
+      "googleItem": 3,
+      "googleText": "Список УИК: В списке избирателей поставлена отметка «Вне помещения для голосования».",
+      "context": [],
+      "docxCitationParagraphs": [
+        193
+      ],
+      "lawIds": [
+        "fz67:article-66:clause-9"
+      ]
+    },
+    {
+      "taskId": "roadmap-home:item-04",
+      "googleHeading": "🚗 ЧЕК-ЛИСТ 4. НАДОМНОЕ ГОЛОСОВАНИЕ (ВЫЕЗД)",
+      "googleItem": 4,
+      "googleText": "Состав: Минимум 2 члена УИК (или 1 член УИК + 2 наблюдателя от разных сил).",
+      "context": [],
+      "docxCitationParagraphs": [
+        190,
+        187
+      ],
+      "lawIds": [
+        "fz67:article-66:clause-9",
+        "fz67:article-66:clause-14"
+      ]
+    },
+    {
+      "taskId": "roadmap-home:item-05",
+      "googleHeading": "🚗 ЧЕК-ЛИСТ 4. НАДОМНОЕ ГОЛОСОВАНИЕ (ВЫЕЗД)",
+      "googleItem": 5,
+      "googleText": "Бюллетени: Выданы строго по выписке + запас (+2 при 1-59 чел., +3 при 60-79 чел.).",
+      "context": [],
+      "docxCitationParagraphs": [
+        196
+      ],
+      "lawIds": [
+        "fz67:article-66:clause-9"
+      ]
+    },
+    {
+      "taskId": "roadmap-home:item-06",
+      "googleHeading": "🚗 ЧЕК-ЛИСТ 4. НАДОМНОЕ ГОЛОСОВАНИЕ (ВЫЕЗД)",
+      "googleItem": 6,
+      "googleText": "Процедура: Голосовать разрешено ТОЛЬКО людям из выписки! К «соседям» заходить нельзя.",
+      "context": [],
+      "docxCitationParagraphs": [
+        220
+      ],
+      "lawIds": [
+        "fz67:article-66:clause-17"
+      ]
+    },
+    {
+      "taskId": "roadmap-home:item-08",
+      "googleHeading": "🚗 ЧЕК-ЛИСТ 4. НАДОМНОЕ ГОЛОСОВАНИЕ (ВЫЕЗД)",
+      "googleItem": 8,
+      "googleText": "Неиспользованные бюллетени сданы под роспись.",
+      "context": [
+        "По возвращении:"
+      ],
+      "docxCitationParagraphs": [
+        223
+      ],
+      "lawIds": [
+        "fz67:article-66:clause-12",
+        "fz67:article-66:clause-9"
+      ]
+    },
+    {
+      "taskId": "roadmap-home:item-09",
+      "googleHeading": "🚗 ЧЕК-ЛИСТ 4. НАДОМНОЕ ГОЛОСОВАНИЕ (ВЫЕЗД)",
+      "googleItem": 9,
+      "googleText": "Составлен Акт о проведённом голосовании вне помещения (с обязательным указанием числа избирателей, проголосовавших по данному ящику, выданных/возвращённых бюллетеней и данных выезжавших).",
+      "context": [
+        "По возвращении:"
+      ],
+      "docxCitationParagraphs": [
+        211
+      ],
+      "lawIds": [
+        "cik86:clause-3.3",
+        "cik86:clause-3.5",
+        "cik86:clause-3.6",
+        "cik86:clause-3.7",
+        "cik86:annex-1"
+      ]
+    },
+    {
+      "taskId": "roadmap-home:item-10",
+      "googleHeading": "🚗 ЧЕК-ЛИСТ 4. НАДОМНОЕ ГОЛОСОВАНИЕ (ВЫЕЗД)",
+      "googleItem": 10,
+      "googleText": "Бюллетени перегружены в сейф-пакет (в пт/сб) С ПОДПИСЯМИ И СЪЁМКОЙ.",
+      "context": [
+        "По возвращении:"
+      ],
+      "docxCitationParagraphs": [
+        211
+      ],
+      "lawIds": [
+        "cik86:clause-3.3",
+        "cik86:clause-3.5",
+        "cik86:clause-3.6",
+        "cik86:clause-3.7",
+        "cik86:annex-1"
+      ]
+    },
+    {
+      "taskId": "roadmap-home:item-11",
+      "googleHeading": "🚗 ЧЕК-ЛИСТ 4. НАДОМНОЕ ГОЛОСОВАНИЕ (ВЫЕЗД)",
+      "googleItem": 11,
+      "googleText": "В списке избирателей проставлены отметки «проголосовал», номер ящика и подписи выезжавших.",
+      "context": [
+        "По возвращении:"
+      ],
+      "docxCitationParagraphs": [
+        214
+      ],
+      "lawIds": [
+        "fz67:article-66:clause-13",
+        "cik86:clause-1.11",
+        "cik86:clause-2.7"
+      ]
+    },
+    {
+      "taskId": "roadmap-evening:item-01",
+      "googleHeading": "🔒 ЧЕК-ЛИСТ 5. ВЕЧЕР ПЯТНИЦЫ И СУББОТЫ (СЕЙФ-ПАКЕТЫ)",
+      "googleItem": 1,
+      "googleText": "20:00: Участковые урны и переносные ящики выгружаются в сейф-пакеты БЕЗ пересчёта.",
+      "context": [],
+      "docxCitationParagraphs": [
+        230
+      ],
+      "lawIds": [
+        "cik86:clause-3.11",
+        "cik86:annex-2"
+      ]
+    },
+    {
+      "taskId": "roadmap-evening:item-03",
+      "googleHeading": "🔒 ЧЕК-ЛИСТ 5. ВЕЧЕР ПЯТНИЦЫ И СУББОТЫ (СЕЙФ-ПАКЕТЫ)",
+      "googleItem": 3,
+      "googleText": "Комиссия обязана предъявить Решение ТИК (размещается на стенде), допускающее использование нескольких ящиков до воскресенья без ежедневной выгрузки.",
+      "context": [
+        "Если бюллетени из стационарных урн НЕ достают:"
+      ],
+      "docxCitationParagraphs": [
+        35
+      ],
+      "lawIds": [
+        "fz67:article-64:clause-3",
+        "cik86:clause-3.2",
+        "cik86:clause-1.9"
+      ]
+    },
+    {
+      "taskId": "roadmap-evening:item-04",
+      "googleHeading": "🔒 ЧЕК-ЛИСТ 5. ВЕЧЕР ПЯТНИЦЫ И СУББОТЫ (СЕЙФ-ПАКЕТЫ)",
+      "googleItem": 4,
+      "googleText": "Урны опечатываются/пломбируются на ночь. Сфотографируйте пломбы и прорези урн!",
+      "context": [
+        "Если бюллетени из стационарных урн НЕ достают:"
+      ],
+      "docxCitationParagraphs": [
+        35
+      ],
+      "lawIds": [
+        "fz67:article-64:clause-3",
+        "cik86:clause-3.2",
+        "cik86:clause-1.9"
+      ]
+    },
+    {
+      "taskId": "roadmap-evening:item-05",
+      "googleHeading": "🔒 ЧЕК-ЛИСТ 5. ВЕЧЕР ПЯТНИЦЫ И СУББОТЫ (СЕЙФ-ПАКЕТЫ)",
+      "googleItem": 5,
+      "googleText": "Съёмка: Снимаю весь процесс на ВИДЕО!",
+      "context": [],
+      "docxCitationParagraphs": [
+        22
+      ],
+      "lawIds": [
+        "fz67:article-30:clause-9:subclause-к",
+        "fz67:article-68:clause-29"
+      ]
+    },
+    {
+      "taskId": "roadmap-evening:item-06",
+      "googleHeading": "🔒 ЧЕК-ЛИСТ 5. ВЕЧЕР ПЯТНИЦЫ И СУББОТЫ (СЕЙФ-ПАКЕТЫ)",
+      "googleItem": 6,
+      "googleText": "Подпись: Ставлю свою подпись на сейф-пакете.",
+      "context": [],
+      "docxCitationParagraphs": [
+        230
+      ],
+      "lawIds": [
+        "cik86:clause-3.11",
+        "cik86:annex-2"
+      ]
+    },
+    {
+      "taskId": "roadmap-evening:item-07",
+      "googleHeading": "🔒 ЧЕК-ЛИСТ 5. ВЕЧЕР ПЯТНИЦЫ И СУББОТЫ (СЕЙФ-ПАКЕТЫ)",
+      "googleItem": 7,
+      "googleText": "Фото: Фотографирую сейф-пакет, номер, индикаторную ленту и подписи.",
+      "context": [],
+      "docxCitationParagraphs": [
+        230
+      ],
+      "lawIds": [
+        "cik86:clause-3.11",
+        "cik86:annex-2"
+      ]
+    },
+    {
+      "taskId": "roadmap-evening:item-08",
+      "googleHeading": "🔒 ЧЕК-ЛИСТ 5. ВЕЧЕР ПЯТНИЦЫ И СУББОТЫ (СЕЙФ-ПАКЕТЫ)",
+      "googleItem": 8,
+      "googleText": "Акт: Составлен Акт к сейф-пакету.",
+      "context": [],
+      "docxCitationParagraphs": [
+        230
+      ],
+      "lawIds": [
+        "cik86:clause-3.11",
+        "cik86:annex-2"
+      ]
+    },
+    {
+      "taskId": "roadmap-evening:item-09",
+      "googleHeading": "🔒 ЧЕК-ЛИСТ 5. ВЕЧЕР ПЯТНИЦЫ И СУББОТЫ (СЕЙФ-ПАКЕТЫ)",
+      "googleItem": 9,
+      "googleText": "В акте указывается количество избирателей, проголосовавших по данному пакету. (Для надомников число переписывается из Акта надомного голосования; для стационарной урны — подсчитывается по книге списка избирателей).",
+      "context": [],
+      "docxCitationParagraphs": [
+        230,
+        211
+      ],
+      "lawIds": [
+        "cik86:clause-3.11",
+        "cik86:annex-2",
+        "cik86:clause-3.3",
+        "cik86:clause-3.5",
+        "cik86:clause-3.6",
+        "cik86:clause-3.7",
+        "cik86:annex-1"
+      ]
+    },
+    {
+      "taskId": "roadmap-evening:item-10",
+      "googleHeading": "🔒 ЧЕК-ЛИСТ 5. ВЕЧЕР ПЯТНИЦЫ И СУББОТЫ (СЕЙФ-ПАКЕТЫ)",
+      "googleItem": 10,
+      "googleText": "Записал номер и ПОЛУЧИЛ ЗАВЕРЕННУЮ КОПИЮ АКТА!",
+      "context": [],
+      "docxCitationParagraphs": [
+        233
+      ],
+      "lawIds": [
+        "cik86:clause-3.11"
+      ]
+    },
+    {
+      "taskId": "roadmap-evening:item-11",
+      "googleHeading": "🔒 ЧЕК-ЛИСТ 5. ВЕЧЕР ПЯТНИЦЫ И СУББОТЫ (СЕЙФ-ПАКЕТЫ)",
+      "googleItem": 11,
+      "googleText": "Сейф: Сейф-пакеты и акты убраны в спец. сейф под видеонаблюдение.",
+      "context": [],
+      "docxCitationParagraphs": [
+        236
+      ],
+      "lawIds": [
+        "cik86:clause-5.2"
+      ]
+    },
+    {
+      "taskId": "roadmap-evening:item-12",
+      "googleHeading": "🔒 ЧЕК-ЛИСТ 5. ВЕЧЕР ПЯТНИЦЫ И СУББОТЫ (СЕЙФ-ПАКЕТЫ)",
+      "googleItem": 12,
+      "googleText": "Убытие: Все присутствующие покидают помещение, помещение опечатывается и передаётся полиции. Я покидаю участок.",
+      "context": [],
+      "docxCitationParagraphs": [
+        239
+      ],
+      "lawIds": [
+        "cik86:clause-3.14",
+        "cik86:clause-3.15"
+      ]
+    },
+    {
+      "taskId": "roadmap-counting:item-01",
+      "googleHeading": "⏱️ ЧЕК-ЛИСТ 6. ПОДСЧЕТ ГОЛОСОВ В ВОСКРЕСЕНЬЕ (С 20:00)",
+      "googleItem": 1,
+      "googleText": "Подсчёт голосов начинается сразу после закрытия участка и выполняется БЕЗ ПЕРЕРЫВОВ.",
+      "context": [
+        "⚠️ НЕ ВЫХОДИТЬ ИЗ ЗДАНИЯ ПОСЛЕ 19:30! ПОДСЧЁТ СТРОГО ПОСЛЕДОВАТЕЛЬНЫЙ!",
+        "Главное правило: Каждое подсчитанное число оглашается председателем вслух и СРАЗУ ЖЕ заносится в УФП на стене! "
+      ],
+      "docxCitationParagraphs": [
+        246
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-2"
+      ]
+    },
+    {
+      "taskId": "roadmap-counting:item-02",
+      "googleHeading": "⏱️ ЧЕК-ЛИСТ 6. ПОДСЧЕТ ГОЛОСОВ В ВОСКРЕСЕНЬЕ (С 20:00)",
+      "googleItem": 2,
+      "googleText": "Шаг 1. Гашение бюллетеней: Считают неиспользованные, оглашают число, отрезают левый нижний угол. Формула: Полученные бюллетени - Подсчитанная явка = Гашеное кол-во.",
+      "context": [],
+      "docxCitationParagraphs": [
+        255
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-4"
+      ]
+    },
+    {
+      "taskId": "roadmap-counting:item-03",
+      "googleHeading": "⏱️ ЧЕК-ЛИСТ 6. ПОДСЧЕТ ГОЛОСОВ В ВОСКРЕСЕНЬЕ (С 20:00)",
+      "googleItem": 3,
+      "googleText": "Шаг 2. Списки избирателей: Считают подписи, подписывают страницы, оглашают цифры, брошюруют том, убирают в сейф.",
+      "context": [],
+      "docxCitationParagraphs": [
+        262,
+        265,
+        286
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-5",
+        "fz67:article-68:clause-6",
+        "fz67:article-68:clause-7"
+      ]
+    },
+    {
+      "taskId": "roadmap-counting:item-05",
+      "googleHeading": "⏱️ ЧЕК-ЛИСТ 6. ПОДСЧЕТ ГОЛОСОВ В ВОСКРЕСЕНЬЕ (С 20:00)",
+      "googleItem": 5,
+      "googleText": "Проверка целостности и сверка номеров пакетов с Актами! (При повреждении — недействительны по акту!)",
+      "context": [
+        "Шаг 3. Вскрытие сейф-пакетов и ящиков:"
+      ],
+      "docxCitationParagraphs": [
+        302
+      ],
+      "lawIds": [
+        "cik86:clause-4.4"
+      ]
+    },
+    {
+      "taskId": "roadmap-counting:item-06",
+      "googleHeading": "⏱️ ЧЕК-ЛИСТ 6. ПОДСЧЕТ ГОЛОСОВ В ВОСКРЕСЕНЬЕ (С 20:00)",
+      "googleItem": 6,
+      "googleText": "Вскрывают: 1) Надомные ящики/пакеты, 2) Сейф-пакеты за пт/сб",
+      "context": [
+        "Шаг 3. Вскрытие сейф-пакетов и ящиков:"
+      ],
+      "docxCitationParagraphs": [
+        296,
+        299,
+        320
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-12",
+        "cik86:clause-4.2",
+        "cik86:clause-4.3",
+        "cik86:clause-4.4",
+        "cik86:clause-4.10"
+      ]
+    },
+    {
+      "taskId": "roadmap-counting:item-07",
+      "googleHeading": "⏱️ ЧЕК-ЛИСТ 6. ПОДСЧЕТ ГОЛОСОВ В ВОСКРЕСЕНЬЕ (С 20:00)",
+      "googleItem": 7,
+      "googleText": "Бюллетени пересчитываются, данные заносятся в Акты и строку 7 протокола.",
+      "context": [
+        "Шаг 3. Вскрытие сейф-пакетов и ящиков:"
+      ],
+      "docxCitationParagraphs": [
+        296,
+        299
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-12",
+        "cik86:clause-4.2",
+        "cik86:clause-4.3",
+        "cik86:clause-4.4"
+      ]
+    },
+    {
+      "taskId": "roadmap-counting:item-08",
+      "googleHeading": "⏱️ ЧЕК-ЛИСТ 6. ПОДСЧЕТ ГОЛОСОВ В ВОСКРЕСЕНЬЕ (С 20:00)",
+      "googleItem": 8,
+      "googleText": "Фактическое число бюллетеней из ящика/сейф-пакета сверяется с числом в Акте (Выписке).",
+      "context": [
+        "Шаг 3. Вскрытие сейф-пакетов и ящиков:",
+        "ПРОЦЕДУРА СВЕРКИ КОЛИЧЕСТВА:"
+      ],
+      "docxCitationParagraphs": [
+        305
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-12"
+      ]
+    },
+    {
+      "taskId": "roadmap-counting:item-09",
+      "googleHeading": "⏱️ ЧЕК-ЛИСТ 6. ПОДСЧЕТ ГОЛОСОВ В ВОСКРЕСЕНЬЕ (С 20:00)",
+      "googleItem": 9,
+      "googleText": "Если бюллетеней ОКАЗАЛОСЬ БОЛЬШЕ, чем в Акте/заявлениях —  Проводится повторная сверка по первичным документам (заявлениям надомников / списку избирателей).",
+      "context": [
+        "Шаг 3. Вскрытие сейф-пакетов и ящиков:",
+        "ПРОЦЕДУРА СВЕРКИ КОЛИЧЕСТВА:"
+      ],
+      "docxCitationParagraphs": [
+        308
+      ],
+      "lawIds": [
+        "cik86:clause-4.5"
+      ]
+    },
+    {
+      "taskId": "roadmap-counting:item-10",
+      "googleHeading": "⏱️ ЧЕК-ЛИСТ 6. ПОДСЧЕТ ГОЛОСОВ В ВОСКРЕСЕНЬЕ (С 20:00)",
+      "googleItem": 10,
+      "googleText": "Если расхождение подтвердилось, ВСЕ бюллетени данного вида в этом сейф-пакете/переносном ящике ПРИЗНАЮТСЯ НЕДЕЙСТВИТЕЛЬНЫМИ! На лицевой стороне каждого бюллетеня ставится запись об этом, подписи 2 членов УИК, печать и составляется акт.",
+      "context": [
+        "Шаг 3. Вскрытие сейф-пакетов и ящиков:",
+        "ПРОЦЕДУРА СВЕРКИ КОЛИЧЕСТВА:"
+      ],
+      "docxCitationParagraphs": [
+        311
+      ],
+      "lawIds": [
+        "cik86:clause-4.6"
+      ]
+    },
+    {
+      "taskId": "roadmap-counting:item-12",
+      "googleHeading": "⏱️ ЧЕК-ЛИСТ 6. ПОДСЧЕТ ГОЛОСОВ В ВОСКРЕСЕНЬЕ (С 20:00)",
+      "googleItem": 12,
+      "googleText": "Проводится строго после завершения подсчёта всех переносных ящиков и сейф-пакетов!",
+      "context": [
+        "Шаг 4. Вскрытие стационарных урн воскресенья:"
+      ],
+      "docxCitationParagraphs": [
+        332
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-13"
+      ]
+    },
+    {
+      "taskId": "roadmap-counting:item-13",
+      "googleHeading": "⏱️ ЧЕК-ЛИСТ 6. ПОДСЧЕТ ГОЛОСОВ В ВОСКРЕСЕНЬЕ (С 20:00)",
+      "googleItem": 13,
+      "googleText": "Проверяется целостность пломб, стационарные урны вскрываются, бюллетени смешиваются с бюллетенями из сейф-пакетов/переносных ящиков.",
+      "context": [
+        "Шаг 4. Вскрытие стационарных урн воскресенья:"
+      ],
+      "docxCitationParagraphs": [
+        332,
+        335
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-13",
+        "fz67:article-68:clause-14"
+      ]
+    },
+    {
+      "taskId": "roadmap-counting:item-15",
+      "googleHeading": "⏱️ ЧЕК-ЛИСТ 6. ПОДСЧЕТ ГОЛОСОВ В ВОСКРЕСЕНЬЕ (С 20:00)",
+      "googleItem": 15,
+      "googleText": "Сортировка с ОГЛАШЕНИЕМ каждой отметки вслух! Оглашается одна бюллетень за раз!",
+      "context": [
+        "Шаг 5. Сортировка и подсчёт:"
+      ],
+      "docxCitationParagraphs": [
+        338
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-14"
+      ]
+    },
+    {
+      "taskId": "roadmap-counting:item-16",
+      "googleHeading": "⏱️ ЧЕК-ЛИСТ 6. ПОДСЧЕТ ГОЛОСОВ В ВОСКРЕСЕНЬЕ (С 20:00)",
+      "googleItem": 16,
+      "googleText": "Подсчет за каждого кандидата — ПЕРЕКЛАДЫВАНИЕМ ПО ОДНОМУ!",
+      "context": [
+        "Шаг 5. Сортировка и подсчёт:"
+      ],
+      "docxCitationParagraphs": [
+        353
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-18"
+      ]
+    },
+    {
+      "taskId": "roadmap-counting:item-17",
+      "googleHeading": "⏱️ ЧЕК-ЛИСТ 6. ПОДСЧЕТ ГОЛОСОВ В ВОСКРЕСЕНЬЕ (С 20:00)",
+      "googleItem": 17,
+      "googleText": "Перекладывают не более одной стопки одновременно (параллельный подсчет разных пачек запрещен)!",
+      "context": [
+        "Шаг 5. Сортировка и подсчёт:"
+      ],
+      "docxCitationParagraphs": [
+        356
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-18"
+      ]
+    },
+    {
+      "taskId": "roadmap-counting:item-18",
+      "googleHeading": "⏱️ ЧЕК-ЛИСТ 6. ПОДСЧЕТ ГОЛОСОВ В ВОСКРЕСЕНЬЕ (С 20:00)",
+      "googleItem": 18,
+      "googleText": "Мне ВИДНЫ все отметки! (Трогать запрещено, но смотреть обязаны дать!)",
+      "context": [
+        "Шаг 5. Сортировка и подсчёт:"
+      ],
+      "docxCitationParagraphs": [
+        353,
+        365
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-18",
+        "fz67:article-68:clause-21"
+      ]
+    },
+    {
+      "taskId": "roadmap-counting:item-19",
+      "googleHeading": "⏱️ ЧЕК-ЛИСТ 6. ПОДСЧЕТ ГОЛОСОВ В ВОСКРЕСЕНЬЕ (С 20:00)",
+      "googleItem": 19,
+      "googleText": "Повторный пересчёт: Любая стопка, вызывающая сомнение у наблюдателя, может быть пересчитана повторно!",
+      "context": [
+        "Шаг 5. Сортировка и подсчёт:"
+      ],
+      "docxCitationParagraphs": [
+        365
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-21"
+      ]
+    },
+    {
+      "taskId": "roadmap-counting:item-20",
+      "googleHeading": "⏱️ ЧЕК-ЛИСТ 6. ПОДСЧЕТ ГОЛОСОВ В ВОСКРЕСЕНЬЕ (С 20:00)",
+      "googleItem": 20,
+      "googleText": "Шаг 6. Контрольные соотношения: Сверка всех формул протокола.",
+      "context": [],
+      "docxCitationParagraphs": [
+        370
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-22"
+      ]
+    },
+    {
+      "taskId": "roadmap-counting:item-21",
+      "googleHeading": "⏱️ ЧЕК-ЛИСТ 6. ПОДСЧЕТ ГОЛОСОВ В ВОСКРЕСЕНЬЕ (С 20:00)",
+      "googleItem": 21,
+      "googleText": "Шаг 7. Упаковка: Бюллетени упакованы в пачки и общий мешок, я поставил подпись на мешке.",
+      "context": [],
+      "docxCitationParagraphs": [
+        382,
+        385
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-23"
+      ]
+    },
+    {
+      "taskId": "roadmap-protocol:item-01",
+      "googleHeading": "📄 ЧЕК-ЛИСТ 7. ИТОГОВОЕ ЗАСЕДАНИЕ И ПРОВЕРКА КОПИИ ПРОТОКОЛА",
+      "googleItem": 1,
+      "googleText": "Заседание УИК проведено, жалобы рассмотрены.",
+      "context": [],
+      "docxCitationParagraphs": [
+        392,
+        395
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-26",
+        "fz67:article-28:clause-13"
+      ]
+    },
+    {
+      "taskId": "roadmap-protocol:item-02",
+      "googleHeading": "📄 ЧЕК-ЛИСТ 7. ИТОГОВОЕ ЗАСЕДАНИЕ И ПРОВЕРКА КОПИИ ПРОТОКОЛА",
+      "googleItem": 2,
+      "googleText": "Подписан Экземпляр №1 протокола. Сфотографировал протокол и УФП!",
+      "context": [],
+      "docxCitationParagraphs": [
+        398
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-26",
+        "fz67:article-68:clause-27",
+        "fz67:article-68:clause-28"
+      ]
+    },
+    {
+      "taskId": "roadmap-protocol:item-03",
+      "googleHeading": "📄 ЧЕК-ЛИСТ 7. ИТОГОВОЕ ЗАСЕДАНИЕ И ПРОВЕРКА КОПИИ ПРОТОКОЛА",
+      "googleItem": 3,
+      "googleText": "ПОЛУЧИЛ КОПИЮ ПРОТОКОЛА ДО ОТПРАВКИ ОРИГИНАЛА В ТИК!",
+      "context": [],
+      "docxCitationParagraphs": [
+        416
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-29",
+        "fz67:article-68:clause-30"
+      ]
+    },
+    {
+      "taskId": "roadmap-protocol:item-04",
+      "googleHeading": "📄 ЧЕК-ЛИСТ 7. ИТОГОВОЕ ЗАСЕДАНИЕ И ПРОВЕРКА КОПИИ ПРОТОКОЛА",
+      "googleItem": 4,
+      "googleText": "Расписался в реестре выдачи копий (указал время и телефон).",
+      "context": [],
+      "docxCitationParagraphs": [
+        410
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-29"
+      ]
+    },
+    {
+      "taskId": "roadmap-protocol:item-05",
+      "googleHeading": "📄 ЧЕК-ЛИСТ 7. ИТОГОВОЕ ЗАСЕДАНИЕ И ПРОВЕРКА КОПИИ ПРОТОКОЛА",
+      "googleItem": 5,
+      "googleText": "Сопровождение в ТИК: Наблюдатель имеет право присутствовать при передаче протокола в ТИК и вводе данных в ГАС «Выборы»!",
+      "context": [],
+      "docxCitationParagraphs": [
+        437
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-30",
+        "fz67:article-69:clause-1",
+        "fz67:article-69:clause-2"
+      ]
+    },
+    {
+      "taskId": "roadmap-protocol:item-06",
+      "googleHeading": "📄 ЧЕК-ЛИСТ 7. ИТОГОВОЕ ЗАСЕДАНИЕ И ПРОВЕРКА КОПИИ ПРОТОКОЛА",
+      "googleItem": 6,
+      "googleText": "На самом ОРИГИНАЛЕ и на КОПИИ стоят дата и точное ВРЕМЯ подписания/заверения (внимание после 00:00 дата 21.09.2026).",
+      "context": [
+        "🔍 ЭКСТРЕННАЯ ПРОВЕРКА КОПИИ ПРОТОКОЛА:"
+      ],
+      "docxCitationParagraphs": [
+        401,
+        413
+      ],
+      "lawIds": [
+        "fz67:article-67:clause-2",
+        "fz67:article-67:clause-3",
+        "fz67:article-68:clause-26",
+        "fz67:article-68:clause-27",
+        "fz67:article-30:clause-12",
+        "fz67:article-68:clause-29"
+      ]
+    },
+    {
+      "taskId": "roadmap-protocol:item-07",
+      "googleHeading": "📄 ЧЕК-ЛИСТ 7. ИТОГОВОЕ ЗАСЕДАНИЕ И ПРОВЕРКА КОПИИ ПРОТОКОЛА",
+      "googleItem": 7,
+      "googleText": "Вверху написано: «Копия №...».",
+      "context": [
+        "🔍 ЭКСТРЕННАЯ ПРОВЕРКА КОПИИ ПРОТОКОЛА:"
+      ],
+      "docxCitationParagraphs": [
+        410,
+        413
+      ],
+      "lawIds": [
+        "fz67:article-68:clause-29",
+        "fz67:article-30:clause-12"
+      ]
+    },
+    {
+      "taskId": "roadmap-protocol:item-09",
+      "googleHeading": "📄 ЧЕК-ЛИСТ 7. ИТОГОВОЕ ЗАСЕДАНИЕ И ПРОВЕРКА КОПИИ ПРОТОКОЛА",
+      "googleItem": 9,
+      "googleText": "Слова «Копия верна» или «Верно».",
+      "context": [
+        "🔍 ЭКСТРЕННАЯ ПРОВЕРКА КОПИИ ПРОТОКОЛА:",
+        "На КАЖДОМ листе есть заверительная надпись:"
+      ],
+      "docxCitationParagraphs": [
+        413
+      ],
+      "lawIds": [
+        "fz67:article-30:clause-12",
+        "fz67:article-68:clause-29"
+      ]
+    },
+    {
+      "taskId": "roadmap-protocol:item-10",
+      "googleHeading": "📄 ЧЕК-ЛИСТ 7. ИТОГОВОЕ ЗАСЕДАНИЕ И ПРОВЕРКА КОПИИ ПРОТОКОЛА",
+      "googleItem": 10,
+      "googleText": "Должность (председатель / зам. / секретарь).",
+      "context": [
+        "🔍 ЭКСТРЕННАЯ ПРОВЕРКА КОПИИ ПРОТОКОЛА:",
+        "На КАЖДОМ листе есть заверительная надпись:"
+      ],
+      "docxCitationParagraphs": [
+        413
+      ],
+      "lawIds": [
+        "fz67:article-30:clause-12",
+        "fz67:article-68:clause-29"
+      ]
+    },
+    {
+      "taskId": "roadmap-protocol:item-11",
+      "googleHeading": "📄 ЧЕК-ЛИСТ 7. ИТОГОВОЕ ЗАСЕДАНИЕ И ПРОВЕРКА КОПИИ ПРОТОКОЛА",
+      "googleItem": 11,
+      "googleText": "Личная подпись и расшифровка (ФИО).",
+      "context": [
+        "🔍 ЭКСТРЕННАЯ ПРОВЕРКА КОПИИ ПРОТОКОЛА:",
+        "На КАЖДОМ листе есть заверительная надпись:"
+      ],
+      "docxCitationParagraphs": [
+        413
+      ],
+      "lawIds": [
+        "fz67:article-30:clause-12",
+        "fz67:article-68:clause-29"
+      ]
+    },
+    {
+      "taskId": "roadmap-protocol:item-12",
+      "googleHeading": "📄 ЧЕК-ЛИСТ 7. ИТОГОВОЕ ЗАСЕДАНИЕ И ПРОВЕРКА КОПИИ ПРОТОКОЛА",
+      "googleItem": 12,
+      "googleText": "Дата и точное ВРЕМЯ заверения.",
+      "context": [
+        "🔍 ЭКСТРЕННАЯ ПРОВЕРКА КОПИИ ПРОТОКОЛА:",
+        "На КАЖДОМ листе есть заверительная надпись:"
+      ],
+      "docxCitationParagraphs": [
+        413
+      ],
+      "lawIds": [
+        "fz67:article-30:clause-12",
+        "fz67:article-68:clause-29"
+      ]
+    },
+    {
+      "taskId": "roadmap-protocol:item-13",
+      "googleHeading": "📄 ЧЕК-ЛИСТ 7. ИТОГОВОЕ ЗАСЕДАНИЕ И ПРОВЕРКА КОПИИ ПРОТОКОЛА",
+      "googleItem": 13,
+      "googleText": "Печать УИК (четкая, не закрывает цифры).",
+      "context": [
+        "🔍 ЭКСТРЕННАЯ ПРОВЕРКА КОПИИ ПРОТОКОЛА:",
+        "На КАЖДОМ листе есть заверительная надпись:"
+      ],
+      "docxCitationParagraphs": [
+        413
+      ],
+      "lawIds": [
+        "fz67:article-30:clause-12",
+        "fz67:article-68:clause-29"
+      ]
+    },
+    {
+      "taskId": "roadmap-protocol:item-14",
+      "googleHeading": "📄 ЧЕК-ЛИСТ 7. ИТОГОВОЕ ЗАСЕДАНИЕ И ПРОВЕРКА КОПИИ ПРОТОКОЛА",
+      "googleItem": 14,
+      "googleText": "Все цифры полностью совпадают с оригиналом №1 и с УФП!",
+      "context": [
+        "🔍 ЭКСТРЕННАЯ ПРОВЕРКА КОПИИ ПРОТОКОЛА:"
+      ],
+      "docxCitationParagraphs": [
+        401,
+        413
+      ],
+      "lawIds": [
+        "fz67:article-67:clause-2",
+        "fz67:article-67:clause-3",
+        "fz67:article-68:clause-26",
+        "fz67:article-68:clause-27",
+        "fz67:article-30:clause-12",
+        "fz67:article-68:clause-29"
+      ]
+    },
+    {
+      "taskId": "roadmap-protocol:item-15",
+      "googleHeading": "📄 ЧЕК-ЛИСТ 7. ИТОГОВОЕ ЗАСЕДАНИЕ И ПРОВЕРКА КОПИИ ПРОТОКОЛА",
+      "googleItem": 15,
+      "googleText": "Сверка в ГАС «Выборы»: Позже сверить данные со своей копии с официальными результатами на сайте избиркома http://www.tyumen.izbirkom.ru/izbirkom_pages/",
+      "context": [
+        "🔍 ЭКСТРЕННАЯ ПРОВЕРКА КОПИИ ПРОТОКОЛА:"
+      ],
+      "docxCitationParagraphs": [],
+      "lawIds": []
+    },
+    {
+      "taskId": "roadmap-protocol:item-16",
+      "googleHeading": "📄 ЧЕК-ЛИСТ 7. ИТОГОВОЕ ЗАСЕДАНИЕ И ПРОВЕРКА КОПИИ ПРОТОКОЛА",
+      "googleItem": 16,
+      "googleText": "Привезти копии Протоколов по адресу ул. Комсомольская, д. 56к1 сразу либо на следующий день.",
+      "context": [
+        "🔍 ЭКСТРЕННАЯ ПРОВЕРКА КОПИИ ПРОТОКОЛА:"
+      ],
+      "docxCitationParagraphs": [],
+      "lawIds": []
+    },
+    {
+      "taskId": "roadmap-violations:item-01",
+      "googleHeading": "🚨 МИНИ-ПАМЯТКА: ЧТО ДЕЛАТЬ ПРИ НАРУШЕНИИ",
+      "googleItem": 1,
+      "googleText": "Скажи устно: Укажи председателю на нарушение и норму закона.",
+      "context": [],
+      "docxCitationParagraphs": [
+        488
+      ],
+      "lawIds": [
+        "fz67:article-30:clause-9",
+        "fz67:article-30:clause-10"
+      ]
+    },
+    {
+      "taskId": "roadmap-violations:item-02",
+      "googleHeading": "🚨 МИНИ-ПАМЯТКА: ЧТО ДЕЛАТЬ ПРИ НАРУШЕНИИ",
+      "googleItem": 2,
+      "googleText": "Нет реакции? Напиши: Пиши Жалобу в 2 экземплярах (ссылка на п. 4 ст. 20 ФЗ № 67-ФЗ).",
+      "context": [],
+      "docxCitationParagraphs": [
+        474
+      ],
+      "lawIds": [
+        "fz67:article-20:clause-4"
+      ]
+    },
+    {
+      "taskId": "roadmap-violations:item-03",
+      "googleHeading": "🚨 МИНИ-ПАМЯТКА: ЧТО ДЕЛАТЬ ПРИ НАРУШЕНИИ",
+      "googleItem": 3,
+      "googleText": "Отметка: Потребуй на своем экземпляре поставить отметку о принятии (ФИО, должность, подпись, дата, время).",
+      "context": [],
+      "docxCitationParagraphs": [],
+      "lawIds": []
+    },
+    {
+      "taskId": "roadmap-violations:item-04",
+      "googleHeading": "🚨 МИНИ-ПАМЯТКА: ЧТО ДЕЛАТЬ ПРИ НАРУШЕНИИ",
+      "googleItem": 4,
+      "googleText": "Отказ принять? Звони в штаб и подавай жалобу в вышестоящую ТИК/ИКС РФ.",
+      "context": [],
+      "docxCitationParagraphs": [],
+      "lawIds": []
+    }
+  ],
+  "withoutDirectLegalCitation": [
+    "roadmap-evidence:item-09",
+    "roadmap-evidence:item-12",
+    "roadmap-protocol:item-15",
+    "roadmap-protocol:item-16",
+    "roadmap-violations:item-03",
+    "roadmap-violations:item-04"
+  ]
+}

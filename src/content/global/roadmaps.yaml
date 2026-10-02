@@ -1,0 +1,28 @@
+observer-multiday-route:
+  id: observer-multiday-route
+  steps:
+    - id: morning
+      blockId: roadmap-morning
+      days: each
+    - id: voting
+      blockId: roadmap-voting
+      days: each
+    - id: evening
+      blockId: roadmap-evening
+      days: except-last
+    - id: counting
+      blockId: roadmap-counting
+      days: last
+    - id: protocol
+      blockId: roadmap-protocol
+      days: last
+  anytime:
+    - id: evidence
+      blockId: roadmap-evidence
+      repeatable: false
+    - id: home
+      blockId: roadmap-home
+      repeatable: true
+    - id: violations
+      blockId: roadmap-violations
+      repeatable: false

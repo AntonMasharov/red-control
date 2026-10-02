@@ -1,0 +1,529 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Observer storage v4",
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": 4
+    },
+    "catalogRevision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observer": {
+      "type": "object",
+      "properties": {
+        "contextSelected": {
+          "type": "boolean"
+        },
+        "adminCatalogVersion": {
+          "const": 1
+        },
+        "previousCatalogSnapshot": {
+          "type": "string"
+        },
+        "legacyBackup": {
+          "type": "string"
+        },
+        "electionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "precinctId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "day": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "profile": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "members": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "members"
+          ],
+          "additionalProperties": false
+        },
+        "checks": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "boolean"
+          }
+        },
+        "notes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "counter": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "electionId": {
+                "type": "string"
+              },
+              "precinctId": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "at": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string"
+              },
+              "delta": {
+                "type": "integer"
+              },
+              "kind": {
+                "enum": [
+                  "increment",
+                  "correction",
+                  "undo"
+                ]
+              },
+              "note": {
+                "type": "string"
+              },
+              "undoOf": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "at",
+              "date",
+              "delta",
+              "kind",
+              "note"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "reconciliations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "electionId": {
+                "type": "string"
+              },
+              "precinctId": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "at": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string"
+              },
+              "slot": {
+                "type": "string"
+              },
+              "observer": {
+                "type": "integer"
+              },
+              "commission": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "id",
+              "at",
+              "date",
+              "slot",
+              "observer",
+              "commission"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "complaints": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "electionId": {
+                "type": "string"
+              },
+              "precinctId": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "at": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "circumstances": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "at",
+              "category",
+              "circumstances",
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "trips": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "electionId": {
+                "type": "string"
+              },
+              "precinctId": {
+                "type": "string"
+              },
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "date": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "stageId": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "electionId",
+              "precinctId",
+              "id",
+              "date",
+              "title"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "noteCopies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "targetKey": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              },
+              "copiedFrom": {
+                "type": "string"
+              },
+              "at": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "targetKey",
+              "text",
+              "at"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "noteTemplates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "title": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "lawTexts": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "materials": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "title": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "uri": {
+                "type": "string"
+              },
+              "purpose": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "name",
+              "mime",
+              "uri"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "outbox": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "at": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "payload": {}
+            },
+            "required": [
+              "id",
+              "at",
+              "type",
+              "payload"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "complaintComposers": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "selected": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "uniqueItems": true
+              },
+              "facts": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "recipient": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              },
+              "variables": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "selected",
+              "facts",
+              "name",
+              "recipient",
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "electionId",
+        "precinctId",
+        "day",
+        "profile",
+        "checks",
+        "notes",
+        "counter",
+        "reconciliations",
+        "complaints",
+        "trips",
+        "noteCopies",
+        "noteTemplates",
+        "lawTexts",
+        "materials",
+        "outbox"
+      ],
+      "additionalProperties": false
+    },
+    "contexts": {
+      "type": "object",
+      "properties": {
+        "elections": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "title": {
+                "type": "string"
+              },
+              "dates": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "roadmapConfigId": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "dates",
+              "roadmapConfigId"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "precincts": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "headquarters": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "title": {
+                "type": "string"
+              },
+              "contactIds": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "contactIds"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "contactById": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "role": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "role",
+              "name",
+              "phone"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "elections",
+        "precincts",
+        "headquarters",
+        "contactById"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "version",
+    "catalogRevision",
+    "observer",
+    "contexts"
+  ],
+  "additionalProperties": false
+}

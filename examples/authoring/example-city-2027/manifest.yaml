@@ -1,0 +1,17 @@
+schemaVersion: 1
+election:
+  id: example-city-2027
+  title: Example city election 2027 — replace with real data
+  dates:
+    - 2027-09-12
+  roadmapConfigId: example-city-2027:route
+  status: training
+  infoId: example-city-2027:info
+  topicIds:
+    - example-city-2027:observer-introduction
+  documentIds: []
+info:
+  id: example-city-2027:info
+  title: Election information
+  markdown: Fictional authoring example. Replace the date, region, commissions and legal content before using it for real work.
+commissionsFile: commissions.yaml

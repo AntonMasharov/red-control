@@ -1,0 +1,13 @@
+example-city-2027:example-law:
+  id: example-city-2027:example-law
+  title: EXAMPLE LEGAL REFERENCE — replace
+  status: placeholder
+  text: Replace with the verified legal excerpt. Authoring placeholder text, not a legal statement.
+  source: Replace with document name and edition
+  sourceIds:
+    - example-city-2027:example-original
+  references:
+    - sourceId: example-city-2027:example-original
+      label: Original document
+      locator: Replace with exact article and paragraph
+

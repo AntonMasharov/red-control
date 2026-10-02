@@ -1,0 +1,1013 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Offline election catalog",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "campaigns": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/campaign"
+      }
+    },
+    "sources": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/source"
+      }
+    },
+    "laws": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/law"
+      }
+    },
+    "topics": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/topic"
+      }
+    },
+    "tasks": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/task"
+      }
+    },
+    "blocks": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/block"
+      }
+    },
+    "roadmaps": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/roadmap"
+      }
+    },
+    "documents": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/document"
+      }
+    },
+    "headquarters": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/hq"
+      }
+    },
+    "contacts": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/contact"
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "revision",
+    "campaigns",
+    "sources",
+    "laws",
+    "topics",
+    "tasks",
+    "blocks",
+    "roadmaps",
+    "documents",
+    "headquarters",
+    "contacts"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "source": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "purpose": {
+          "enum": [
+            "raw-law",
+            "template",
+            "filled-example",
+            "photo-example",
+            "procedure-video",
+            "unclassified"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mime": {
+          "type": "string",
+          "minLength": 1
+        },
+        "file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "assetKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "purpose",
+        "name",
+        "mime",
+        "assetKey"
+      ],
+      "additionalProperties": false
+    },
+    "law": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "sourceId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "locator": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "sourceId",
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "status",
+        "text",
+        "source",
+        "sourceIds",
+        "references"
+      ],
+      "additionalProperties": false
+    },
+    "topic": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string",
+          "minLength": 1
+        },
+        "minutes": {
+          "type": "number",
+          "minimum": 0
+        },
+        "videoId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "markdown": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "lawIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "sourceId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "locator": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "sourceId",
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "media": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "enum": [
+                  "image",
+                  "video",
+                  "document"
+                ]
+              },
+              "sourceId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "alt": {
+                "type": "string",
+                "minLength": 1
+              },
+              "url": {
+                "type": "string",
+                "minLength": 1
+              },
+              "embedId": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "kind",
+              "sourceId",
+              "alt"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description",
+        "icon",
+        "minutes",
+        "markdown",
+        "sourceIds",
+        "lawIds",
+        "references",
+        "media"
+      ],
+      "additionalProperties": false
+    },
+    "task": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lawIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "media": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "enum": [
+                  "image",
+                  "video",
+                  "document"
+                ]
+              },
+              "sourceId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "alt": {
+                "type": "string",
+                "minLength": 1
+              },
+              "url": {
+                "type": "string",
+                "minLength": 1
+              },
+              "embedId": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "kind",
+              "sourceId",
+              "alt"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "id",
+        "text",
+        "lawIds",
+        "sourceIds",
+        "media"
+      ],
+      "additionalProperties": false
+    },
+    "block": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "time": {
+          "type": "string"
+        },
+        "sourceHeading": {
+          "type": "string"
+        },
+        "taskIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "time",
+        "sourceHeading",
+        "taskIds"
+      ],
+      "additionalProperties": false
+    },
+    "roadmap": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "blockId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "days": {
+                "enum": [
+                  "each",
+                  "first",
+                  "middle",
+                  "last",
+                  "except-last",
+                  "last-after-first"
+                ]
+              },
+              "repeatable": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "blockId",
+              "days"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "anytime": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "blockId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "repeatable": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "blockId",
+              "repeatable"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "id",
+        "steps",
+        "anytime"
+      ],
+      "additionalProperties": false
+    },
+    "document": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "sourceId"
+      ],
+      "additionalProperties": false
+    },
+    "hq": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contactIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "contactIds"
+      ],
+      "additionalProperties": false
+    },
+    "contact": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "role": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "role",
+        "name",
+        "phone"
+      ],
+      "additionalProperties": false
+    },
+    "commission": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "IKSRF",
+            "OIK",
+            "TIK",
+            "UIK"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "parentId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "number": {
+          "type": "string",
+          "minLength": 1
+        },
+        "region": {
+          "type": "string",
+          "minLength": 1
+        },
+        "address": {
+          "type": "string",
+          "minLength": 1
+        },
+        "members": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "role": {
+                "type": "string",
+                "minLength": 1
+              },
+              "name": {
+                "type": "string"
+              },
+              "party": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "role",
+              "name",
+              "party"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "electionId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hqId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "demo": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "title",
+        "parentId"
+      ],
+      "additionalProperties": false,
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "UIK"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "number",
+          "region",
+          "address",
+          "members",
+          "electionId",
+          "hqId"
+        ]
+      }
+    },
+    "campaign": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "election": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "dates": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              "uniqueItems": true,
+              "minItems": 1,
+              "maxItems": 31
+            },
+            "roadmapConfigId": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "enum": [
+                "draft",
+                "active",
+                "archived",
+                "training"
+              ]
+            },
+            "infoId": {
+              "type": "string",
+              "minLength": 1
+            },
+            "topicIds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "lawIds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "sourceIds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "documentIds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "dates",
+            "roadmapConfigId",
+            "status",
+            "infoId",
+            "topicIds",
+            "lawIds",
+            "sourceIds",
+            "documentIds"
+          ],
+          "additionalProperties": false
+        },
+        "info": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "markdown": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "markdown"
+          ],
+          "additionalProperties": false
+        },
+        "commissions": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/commission"
+          }
+        },
+        "complaints": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "header_template": {
+                "type": "string"
+              },
+              "footer_template": {
+                "type": "string"
+              },
+              "checkbox_items": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "label": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "inserted_text": {
+                      "type": "string"
+                    },
+                    "law_references": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "label",
+                    "description",
+                    "inserted_text",
+                    "law_references"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "category",
+              "header_template",
+              "footer_template",
+              "checkbox_items"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "election",
+        "info",
+        "commissions"
+      ],
+      "additionalProperties": false
+    },
+    "campaignFile": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "election": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "dates": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              "uniqueItems": true,
+              "minItems": 1,
+              "maxItems": 31
+            },
+            "roadmapConfigId": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "enum": [
+                "draft",
+                "active",
+                "archived",
+                "training"
+              ]
+            },
+            "infoId": {
+              "type": "string",
+              "minLength": 1
+            },
+            "topicIds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "lawIds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "sourceIds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "documentIds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "dates",
+            "roadmapConfigId",
+            "status",
+            "infoId",
+            "topicIds",
+            "lawIds",
+            "sourceIds",
+            "documentIds"
+          ],
+          "additionalProperties": false
+        },
+        "info": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "markdown": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "markdown"
+          ],
+          "additionalProperties": false
+        },
+        "commissionsFile": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "election",
+        "info",
+        "commissionsFile"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,4 @@
+schemaVersion: 1
+revision: 2026-10-02.1
+campaigns:
+  - elections/deputy-2026/manifest.yaml

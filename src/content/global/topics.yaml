@@ -1,0 +1,70 @@
+theory-general:
+  id: theory-general
+  title: Общие положения
+  description: Общие положения работы наблюдателя.
+  icon: book-open
+  minutes: 0
+  videoId: wheatley-crab
+  markdown: Здесь будет текст
+  lawIds: []
+  sourceIds: []
+  references: []
+  media: []
+
+theory-arrival:
+  id: theory-arrival
+  title: Прибытие на участок
+  description: Прибытие наблюдателя на избирательный участок.
+  icon: map-pin
+  minutes: 0
+  markdown: Здесь будет текст
+  lawIds: []
+  sourceIds: []
+  references: []
+  media: []
+
+theory-home-voting:
+  id: theory-home-voting
+  title: Голосование на дому
+  description: Голосование вне помещения для голосования.
+  icon: home
+  minutes: 0
+  markdown: Здесь будет текст
+  lawIds:
+    - fz67:article-66:clause-2
+    - fz67:article-66:clause-5
+    - fz67:article-66:clause-9
+    - fz67:article-66:clause-14
+    - cik86:clause-3.3
+    - cik86:clause-3.5
+    - cik86:clause-3.6
+    - cik86:clause-3.7
+    - cik86:clause-3.8
+    - cik86:annex-1
+  sourceIds: []
+  references: []
+  media: []
+
+theory-counting:
+  id: theory-counting
+  title: Подсчёт голосов
+  description: Порядок подсчёта голосов избирателей.
+  icon: list
+  minutes: 0
+  markdown: Здесь будет текст
+  lawIds: []
+  sourceIds: []
+  references: []
+  media: []
+
+theory-protocol-copy:
+  id: theory-protocol-copy
+  title: Получение копии протокола
+  description: Получение копии протокола об итогах голосования.
+  icon: file-text
+  minutes: 0
+  markdown: Здесь будет текст
+  lawIds: []
+  sourceIds: []
+  references: []
+  media: []

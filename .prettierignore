@@ -1,0 +1,7 @@
+node_modules
+dist
+qa
+.expo
+src/content/documents.json
+src/content/roadmap.json
+src/content/laws.json

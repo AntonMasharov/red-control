@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "Красный контроль",
+    "slug": "red-control",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "scheme": "red-control",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "ru.redcontrol.observer"
+    },
+    "android": {
+      "package": "ru.redcontrol.observer",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "name": "Красный контроль",
+      "favicon": "./assets/app-icon.png"
+    },
+    "plugins": [
+      "expo-sqlite",
+      "expo-asset",
+      "expo-sharing"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "4b57a041-05f3-4e11-9c90-2900c8723915"
+      }
+    },
+    "icon": "./assets/app-icon.png"
+  }
+}

@@ -1,0 +1,915 @@
+roadmap-morning:item-01:
+  id: roadmap-morning:item-01
+  text: 07:00–07:30 — Прибыл на участок.
+  lawIds:
+    - fz67:article-30:clause-3
+    - fz67:article-30:clause-5
+    - fz67:article-64:clause-1
+  sourceIds: []
+  media: []
+roadmap-morning:item-02:
+  id: roadmap-morning:item-02
+  text: "Документы в комиссию: Отдал Паспорт и Направление."
+  lawIds:
+    - fz67:article-30:clause-3
+    - fz67:article-30:clause-7
+    - fz67:article-30:clause-8
+  sourceIds: []
+  media: []
+roadmap-morning:item-03:
+  id: roadmap-morning:item-03
+  text: "Отметка на копиях: На моих копиях Направления и Требования о выдаче протокола комиссия поставила подпись, дату, время и печать/штамп!"
+  lawIds:
+    - fz67:article-30:clause-3
+    - fz67:article-30:clause-7
+    - fz67:article-30:clause-8
+    - fz67:article-30:clause-9:subclause-к
+    - fz67:article-68:clause-29
+    - fz67:article-30:clause-12
+  sourceIds: []
+  media: []
+roadmap-morning:item-04:
+  id: roadmap-morning:item-04
+  text: "Список присутствующих: Проверил, что меня внесли в реестр (указали время прихода и мой мобильный телефон)."
+  lawIds:
+    - fz67:article-64:clause-11.2
+  sourceIds: []
+  media: []
+roadmap-morning:item-05:
+  id: roadmap-morning:item-05
+  text: "Уведомление о съёмке: Заявил председателю/секретарю о ведении фото-/видеосъёмки."
+  lawIds:
+    - fz67:article-30:clause-9:subclause-к
+    - fz67:article-68:clause-29
+  sourceIds: []
+  media: []
+roadmap-morning:item-06:
+  id: roadmap-morning:item-06
+  text: "Обзор: Убедился, что с моего места видны столы выдачи, кабины и все ящики."
+  lawIds:
+    - fz67:article-61:clause-11
+  sourceIds: []
+  media: []
+roadmap-morning:item-07:
+  id: roadmap-morning:item-07
+  text: "Стенд и УФП: Сфотографировал стенд. В УФП заполнены только номер УИК и адрес!"
+  lawIds:
+    - fz67:article-61:clause-3
+    - fz67:article-61:clause-3.1
+    - fz67:article-61:clause-4
+    - fz67:article-61:clause-5
+    - fz67:article-61:clause-6
+    - fz67:article-61:clause-7
+    - fz67:article-61:clause-7.1
+    - fz67:article-61:clause-8
+    - fz67:article-61:clause-9
+  sourceIds: []
+  media: []
+roadmap-morning:item-09:
+  id: roadmap-morning:item-09
+  text: |-
+    Опечатывание ящиков (до 08:00):
+
+    Осмотрел ПУСТЫЕ переносные и стационарные ящики.
+  lawIds:
+    - fz67:article-64:clause-3
+    - cik86:clause-3.2
+    - cik86:clause-1.9
+  sourceIds: []
+  media: []
+roadmap-morning:item-10:
+  id: roadmap-morning:item-10
+  text: |-
+    Опечатывание ящиков (до 08:00):
+
+    Сфотографировал пломбы.
+  lawIds:
+    - fz67:article-64:clause-3
+    - cik86:clause-3.2
+    - cik86:clause-1.9
+  sourceIds: []
+  media: []
+roadmap-morning:item-11:
+  id: roadmap-morning:item-11
+  text: |-
+    Опечатывание ящиков (до 08:00):
+
+    Записал в Дорожную Карту число стационарных и переносных ящиков.
+  lawIds:
+    - fz67:article-66:clause-8
+    - fz67:article-66:clause-8.1
+  sourceIds: []
+  media: []
+roadmap-evidence:item-01:
+  id: roadmap-evidence:item-01
+  text: |-
+    📸 Обязательные фото/видео:
+
+    Пломбы и номера всех ящиков (до 08:00).
+  lawIds:
+    - fz67:article-64:clause-3
+    - cik86:clause-3.2
+    - cik86:clause-1.9
+  sourceIds: []
+  media: []
+roadmap-evidence:item-02:
+  id: roadmap-evidence:item-02
+  text: |-
+    📸 Обязательные фото/видео:
+
+    Информационный стенд в помещении.
+  lawIds:
+    - fz67:article-61:clause-3
+    - fz67:article-61:clause-3.1
+    - fz67:article-61:clause-4
+    - fz67:article-61:clause-5
+    - fz67:article-61:clause-6
+    - fz67:article-61:clause-7
+    - fz67:article-61:clause-7.1
+    - fz67:article-61:clause-8
+  sourceIds: []
+  media: []
+roadmap-evidence:item-03:
+  id: roadmap-evidence:item-03
+  text: |-
+    📸 Обязательные фото/видео:
+
+    УФП — пустая с утра и заполненная вечером.
+  lawIds:
+    - fz67:article-61:clause-9
+    - fz67:article-68:clause-18
+  sourceIds: []
+  media: []
+roadmap-evidence:item-04:
+  id: roadmap-evidence:item-04
+  text: |-
+    📸 Обязательные фото/видео:
+
+    Видео запечатывания сейф-пакетов (пт, сб в 20:00 и после надомного выезда).
+  lawIds:
+    - fz67:article-30:clause-9:subclause-к
+    - fz67:article-68:clause-29
+    - cik86:clause-3.3
+    - cik86:clause-3.5
+    - cik86:clause-3.6
+    - cik86:clause-3.7
+    - cik86:annex-1
+    - cik86:clause-3.11
+    - cik86:annex-2
+  sourceIds: []
+  media: []
+roadmap-evidence:item-05:
+  id: roadmap-evidence:item-05
+  text: |-
+    📸 Обязательные фото/видео:
+
+    Сейф-пакеты (номер, пломбы, подписи).
+  lawIds:
+    - cik86:clause-3.3
+    - cik86:clause-3.5
+    - cik86:clause-3.6
+    - cik86:clause-3.7
+    - cik86:annex-1
+    - cik86:clause-3.11
+    - cik86:annex-2
+  sourceIds: []
+  media: []
+roadmap-evidence:item-06:
+  id: roadmap-evidence:item-06
+  text: |-
+    📸 Обязательные фото/видео:
+
+    Подписанный оригинал протокола УИК (Экземпляр №1).
+  lawIds:
+    - fz67:article-68:clause-26
+    - fz67:article-68:clause-27
+    - fz67:article-68:clause-28
+  sourceIds: []
+  media: []
+roadmap-evidence:item-07:
+  id: roadmap-evidence:item-07
+  text: |-
+    📸 Обязательные фото/видео:
+
+    Опечатанный общий мешок/коробка с бюллетенями.
+  lawIds:
+    - fz67:article-68:clause-23
+  sourceIds: []
+  media: []
+roadmap-evidence:item-08:
+  id: roadmap-evidence:item-08
+  text: |-
+    📸 Обязательные фото/видео:
+
+    Повешенная на стену заверенная копия протокола (Экземпляр №2).
+  lawIds:
+    - fz67:article-68:clause-31
+  sourceIds: []
+  media: []
+roadmap-evidence:item-09:
+  id: roadmap-evidence:item-09
+  text: |-
+    📝 Что записать:
+
+    ФИО председателя, зам. председателя и секретаря.
+  lawIds: []
+  sourceIds: []
+  media: []
+roadmap-evidence:item-10:
+  id: roadmap-evidence:item-10
+  text: |-
+    📝 Что записать:
+
+    Точное время своего прибытия на участок.
+  lawIds:
+    - fz67:article-30:clause-3
+    - fz67:article-30:clause-7
+    - fz67:article-30:clause-8
+  sourceIds: []
+  media: []
+roadmap-evidence:item-11:
+  id: roadmap-evidence:item-11
+  text: |-
+    📝 Что записать:
+
+    Количество стационарных и переносных ящиков.
+  lawIds:
+    - fz67:article-66:clause-8
+    - fz67:article-66:clause-8.1
+  sourceIds: []
+  media: []
+roadmap-evidence:item-12:
+  id: roadmap-evidence:item-12
+  text: |-
+    📝 Что записать:
+
+    Данные явки на 10:00, 12:00, 15:00, 18:00.
+  lawIds: []
+  sourceIds: []
+  media: []
+roadmap-evidence:item-13:
+  id: roadmap-evidence:item-13
+  text: |-
+    📝 Что записать:
+
+    Количество заявленников в реестре надомного голосования.
+  lawIds:
+    - fz67:article-30:clause-9:subclause-а
+    - fz67:article-66:clause-2
+    - fz67:article-66:clause-3
+    - fz67:article-66:clause-4
+    - fz67:article-66:clause-5
+  sourceIds: []
+  media: []
+roadmap-evidence:item-14:
+  id: roadmap-evidence:item-14
+  text: |-
+    📝 Что записать:
+
+    Номера всех сейф-пакетов и Актов к ним.
+  lawIds:
+    - cik86:clause-3.3
+    - cik86:clause-3.5
+    - cik86:clause-3.6
+    - cik86:clause-3.7
+    - cik86:annex-1
+    - cik86:clause-3.11
+    - cik86:annex-2
+  sourceIds: []
+  media: []
+roadmap-evidence:item-15:
+  id: roadmap-evidence:item-15
+  text: |-
+    📝 Что записать:
+
+    Число рассмотренных УИК жалоб.
+  lawIds:
+    - fz67:article-68:clause-26
+  sourceIds: []
+  media: []
+roadmap-evidence:item-16:
+  id: roadmap-evidence:item-16
+  text: |-
+    📝 Что записать:
+
+    Номер полученной копии протокола и время её выдачи.
+  lawIds:
+    - fz67:article-68:clause-29
+  sourceIds: []
+  media: []
+roadmap-voting:item-01:
+  id: roadmap-voting:item-01
+  text: Выдача бюллетеней строго по паспорту.
+  lawIds:
+    - fz67:article-64:clause-4
+    - fz67:article-64:clause-5
+  sourceIds: []
+  media: []
+roadmap-voting:item-02:
+  id: roadmap-voting:item-02
+  text: Подпись в списке ставит ТОЛЬКО сам избиратель (помощник — только по устной просьбе, не член УИК/не наблюдатель, с внесением данных паспорта помощника).
+  lawIds:
+    - fz67:article-64:clause-6
+    - fz67:article-64:clause-8
+    - fz67:article-64:clause-10
+  sourceIds: []
+  media: []
+roadmap-voting:item-03:
+  id: roadmap-voting:item-03
+  text: В списке НЕТ карандашных пометок или вложенных листов.
+  lawIds:
+    - fz67:article-30:clause-9:subclause-а
+    - fz67:article-17:clause-13
+  sourceIds: []
+  media: []
+roadmap-voting:item-04:
+  id: roadmap-voting:item-04
+  text: "При ошибке: испорченный бюллетень гасится отрезанием угла, взамен выдаётся новый."
+  lawIds:
+    - fz67:article-64:clause-9
+  sourceIds: []
+  media: []
+roadmap-voting:item-05:
+  id: roadmap-voting:item-05
+  text: Голосование не по прописке — ТОЛЬКО если человек есть в списке «Мобильный избиратель».
+  lawIds:
+    - fz67:article-64:clause-16
+  sourceIds: []
+  media: []
+roadmap-home:item-01:
+  id: roadmap-home:item-01
+  text: "Реестр: Все графы заполнены. Массовые списки (>30 чел.) — сигнал в штаб, +7(3452)69-64-64 (доб. 1, либо доб. 3)."
+  lawIds:
+    - fz67:article-30:clause-9:subclause-а
+    - fz67:article-66:clause-2
+    - fz67:article-66:clause-3
+    - fz67:article-66:clause-4
+    - fz67:article-66:clause-5
+  sourceIds: []
+  media: []
+roadmap-home:item-02:
+  id: roadmap-home:item-02
+  text: "За 30 минут: Председатель объявил о выезде. Запросил выписку из реестра."
+  lawIds:
+    - fz67:article-66:clause-6
+    - fz67:article-30:clause-9:subclause-а
+  sourceIds: []
+  media: []
+roadmap-home:item-03:
+  id: roadmap-home:item-03
+  text: "Список УИК: В списке избирателей поставлена отметка «Вне помещения для голосования»."
+  lawIds:
+    - fz67:article-66:clause-9
+  sourceIds: []
+  media: []
+roadmap-home:item-04:
+  id: roadmap-home:item-04
+  text: "Состав: Минимум 2 члена УИК (или 1 член УИК + 2 наблюдателя от разных сил)."
+  lawIds:
+    - fz67:article-66:clause-9
+    - fz67:article-66:clause-14
+  sourceIds: []
+  media: []
+roadmap-home:item-05:
+  id: roadmap-home:item-05
+  text: "Бюллетени: Выданы строго по выписке + запас (+2 при 1-59 чел., +3 при 60-79 чел.)."
+  lawIds:
+    - fz67:article-66:clause-9
+  sourceIds: []
+  media: []
+roadmap-home:item-06:
+  id: roadmap-home:item-06
+  text: "Процедура: Голосовать разрешено ТОЛЬКО людям из выписки! К «соседям» заходить нельзя."
+  lawIds:
+    - fz67:article-66:clause-17
+  sourceIds: []
+  media: []
+roadmap-home:item-08:
+  id: roadmap-home:item-08
+  text: |-
+    По возвращении:
+
+    Неиспользованные бюллетени сданы под роспись.
+  lawIds:
+    - fz67:article-66:clause-12
+    - fz67:article-66:clause-9
+  sourceIds: []
+  media: []
+roadmap-home:item-09:
+  id: roadmap-home:item-09
+  text: |-
+    По возвращении:
+
+    Составлен Акт о проведённом голосовании вне помещения (с обязательным указанием числа избирателей, проголосовавших по данному ящику, выданных/возвращённых бюллетеней и данных выезжавших).
+  lawIds:
+    - cik86:clause-3.3
+    - cik86:clause-3.5
+    - cik86:clause-3.6
+    - cik86:clause-3.7
+    - cik86:annex-1
+  sourceIds: []
+  media: []
+roadmap-home:item-10:
+  id: roadmap-home:item-10
+  text: |-
+    По возвращении:
+
+    Бюллетени перегружены в сейф-пакет (в пт/сб) С ПОДПИСЯМИ И СЪЁМКОЙ.
+  lawIds:
+    - cik86:clause-3.3
+    - cik86:clause-3.5
+    - cik86:clause-3.6
+    - cik86:clause-3.7
+    - cik86:annex-1
+  sourceIds: []
+  media: []
+roadmap-home:item-11:
+  id: roadmap-home:item-11
+  text: |-
+    По возвращении:
+
+    В списке избирателей проставлены отметки «проголосовал», номер ящика и подписи выезжавших.
+  lawIds:
+    - fz67:article-66:clause-13
+    - cik86:clause-1.11
+    - cik86:clause-2.7
+  sourceIds: []
+  media: []
+roadmap-evening:item-01:
+  id: roadmap-evening:item-01
+  text: "20:00: Участковые урны и переносные ящики выгружаются в сейф-пакеты БЕЗ пересчёта."
+  lawIds:
+    - cik86:clause-3.11
+    - cik86:annex-2
+  sourceIds: []
+  media: []
+roadmap-evening:item-03:
+  id: roadmap-evening:item-03
+  text: |-
+    Если бюллетени из стационарных урн НЕ достают:
+
+    Комиссия обязана предъявить Решение ТИК (размещается на стенде), допускающее использование нескольких ящиков до воскресенья без ежедневной выгрузки.
+  lawIds:
+    - fz67:article-64:clause-3
+    - cik86:clause-3.2
+    - cik86:clause-1.9
+  sourceIds: []
+  media: []
+roadmap-evening:item-04:
+  id: roadmap-evening:item-04
+  text: |-
+    Если бюллетени из стационарных урн НЕ достают:
+
+    Урны опечатываются/пломбируются на ночь. Сфотографируйте пломбы и прорези урн!
+  lawIds:
+    - fz67:article-64:clause-3
+    - cik86:clause-3.2
+    - cik86:clause-1.9
+  sourceIds: []
+  media: []
+roadmap-evening:item-05:
+  id: roadmap-evening:item-05
+  text: "Съёмка: Снимаю весь процесс на ВИДЕО!"
+  lawIds:
+    - fz67:article-30:clause-9:subclause-к
+    - fz67:article-68:clause-29
+  sourceIds: []
+  media: []
+roadmap-evening:item-06:
+  id: roadmap-evening:item-06
+  text: "Подпись: Ставлю свою подпись на сейф-пакете."
+  lawIds:
+    - cik86:clause-3.11
+    - cik86:annex-2
+  sourceIds: []
+  media: []
+roadmap-evening:item-07:
+  id: roadmap-evening:item-07
+  text: "Фото: Фотографирую сейф-пакет, номер, индикаторную ленту и подписи."
+  lawIds:
+    - cik86:clause-3.11
+    - cik86:annex-2
+  sourceIds: []
+  media: []
+roadmap-evening:item-08:
+  id: roadmap-evening:item-08
+  text: "Акт: Составлен Акт к сейф-пакету."
+  lawIds:
+    - cik86:clause-3.11
+    - cik86:annex-2
+  sourceIds: []
+  media: []
+roadmap-evening:item-09:
+  id: roadmap-evening:item-09
+  text: В акте указывается количество избирателей, проголосовавших по данному пакету. (Для надомников число переписывается из Акта надомного голосования; для стационарной урны — подсчитывается по книге списка избирателей).
+  lawIds:
+    - cik86:clause-3.11
+    - cik86:annex-2
+    - cik86:clause-3.3
+    - cik86:clause-3.5
+    - cik86:clause-3.6
+    - cik86:clause-3.7
+    - cik86:annex-1
+  sourceIds: []
+  media: []
+roadmap-evening:item-10:
+  id: roadmap-evening:item-10
+  text: Записал номер и ПОЛУЧИЛ ЗАВЕРЕННУЮ КОПИЮ АКТА!
+  lawIds:
+    - cik86:clause-3.11
+  sourceIds: []
+  media: []
+roadmap-evening:item-11:
+  id: roadmap-evening:item-11
+  text: "Сейф: Сейф-пакеты и акты убраны в спец. сейф под видеонаблюдение."
+  lawIds:
+    - cik86:clause-5.2
+  sourceIds: []
+  media: []
+roadmap-evening:item-12:
+  id: roadmap-evening:item-12
+  text: "Убытие: Все присутствующие покидают помещение, помещение опечатывается и передаётся полиции. Я покидаю участок."
+  lawIds:
+    - cik86:clause-3.14
+    - cik86:clause-3.15
+  sourceIds: []
+  media: []
+roadmap-counting:item-01:
+  id: roadmap-counting:item-01
+  text: |-
+    ⚠️ НЕ ВЫХОДИТЬ ИЗ ЗДАНИЯ ПОСЛЕ 19:30! ПОДСЧЁТ СТРОГО ПОСЛЕДОВАТЕЛЬНЫЙ!
+
+    Главное правило: Каждое подсчитанное число оглашается председателем вслух и СРАЗУ ЖЕ заносится в УФП на стене! 
+
+    Подсчёт голосов начинается сразу после закрытия участка и выполняется БЕЗ ПЕРЕРЫВОВ.
+  lawIds:
+    - fz67:article-68:clause-2
+  sourceIds: []
+  media: []
+roadmap-counting:item-02:
+  id: roadmap-counting:item-02
+  text: "Шаг 1. Гашение бюллетеней: Считают неиспользованные, оглашают число, отрезают левый нижний угол. Формула: Полученные бюллетени - Подсчитанная явка = Гашеное кол-во."
+  lawIds:
+    - fz67:article-68:clause-4
+  sourceIds: []
+  media: []
+roadmap-counting:item-03:
+  id: roadmap-counting:item-03
+  text: "Шаг 2. Списки избирателей: Считают подписи, подписывают страницы, оглашают цифры, брошюруют том, убирают в сейф."
+  lawIds:
+    - fz67:article-68:clause-5
+    - fz67:article-68:clause-6
+    - fz67:article-68:clause-7
+  sourceIds: []
+  media: []
+roadmap-counting:item-05:
+  id: roadmap-counting:item-05
+  text: |-
+    Шаг 3. Вскрытие сейф-пакетов и ящиков:
+
+    Проверка целостности и сверка номеров пакетов с Актами! (При повреждении — недействительны по акту!)
+  lawIds:
+    - cik86:clause-4.4
+  sourceIds: []
+  media: []
+roadmap-counting:item-06:
+  id: roadmap-counting:item-06
+  text: |-
+    Шаг 3. Вскрытие сейф-пакетов и ящиков:
+
+    Вскрывают: 1) Надомные ящики/пакеты, 2) Сейф-пакеты за пт/сб
+  lawIds:
+    - fz67:article-68:clause-12
+    - cik86:clause-4.2
+    - cik86:clause-4.3
+    - cik86:clause-4.4
+    - cik86:clause-4.10
+  sourceIds: []
+  media: []
+roadmap-counting:item-07:
+  id: roadmap-counting:item-07
+  text: |-
+    Шаг 3. Вскрытие сейф-пакетов и ящиков:
+
+    Бюллетени пересчитываются, данные заносятся в Акты и строку 7 протокола.
+  lawIds:
+    - fz67:article-68:clause-12
+    - cik86:clause-4.2
+    - cik86:clause-4.3
+    - cik86:clause-4.4
+  sourceIds: []
+  media: []
+roadmap-counting:item-08:
+  id: roadmap-counting:item-08
+  text: |-
+    Шаг 3. Вскрытие сейф-пакетов и ящиков:
+
+    ПРОЦЕДУРА СВЕРКИ КОЛИЧЕСТВА:
+
+    Фактическое число бюллетеней из ящика/сейф-пакета сверяется с числом в Акте (Выписке).
+  lawIds:
+    - fz67:article-68:clause-12
+  sourceIds: []
+  media: []
+roadmap-counting:item-09:
+  id: roadmap-counting:item-09
+  text: |-
+    Шаг 3. Вскрытие сейф-пакетов и ящиков:
+
+    ПРОЦЕДУРА СВЕРКИ КОЛИЧЕСТВА:
+
+    Если бюллетеней ОКАЗАЛОСЬ БОЛЬШЕ, чем в Акте/заявлениях —  Проводится повторная сверка по первичным документам (заявлениям надомников / списку избирателей).
+  lawIds:
+    - cik86:clause-4.5
+  sourceIds: []
+  media: []
+roadmap-counting:item-10:
+  id: roadmap-counting:item-10
+  text: |-
+    Шаг 3. Вскрытие сейф-пакетов и ящиков:
+
+    ПРОЦЕДУРА СВЕРКИ КОЛИЧЕСТВА:
+
+    Если расхождение подтвердилось, ВСЕ бюллетени данного вида в этом сейф-пакете/переносном ящике ПРИЗНАЮТСЯ НЕДЕЙСТВИТЕЛЬНЫМИ! На лицевой стороне каждого бюллетеня ставится запись об этом, подписи 2 членов УИК, печать и составляется акт.
+  lawIds:
+    - cik86:clause-4.6
+  sourceIds: []
+  media: []
+roadmap-counting:item-12:
+  id: roadmap-counting:item-12
+  text: |-
+    Шаг 4. Вскрытие стационарных урн воскресенья:
+
+    Проводится строго после завершения подсчёта всех переносных ящиков и сейф-пакетов!
+  lawIds:
+    - fz67:article-68:clause-13
+  sourceIds: []
+  media: []
+roadmap-counting:item-13:
+  id: roadmap-counting:item-13
+  text: |-
+    Шаг 4. Вскрытие стационарных урн воскресенья:
+
+    Проверяется целостность пломб, стационарные урны вскрываются, бюллетени смешиваются с бюллетенями из сейф-пакетов/переносных ящиков.
+  lawIds:
+    - fz67:article-68:clause-13
+    - fz67:article-68:clause-14
+  sourceIds: []
+  media: []
+roadmap-counting:item-15:
+  id: roadmap-counting:item-15
+  text: |-
+    Шаг 5. Сортировка и подсчёт:
+
+    Сортировка с ОГЛАШЕНИЕМ каждой отметки вслух! Оглашается одна бюллетень за раз!
+  lawIds:
+    - fz67:article-68:clause-14
+  sourceIds: []
+  media: []
+roadmap-counting:item-16:
+  id: roadmap-counting:item-16
+  text: |-
+    Шаг 5. Сортировка и подсчёт:
+
+    Подсчет за каждого кандидата — ПЕРЕКЛАДЫВАНИЕМ ПО ОДНОМУ!
+  lawIds:
+    - fz67:article-68:clause-18
+  sourceIds: []
+  media: []
+roadmap-counting:item-17:
+  id: roadmap-counting:item-17
+  text: |-
+    Шаг 5. Сортировка и подсчёт:
+
+    Перекладывают не более одной стопки одновременно (параллельный подсчет разных пачек запрещен)!
+  lawIds:
+    - fz67:article-68:clause-18
+  sourceIds: []
+  media: []
+roadmap-counting:item-18:
+  id: roadmap-counting:item-18
+  text: |-
+    Шаг 5. Сортировка и подсчёт:
+
+    Мне ВИДНЫ все отметки! (Трогать запрещено, но смотреть обязаны дать!)
+  lawIds:
+    - fz67:article-68:clause-18
+    - fz67:article-68:clause-21
+  sourceIds: []
+  media: []
+roadmap-counting:item-19:
+  id: roadmap-counting:item-19
+  text: |-
+    Шаг 5. Сортировка и подсчёт:
+
+    Повторный пересчёт: Любая стопка, вызывающая сомнение у наблюдателя, может быть пересчитана повторно!
+  lawIds:
+    - fz67:article-68:clause-21
+  sourceIds: []
+  media: []
+roadmap-counting:item-20:
+  id: roadmap-counting:item-20
+  text: "Шаг 6. Контрольные соотношения: Сверка всех формул протокола."
+  lawIds:
+    - fz67:article-68:clause-22
+  sourceIds: []
+  media: []
+roadmap-counting:item-21:
+  id: roadmap-counting:item-21
+  text: "Шаг 7. Упаковка: Бюллетени упакованы в пачки и общий мешок, я поставил подпись на мешке."
+  lawIds:
+    - fz67:article-68:clause-23
+  sourceIds: []
+  media: []
+roadmap-protocol:item-01:
+  id: roadmap-protocol:item-01
+  text: Заседание УИК проведено, жалобы рассмотрены.
+  lawIds:
+    - fz67:article-68:clause-26
+    - fz67:article-28:clause-13
+  sourceIds: []
+  media: []
+roadmap-protocol:item-02:
+  id: roadmap-protocol:item-02
+  text: Подписан Экземпляр №1 протокола. Сфотографировал протокол и УФП!
+  lawIds:
+    - fz67:article-68:clause-26
+    - fz67:article-68:clause-27
+    - fz67:article-68:clause-28
+  sourceIds: []
+  media: []
+roadmap-protocol:item-03:
+  id: roadmap-protocol:item-03
+  text: ПОЛУЧИЛ КОПИЮ ПРОТОКОЛА ДО ОТПРАВКИ ОРИГИНАЛА В ТИК!
+  lawIds:
+    - fz67:article-68:clause-29
+    - fz67:article-68:clause-30
+  sourceIds: []
+  media: []
+roadmap-protocol:item-04:
+  id: roadmap-protocol:item-04
+  text: Расписался в реестре выдачи копий (указал время и телефон).
+  lawIds:
+    - fz67:article-68:clause-29
+  sourceIds: []
+  media: []
+roadmap-protocol:item-05:
+  id: roadmap-protocol:item-05
+  text: "Сопровождение в ТИК: Наблюдатель имеет право присутствовать при передаче протокола в ТИК и вводе данных в ГАС «Выборы»!"
+  lawIds:
+    - fz67:article-68:clause-30
+    - fz67:article-69:clause-1
+    - fz67:article-69:clause-2
+  sourceIds: []
+  media: []
+roadmap-protocol:item-06:
+  id: roadmap-protocol:item-06
+  text: |-
+    🔍 ЭКСТРЕННАЯ ПРОВЕРКА КОПИИ ПРОТОКОЛА:
+
+    На самом ОРИГИНАЛЕ и на КОПИИ стоят дата и точное ВРЕМЯ подписания/заверения (внимание после 00:00 дата 21.09.2026).
+  lawIds:
+    - fz67:article-67:clause-2
+    - fz67:article-67:clause-3
+    - fz67:article-68:clause-26
+    - fz67:article-68:clause-27
+    - fz67:article-30:clause-12
+    - fz67:article-68:clause-29
+  sourceIds: []
+  media: []
+roadmap-protocol:item-07:
+  id: roadmap-protocol:item-07
+  text: |-
+    🔍 ЭКСТРЕННАЯ ПРОВЕРКА КОПИИ ПРОТОКОЛА:
+
+    Вверху написано: «Копия №...».
+  lawIds:
+    - fz67:article-68:clause-29
+    - fz67:article-30:clause-12
+  sourceIds: []
+  media: []
+roadmap-protocol:item-09:
+  id: roadmap-protocol:item-09
+  text: |-
+    🔍 ЭКСТРЕННАЯ ПРОВЕРКА КОПИИ ПРОТОКОЛА:
+
+    На КАЖДОМ листе есть заверительная надпись:
+
+    Слова «Копия верна» или «Верно».
+  lawIds:
+    - fz67:article-30:clause-12
+    - fz67:article-68:clause-29
+  sourceIds: []
+  media: []
+roadmap-protocol:item-10:
+  id: roadmap-protocol:item-10
+  text: |-
+    🔍 ЭКСТРЕННАЯ ПРОВЕРКА КОПИИ ПРОТОКОЛА:
+
+    На КАЖДОМ листе есть заверительная надпись:
+
+    Должность (председатель / зам. / секретарь).
+  lawIds:
+    - fz67:article-30:clause-12
+    - fz67:article-68:clause-29
+  sourceIds: []
+  media: []
+roadmap-protocol:item-11:
+  id: roadmap-protocol:item-11
+  text: |-
+    🔍 ЭКСТРЕННАЯ ПРОВЕРКА КОПИИ ПРОТОКОЛА:
+
+    На КАЖДОМ листе есть заверительная надпись:
+
+    Личная подпись и расшифровка (ФИО).
+  lawIds:
+    - fz67:article-30:clause-12
+    - fz67:article-68:clause-29
+  sourceIds: []
+  media: []
+roadmap-protocol:item-12:
+  id: roadmap-protocol:item-12
+  text: |-
+    🔍 ЭКСТРЕННАЯ ПРОВЕРКА КОПИИ ПРОТОКОЛА:
+
+    На КАЖДОМ листе есть заверительная надпись:
+
+    Дата и точное ВРЕМЯ заверения.
+  lawIds:
+    - fz67:article-30:clause-12
+    - fz67:article-68:clause-29
+  sourceIds: []
+  media: []
+roadmap-protocol:item-13:
+  id: roadmap-protocol:item-13
+  text: |-
+    🔍 ЭКСТРЕННАЯ ПРОВЕРКА КОПИИ ПРОТОКОЛА:
+
+    На КАЖДОМ листе есть заверительная надпись:
+
+    Печать УИК (четкая, не закрывает цифры).
+  lawIds:
+    - fz67:article-30:clause-12
+    - fz67:article-68:clause-29
+  sourceIds: []
+  media: []
+roadmap-protocol:item-14:
+  id: roadmap-protocol:item-14
+  text: |-
+    🔍 ЭКСТРЕННАЯ ПРОВЕРКА КОПИИ ПРОТОКОЛА:
+
+    Все цифры полностью совпадают с оригиналом №1 и с УФП!
+  lawIds:
+    - fz67:article-67:clause-2
+    - fz67:article-67:clause-3
+    - fz67:article-68:clause-26
+    - fz67:article-68:clause-27
+    - fz67:article-30:clause-12
+    - fz67:article-68:clause-29
+  sourceIds: []
+  media: []
+roadmap-protocol:item-15:
+  id: roadmap-protocol:item-15
+  text: |-
+    🔍 ЭКСТРЕННАЯ ПРОВЕРКА КОПИИ ПРОТОКОЛА:
+
+    Сверка в ГАС «Выборы»: Позже сверить данные со своей копии с официальными результатами на сайте избиркома http://www.tyumen.izbirkom.ru/izbirkom_pages/
+  lawIds: []
+  sourceIds: []
+  media: []
+roadmap-protocol:item-16:
+  id: roadmap-protocol:item-16
+  text: |-
+    🔍 ЭКСТРЕННАЯ ПРОВЕРКА КОПИИ ПРОТОКОЛА:
+
+    Привезти копии Протоколов по адресу ул. Комсомольская, д. 56к1 сразу либо на следующий день.
+  lawIds: []
+  sourceIds: []
+  media: []
+roadmap-violations:item-01:
+  id: roadmap-violations:item-01
+  text: "Скажи устно: Укажи председателю на нарушение и норму закона."
+  lawIds:
+    - fz67:article-30:clause-9
+    - fz67:article-30:clause-10
+  sourceIds: []
+  media: []
+roadmap-violations:item-02:
+  id: roadmap-violations:item-02
+  text: "Нет реакции? Напиши: Пиши Жалобу в 2 экземплярах (ссылка на п. 4 ст. 20 ФЗ № 67-ФЗ)."
+  lawIds:
+    - fz67:article-20:clause-4
+  sourceIds: []
+  media: []
+roadmap-violations:item-03:
+  id: roadmap-violations:item-03
+  text: "Отметка: Потребуй на своем экземпляре поставить отметку о принятии (ФИО, должность, подпись, дата, время)."
+  lawIds: []
+  sourceIds: []
+  media: []
+roadmap-violations:item-04:
+  id: roadmap-violations:item-04
+  text: Отказ принять? Звони в штаб и подавай жалобу в вышестоящую ТИК/ИКС РФ.
+  lawIds: []
+  sourceIds: []
+  media: []

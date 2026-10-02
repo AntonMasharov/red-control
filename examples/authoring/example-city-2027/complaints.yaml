@@ -1,0 +1,23 @@
+templates:
+  - id: observer-complaint
+    title: Example complaint — replace with reviewed wording
+    category: Observation
+    header_template: |-
+      В {{recipient}}
+      От наблюдателя {{observer_name}}
+
+      ЖАЛОБА
+      УИК № {{uik_number}}
+    footer_template: |-
+      ПРОШУ:
+      [Replace with legally reviewed request.]
+
+      Дата: {{date}}
+      Подпись: __________
+    checkbox_items:
+      - id: document-access
+        label: "Example: denied access to documents"
+        description: Replace this label and description.
+        inserted_text: В {{time}} [replace with the description of the observed event].
+        law_references:
+          - example-city-2027:example-law
