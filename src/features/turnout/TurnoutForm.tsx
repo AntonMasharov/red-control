@@ -1,6 +1,5 @@
 import { View, Text, Pressable } from 'react-native';
 import { manifest } from '../../content';
-import { formatDate } from '../../data/model';
 import { Button, Field } from '../../ui/components';
 import { colors as c, s } from '../../ui/theme';
 import type { useTurnout } from './useTurnout';
@@ -11,30 +10,27 @@ export function TurnoutForm({ controller }: { controller: ReturnType<typeof useT
   return (
     <>
       {mode === 'record' && (
-        <Text style={s.small}>
-          {formatDate(controller.date)} · показания на {slot}
-        </Text>
-      )}
-      {mode === 'record' && (
         <>
-          <Text style={s.label}>Время сверки</Text>
-          <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
-            {manifest.reconciliationTimes.map((t) => (
-              <Pressable
-                accessibilityRole="button"
-                accessibilityState={{ selected: slot === t }}
-                disabled={!controller.points.find((p) => p.label === t)?.reached}
-                key={t}
-                onPress={() => controller.openRecord(t)}
-                style={{
-                  backgroundColor: slot === t ? c.red : c.wash,
-                  padding: 12,
-                  borderRadius: 9,
-                }}
-              >
-                <Text style={{ color: slot === t ? c.white : c.ink }}>{t}</Text>
-              </Pressable>
-            ))}
+          <View style={{ gap: 7 }}>
+            <Text style={[s.label, { marginBottom: 0 }]}>Время сверки</Text>
+            <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
+              {manifest.reconciliationTimes.map((t) => (
+                <Pressable
+                  accessibilityRole="button"
+                  accessibilityState={{ selected: slot === t }}
+                  disabled={!controller.points.find((p) => p.label === t)?.reached}
+                  key={t}
+                  onPress={() => controller.openRecord(t)}
+                  style={{
+                    backgroundColor: slot === t ? c.red : c.wash,
+                    padding: 12,
+                    borderRadius: 9,
+                  }}
+                >
+                  <Text style={{ color: slot === t ? c.white : c.ink }}>{t}</Text>
+                </Pressable>
+              ))}
+            </View>
           </View>
           <Field
             label="Ваш подсчёт на момент сверки"
@@ -42,10 +38,6 @@ export function TurnoutForm({ controller }: { controller: ReturnType<typeof useT
             onChangeText={setObserver}
             keyboardType="number-pad"
           />
-          <Text style={s.small}>
-            Если записываете прошлую сверку, укажите свой подсчёт на то время. Текущий счётчик не
-            изменится. Повторная сверка сохранится отдельной записью.
-          </Text>
         </>
       )}
       <Field

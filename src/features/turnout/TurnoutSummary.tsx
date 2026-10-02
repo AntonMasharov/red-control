@@ -10,7 +10,6 @@ export function TurnoutSummary({ controller }: { controller: ReturnType<typeof u
     controller;
   return (
     <>
-      <Text style={s.sectionTitle}>Динамика</Text>
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
@@ -61,6 +60,7 @@ export function TurnoutSummary({ controller }: { controller: ReturnType<typeof u
               <Text style={[s.label, { marginBottom: 0 }]}>{point.label}</Text>
               <Text style={s.small}>Комиссия</Text>
               <Text style={s.sectionTitle}>{point.row?.commission ?? '—'}</Text>
+              <View style={{ height: 1, backgroundColor: c.border, marginVertical: 4 }} />
               <Text style={s.small}>Ваш подсчёт</Text>
               <Text style={s.text}>{point.reached ? point.value : '—'}</Text>
               <Text style={[s.small, { color }]}>

@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { manifest } from '../content';
-import { activeElection, formatDate, selectedDate } from '../data/model';
+import { activeElection, formatDate } from '../data/model';
 import { actions, useStore } from '../data/store';
 import { StageSheet } from '../features/roadmap/StageSheet';
 import { TaskNotes } from '../features/roadmap/TaskNotes';
@@ -55,7 +55,6 @@ export function Roadmap() {
   return (
     <View style={s.stack}>
       <Text style={s.title}>Дорожная карта</Text>
-      <Text style={s.subtitle}>{formatDate(selectedDate(state))}</Text>
       <DayPicker />
       <Text style={s.label}>
         Основной маршрут: {done} из {total}

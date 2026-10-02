@@ -1,5 +1,4 @@
 import { Linking, Pressable, StyleSheet, Text, View } from 'react-native';
-import { activePrecinct } from '../data/model';
 import { formatPhone, normalizePhone } from '../data/phone';
 import { actions } from '../data/store';
 import { useContacts } from '../features/contacts/useContacts';
@@ -29,19 +28,6 @@ export function Contacts() {
   return (
     <View style={s.stack}>
       <Text style={s.title}>Связь со штабом</Text>
-      <Text style={s.subtitle}>{state.headquarters[activePrecinct(state).hqId]?.title}</Text>
-      <Button
-        title="Добавить контакт"
-        icon="plus"
-        secondary
-        onPress={() => {
-          setEditingId(undefined);
-          setName('');
-          setRole('');
-          setPhone('');
-          setAdding(true);
-        }}
-      />
       {contacts.map((contact) => (
         <View style={[s.card, localStyles.contactCard]} key={contact.id}>
           <View style={localStyles.contactDetails}>
@@ -94,6 +80,18 @@ export function Contacts() {
       {!contacts.length && (
         <Empty icon="phone" title="Контактов пока нет" text="Добавьте свой контакт для связи." />
       )}
+      <Button
+        title="Добавить контакт"
+        icon="plus"
+        secondary
+        onPress={() => {
+          setEditingId(undefined);
+          setName('');
+          setRole('');
+          setPhone('');
+          setAdding(true);
+        }}
+      />
       {adding && (
         <Sheet
           title={editingId ? 'Изменить контакт' : 'Добавить контакт'}
