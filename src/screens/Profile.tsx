@@ -1,6 +1,6 @@
 import { randomUUID } from 'expo-crypto';
 import { useState } from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import { exportText } from '../data/export';
 import {
   activeElection,
@@ -17,7 +17,6 @@ import { useElections } from '../features/elections/useElections';
 import { CommissionTree } from '../ui/CommissionTree';
 import { Button, Field, Icon, IconButton, Notice, RowLink, Sheet } from '../ui/components';
 import { colors, s } from '../ui/theme';
-import { CampaignPreview } from './CampaignPreview';
 
 export function Profile({ onClose }: { onClose: () => void }) {
   const state = useStore();
@@ -45,12 +44,19 @@ function StationSummary({ onClose, onChange }: { onClose: () => void; onChange: 
   const [removing, setRemoving] = useState(false);
   return (
     <Sheet title="Мой участок" onClose={onClose}>
-      <View style={localStyles.stationDetails}>
-        <Text style={s.sectionTitle}>{activeElection(state).title}</Text>
-        <Text style={s.label}>УИК № {precinct.number}</Text>
-        <Text style={s.text}>{precinct.address || 'Адрес пока не указан'}</Text>
+      <View style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 12 }}>
+        <View style={[localStyles.stationDetails, { flex: 1 }]}>
+          <Text style={s.sectionTitle}>{activeElection(state).title}</Text>
+          <Text style={s.label}>УИК № {precinct.number}</Text>
+          <Text style={s.text}>{precinct.address || 'Адрес пока не указан'}</Text>
+        </View>
+        <IconButton
+          name="edit-2"
+          label="Изменить / сменить участок"
+          color={colors.red}
+          onPress={onChange}
+        />
       </View>
-      <Button title="Изменить / сменить участок" secondary onPress={onChange} />
       <Text style={s.sectionTitle}>Члены комиссии</Text>
       {(editing ? members : initialMembers()).map((member) => (
         <View
@@ -174,15 +180,11 @@ function Selection({ onClose, onSaved }: { onClose: () => void; onSaved: () => v
     setName,
     query,
     setQuery,
-    preview,
-    setPreview,
     election,
     precinct,
     changed,
     save,
   } = useElections(onSaved);
-  if (preview && election)
-    return <CampaignPreview election={election} onClose={() => setPreview(false)} />;
   return (
     <Sheet
       title={election ? '2. Выберите УИК' : '1. Выберите выборы'}
@@ -206,11 +208,6 @@ function Selection({ onClose, onSaved }: { onClose: () => void; onSaved: () => v
     >
       {!election ? (
         <>
-          <Text style={s.small}>
-            {electionCatalog.length
-              ? 'Выборы и участки подготовлены администратором. Выберите выборы, на которых будете работать.'
-              : 'Выборы пока не добавлены. Они появятся после публикации новых материалов администратором.'}
-          </Text>
           {electionCatalog.map((e) => (
             <RowLink
               key={e.id}
@@ -230,18 +227,11 @@ function Selection({ onClose, onSaved }: { onClose: () => void; onSaved: () => v
         </>
       ) : (
         <View style={localStyles.selectionContent}>
-          <View style={localStyles.electionDetails}>
-            <Text style={s.sectionTitle}>{election.title}</Text>
-            <Text style={s.small}>{election.dates.map(formatDate).join(' · ')}</Text>
-          </View>
-          <Button
-            title="Посмотреть дорожную карту и законы"
-            secondary
-            onPress={() => setPreview(true)}
-          />
           <View style={localStyles.searchContent}>
-            <Field
-              label="Найти УИК"
+            <TextInput
+              accessibilityLabel="Найти УИК"
+              style={s.input}
+              placeholderTextColor="#9A9EA5"
               value={query}
               onChangeText={setQuery}
               placeholder="Номер, регион или адрес"
@@ -327,7 +317,6 @@ const localStyles = StyleSheet.create({
   },
   editActions: { flexDirection: 'row', gap: 12 },
   selectionContent: { gap: 24 },
-  electionDetails: { gap: 6 },
   searchContent: { gap: 8 },
   observerField: { borderTopWidth: 1, borderTopColor: colors.border, paddingTop: 20 },
   exportSection: {

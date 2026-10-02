@@ -1,11 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native';
-import { manifest } from '../content';
 import { activeElection, formatDate } from '../data/model';
 import { actions, useStore } from '../data/store';
 import { StageSheet } from '../features/roadmap/StageSheet';
 import { TaskNotes } from '../features/roadmap/TaskNotes';
 import { useRoadmap } from '../features/roadmap/useRoadmap';
-import { Button, Notice, RowLink, Sheet } from '../ui/components';
+import { Button, RowLink, Sheet } from '../ui/components';
 import { useFeedback } from '../ui/feedback';
 import { s } from '../ui/theme';
 import { LawSheet } from '../features/laws/LegalReaders';
@@ -80,7 +79,6 @@ export function Roadmap() {
             onPress={() => (stage.repeatable ? setHome(stage.id) : open(stage))}
           />
         ))}
-      <Notice>{manifest.notice}</Notice>
       {home && (
         <Sheet
           title={visible.find((stage) => stage.id === home)?.title ?? ''}
