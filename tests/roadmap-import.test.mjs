@@ -7,9 +7,9 @@ import { resolveContent } from '../src/data/repositories/content.ts';
 test('Google roadmap wording and DOCX-only law mappings are preserved and scoped to the election', () => {
   const root = new URL('../', import.meta.url);
   const catalog = JSON.parse(readFileSync(new URL('src/content/catalog.generated.json', root), 'utf8'));
-  const audit = JSON.parse(readFileSync(new URL('docs/roadmap-import/task-law-map.json', root), 'utf8'));
-  const legalAudit = JSON.parse(readFileSync(new URL('docs/legal-import/dk-uik-2026-reference-map.json', root), 'utf8'));
-  const source = readFileSync(new URL('docs/roadmap-import/google-doc-source.txt', root), 'utf8');
+  const audit = JSON.parse(readFileSync(new URL('tests/fixtures/roadmap-import/task-law-map.json', root), 'utf8'));
+  const legalAudit = JSON.parse(readFileSync(new URL('tests/fixtures/legal-import/dk-uik-2026-reference-map.json', root), 'utf8'));
+  const source = readFileSync(new URL('tests/fixtures/roadmap-import/google-doc-source.txt', root), 'utf8');
   assert.equal(audit.entries.length, 89);
   assert.equal(audit.withoutDirectLegalCitation.length, 6);
   const selected = resolveContent(catalog, 'deputy-2026');

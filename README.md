@@ -124,7 +124,7 @@ src/content/
 
 Оригиналы документов и видео по умолчанию ищутся в `global/documents/` и `global/videos/`. Поле `file` в описании источника позволяет указать другой путь относительно `src/content/`. Одного добавления файла недостаточно — зарегистрируйте его в соответствующем `sources.yaml`.
 
-Настройки из `global/app-settings.yaml` также собираются в `src/core/constants/app-settings.generated.json` — этот файл не редактируется вручную. Пример новой кампании находится в `examples/authoring/`.
+Настройки из `global/app-settings.yaml` также собираются в `src/core/constants/app-settings.generated.json` — этот файл не редактируется вручную. В качестве примера используйте существующую кампанию в `src/content/elections/deputy-2026/`.
 
 После изменения материалов выполните:
 
@@ -138,7 +138,6 @@ npm run check:content
 Подробные инструкции:
 
 - [Руководство по наполнению](docs/content-authoring-tutorial.md)
-- [Устройство и сборка каталога](docs/offline-authoring.md)
 - [Сценарии решения проблем](docs/problem-solving.md)
 
 ## Структура проекта
@@ -159,7 +158,6 @@ npm run check:content
 
 ```sh
 npm run check:content     # актуальность и корректность каталога
-npm run check:example     # пример авторского наполнения
 npm run typecheck         # проверка типов
 npm test                  # тесты данных и логики
 npm run test:integration  # сценарии интерфейса

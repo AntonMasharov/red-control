@@ -1,8 +1,0 @@
-example-city-2027:document-access:
-  id: example-city-2027:document-access
-  templateId: example-city-2027:complaint-template
-  title: "Example: denied access to documents"
-  description: Replace this label and description.
-  text: В {{time}} [replace with the description of the observed event].
-  lawIds:
-    - example-city-2027:example-law

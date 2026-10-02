@@ -8,7 +8,7 @@ test('imported legal provisions have atomic IDs, complete citation mappings and 
   const root = new URL('../', import.meta.url);
   const laws = parse(readFileSync(new URL('src/content/global/laws/laws.yaml', root), 'utf8'));
   const sources = parse(readFileSync(new URL('src/content/global/documents/sources.yaml', root), 'utf8'));
-  const audit = JSON.parse(readFileSync(new URL('docs/legal-import/dk-uik-2026-reference-map.json', root), 'utf8'));
+  const audit = JSON.parse(readFileSync(new URL('tests/fixtures/legal-import/dk-uik-2026-reference-map.json', root), 'utf8'));
   assert.equal(audit.entries.length, 107);
   assert.equal(new Set(audit.entries.map(row => row.id)).size, 107);
   for (const row of audit.entries) {

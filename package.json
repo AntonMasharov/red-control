@@ -12,7 +12,6 @@
     "typecheck": "tsc --noEmit",
     "build:web": "expo export --platform web",
     "check:content": "node scripts/build-content.mjs --check",
-    "check:example": "node scripts/verify-authoring-example.mjs",
     "preview": "node scripts/serve-preview.mjs",
     "build:content": "node scripts/build-content.mjs",
     "prebuild:web": "npm run build:content",
