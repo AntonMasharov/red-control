@@ -1,7 +1,7 @@
 import { Platform, Linking } from 'react-native';
 import * as Picker from 'expo-document-picker';
 import * as FS from 'expo-file-system/legacy';
-import * as Sharing from 'expo-sharing';
+import { openLocalFile } from './open-local-file';
 import { randomUUID } from 'expo-crypto';
 import type { Material } from '../data/model';
 
@@ -101,8 +101,5 @@ export async function openMaterial(file: Material) {
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 60000);
   } else
-    await Sharing.shareAsync(file.uri, {
-      mimeType: file.mime,
-      dialogTitle: 'Открыть исходный файл',
-    });
+    await openLocalFile(file.uri, file.mime);
 }

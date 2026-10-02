@@ -1,6 +1,6 @@
 import { Asset } from 'expo-asset';
 import { Platform, Linking } from 'react-native';
-import * as Sharing from 'expo-sharing';
+import { openLocalFile } from './open-local-file';
 import * as FS from 'expo-file-system/legacy';
 import * as Picker from 'expo-document-picker';
 
@@ -18,7 +18,7 @@ export async function openOriginal(source: {
   await asset.downloadAsync();
   const uri = FS.cacheDirectory + source.name;
   await FS.copyAsync({ from: asset.localUri || asset.uri, to: uri });
-  await Sharing.shareAsync(uri, { mimeType: source.mime, dialogTitle: 'Открыть исходный файл' });
+  await openLocalFile(uri, source.mime);
 }
 export async function pickText() {
   const result = await Picker.getDocumentAsync({
