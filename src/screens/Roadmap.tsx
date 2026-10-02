@@ -52,10 +52,12 @@ export function Roadmap() {
     done,
   } = controller;
   return (
-    <View style={s.stack}>
+    <View style={{ gap: 0 }}>
       <Text style={s.title}>Дорожная карта</Text>
-      <DayPicker />
-      <Text style={s.label}>
+      <View style={{ marginTop: 28, marginBottom: 30 }}>
+        <DayPicker />
+      </View>
+      <Text style={[s.label, { marginBottom: 4 }]}>
         Основной маршрут: {done} из {total}
       </Text>
       {sequential.map((stage, index) => (
@@ -67,7 +69,7 @@ export function Roadmap() {
           onPress={() => (stage.repeatable ? setHome(stage.id) : open(stage))}
         />
       ))}
-      <Text style={s.sectionTitle}>В любое время</Text>
+      <Text style={[s.sectionTitle, { marginTop: 24, marginBottom: 6 }]}>В любое время</Text>
       {visible
         .filter((s) => s.anytime)
         .map((stage) => (
@@ -121,17 +123,17 @@ export function Roadmap() {
       {lawIds && (
         <Sheet title="Правовые основания" onClose={() => setLawIds(undefined)}>
           <View style={{ gap: 2 }}>
-          {laws
-            .filter((entry) => lawIds.includes(entry.id))
-            .map((entry) => (
-              <RowLink
-                key={entry.id}
-                compact
-                title={entry.title}
-                icon="book"
-                onPress={() => setLaw(entry)}
-              />
-            ))}
+            {laws
+              .filter((entry) => lawIds.includes(entry.id))
+              .map((entry) => (
+                <RowLink
+                  key={entry.id}
+                  compact
+                  title={entry.title}
+                  icon="book"
+                  onPress={() => setLaw(entry)}
+                />
+              ))}
           </View>
           {!laws.some((entry) => lawIds.includes(entry.id)) && (
             <Text style={s.small}>Правовые основания не добавлены.</Text>

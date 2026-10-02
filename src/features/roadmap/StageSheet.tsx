@@ -6,7 +6,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { canCheck, formatDate, recordKey, selectedDate, taskRecordId } from '../../data/model';
 import { actions } from '../../data/store';
 import { SourceLink } from '../laws/LegalReaders';
-import { Icon, IconButton, Notice, Sheet, Tag } from '../../ui/components';
+import { Icon, IconButton, Sheet, Tag } from '../../ui/components';
 import { ContentMedia } from '../../ui/ContentMedia';
 import { colors as c, s } from '../../ui/theme';
 import { TaskNotes } from './TaskNotes';
@@ -17,9 +17,8 @@ export function StageSheet({ controller }: { controller: ReturnType<typeof useRo
   if (!active) return null;
   return (
     <>
-      <Sheet title={active.title} onClose={() => setActive(undefined)}>
+      <Sheet title={active.title} onClose={() => setActive(undefined)} fullScreen>
         <Tag text={formatDate(selectedDate(state))} />
-        {!active.anytime && <Notice>Уже выполненные пункты можно исправить.</Notice>}
         {active.items.map((item) => {
           const target = taskRecordId(active, item.id, trip);
           const checked = !!state.checks[recordKey(state, target)];

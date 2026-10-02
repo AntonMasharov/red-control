@@ -103,7 +103,8 @@ test('repeated roadmap trips maintain separate checklists', async () => {
   expect(getState().trips.length).toBe(1);
   await fireEvent.press(screen.getAllByRole('checkbox')[0]);
   await fireEvent.changeText(screen.getByLabelText('Заметки к этапу'), 'Первый выезд');
-  await fireEvent.press(screen.getByText('Сохранить'));
+  await fireEvent(screen.getByLabelText('Заметки к этапу'), 'blur');
+  expect(screen.getByText('✓ Сохранено')).toBeTruthy();
   await fireEvent.press(screen.getByLabelText('Закрыть окно'));
   await fireEvent.press(screen.getByText('Добавить выезд'));
   expect(getState().trips.length).toBe(2);
