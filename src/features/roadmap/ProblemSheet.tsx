@@ -244,7 +244,10 @@ export function ProblemSheet({
       )}
       {complaints.form && <ComplaintForm controller={complaints} />}
       {complaints.draft && (
-        <Sheet title="Черновик сохранён" onClose={() => complaints.setDraft(null)}>
+        <Sheet
+          title={complaints.draft.submittedAt ? 'Поданная жалоба' : 'Черновик сохранён'}
+          onClose={() => complaints.setDraft(null)}
+        >
           <Text style={s.small}>
             Сохранение черновика не означает подачу жалобы. После подачи отметьте действие в ветке
             решения.
@@ -253,8 +256,10 @@ export function ProblemSheet({
             {complaints.draft.text}
           </Text>
           <Button
-            title="Экспортировать текст"
-            onPress={() => complaints.share(complaints.draft!)}
+            title={complaints.draft.submittedAt ? 'Вернуть в черновики' : 'Подано'}
+            onPress={() =>
+              complaints.markSubmitted(complaints.draft!, !complaints.draft!.submittedAt)
+            }
           />
         </Sheet>
       )}

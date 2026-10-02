@@ -17,7 +17,10 @@ test('Google roadmap wording and DOCX-only law mappings are preserved and scoped
   for (const entry of audit.entries) {
     const task = catalog.tasks[entry.taskId];
     assert.ok(source.includes(entry.googleText), entry.taskId);
-    assert.equal(task.text, [...entry.context, entry.googleText].join('\n\n'));
+    const block = Object.values(catalog.blocks).find(block => block.taskIds.includes(task.id));
+    const heading = block?.headings?.filter(heading => block.taskIds.indexOf(heading.beforeTaskId) <= block.taskIds.indexOf(task.id)).at(-1);
+    const movedContext = heading && entry.context.includes(heading.title + ':');
+    assert.equal(task.text, [...entry.context.filter(text => !movedContext || text !== heading.title + ':'), entry.googleText].join('\n\n'));
     const mapped = [...new Set(entry.docxCitationParagraphs.flatMap(paragraph =>
       legalAudit.mappings.find(row => row.paragraph === paragraph).lawIds))];
     assert.deepEqual(task.lawIds, mapped);

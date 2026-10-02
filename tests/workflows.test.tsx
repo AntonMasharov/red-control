@@ -88,8 +88,14 @@ test('opening a violation produces only its complaint and saves an independent d
   await fireEvent.press(screen.getByText('Сохранить черновик'));
   expect(getState().complaints.at(0)?.text).toContain('ЖАЛОБА');
   expect(Object.values(getState().complaintComposers ?? {})[0].selected).toEqual([]);
-  await fireEvent.press(screen.getByText('Экспортировать текст'));
-  expect(exportText).toHaveBeenCalled();
+  await fireEvent.press(screen.getByText('Подано'));
+  expect(getState().complaints.at(0)?.submittedAt).toBeTruthy();
+  expect(screen.getByText('Поданные (1)')).toBeTruthy();
+  const restored = readState(serializeState(getState()));
+  expect(restored.complaints.at(0)?.submittedAt).toBeTruthy();
+  await fireEvent.press(screen.getAllByText('Не дают ознакомиться с реестром').at(-1)!);
+  await fireEvent.press(screen.getByText('Вернуть в черновики'));
+  expect(getState().complaints.at(0)?.submittedAt).toBeUndefined();
 });
 
 test('repeated roadmap trips maintain separate checklists', async () => {

@@ -27,7 +27,12 @@ export function useComplaintGenerator() {
   const setRecipient = (recipient: string) => update({ recipient });
   const setText = (text: string) => update({ text });
   const [form, setForm] = useState(false);
-  const [draft, setDraft] = useState<Complaint | null>(null);
+  const [draftEntry, setDraft] = useState<Complaint | null>(null);
+  const draft = draftEntry
+    ? (state.complaints.find((c) => c.id === draftEntry.id) ?? draftEntry)
+    : null;
+  const markSubmitted = (entry: Complaint, submitted = true) =>
+    run(() => actions.setComplaintSubmitted(entry.id, submitted));
   const complaints = state.complaints.filter((c) => inContext(state, c));
   const template = campaignContent(state.electionId).complaints[0];
   const options =
@@ -50,19 +55,28 @@ export function useComplaintGenerator() {
   const compose = (ids: string[], complaintFacts = facts) => {
     if (!template) throw new Error('Шаблон жалобы недоступен.');
     if (ids.length !== 1) throw new Error('Откройте одно нарушение из списка.');
-    return generateComplaint(template, ids, {
-      ...variables,
-      recipient: recipient.trim() || 'УИК № ' + (activePrecinct(state).number || '_____'),
-      observer_name: name.trim() || '____________________ (ФИО наблюдателя)',
-      uik_number: activePrecinct(state).number || '_____',
-      date: new Date().toLocaleDateString('ru-RU'),
-      facts: complaintFacts,
-    }, catalog.laws);
+    return generateComplaint(
+      template,
+      ids,
+      {
+        ...variables,
+        recipient: recipient.trim() || 'УИК № ' + (activePrecinct(state).number || '_____'),
+        observer_name: name.trim() || '____________________ (ФИО наблюдателя)',
+        uik_number: activePrecinct(state).number || '_____',
+        date: new Date().toLocaleDateString('ru-RU'),
+        facts: complaintFacts,
+      },
+      catalog.laws,
+    );
   };
   const openViolation = (id: string) => {
     try {
       const resume = selected.length === 1 && selected[0] === id;
-      update({ selected: [id], facts: resume ? facts : '', text: resume && text ? text : compose([id], resume ? facts : '') });
+      update({
+        selected: [id],
+        facts: resume ? facts : '',
+        text: resume && text ? text : compose([id], resume ? facts : ''),
+      });
       setForm(true);
     } catch (error) {
       notify(error instanceof Error ? error.message : 'Не удалось составить текст.');
@@ -75,16 +89,20 @@ export function useComplaintGenerator() {
       notify(error instanceof Error ? error.message : 'Не удалось составить текст.');
     }
   };
-  const save = () => {
+  const save = (submitted = false) => {
     let saved: Complaint | undefined;
     if (
-      run(() => {
-        saved = actions.complaint({
-          category: selected.map((id) => options.find((c) => c.id === id)?.title).join('; '),
-          circumstances: facts,
-          text,
-        });
-      }, 'Черновик сохранён')
+      run(
+        () => {
+          saved = actions.complaint({
+            category: selected.map((id) => options.find((c) => c.id === id)?.title).join('; '),
+            submittedAt: submitted ? new Date().toISOString() : undefined,
+            circumstances: facts,
+            text,
+          });
+        },
+        submitted ? 'Отмечено как поданное' : 'Черновик сохранён',
+      )
     ) {
       setForm(false);
       setDraft(saved!);
@@ -121,5 +139,6 @@ export function useComplaintGenerator() {
     prepare,
     save,
     share,
+    markSubmitted,
   };
 }

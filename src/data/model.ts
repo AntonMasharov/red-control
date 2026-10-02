@@ -31,6 +31,7 @@ export type Reconciliation = {
 };
 export type Contact = { id: string; role: string; name: string; phone: string };
 export type Complaint = {
+  submittedAt?: string;
   electionId?: string;
   precinctId?: string;
   id: string;

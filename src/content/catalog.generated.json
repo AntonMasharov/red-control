@@ -2246,7 +2246,7 @@
     },
     "roadmap-morning:item-09": {
       "id": "roadmap-morning:item-09",
-      "text": "Опечатывание ящиков (до 08:00):\n\nОсмотрел ПУСТЫЕ переносные и стационарные ящики.",
+      "text": "Осмотрел ПУСТЫЕ переносные и стационарные ящики.",
       "lawIds": [
         "fz67:article-64:clause-3",
         "cik86:clause-3.2",
@@ -2257,7 +2257,7 @@
     },
     "roadmap-morning:item-10": {
       "id": "roadmap-morning:item-10",
-      "text": "Опечатывание ящиков (до 08:00):\n\nСфотографировал пломбы.",
+      "text": "Сфотографировал пломбы.",
       "lawIds": [
         "fz67:article-64:clause-3",
         "cik86:clause-3.2",
@@ -2268,7 +2268,7 @@
     },
     "roadmap-morning:item-11": {
       "id": "roadmap-morning:item-11",
-      "text": "Опечатывание ящиков (до 08:00):\n\nЗаписал в Дорожную Карту число стационарных и переносных ящиков.",
+      "text": "Записал в Дорожную Карту число стационарных и переносных ящиков.",
       "lawIds": [
         "fz67:article-66:clause-8",
         "fz67:article-66:clause-8.1"
@@ -3091,6 +3091,12 @@
   "blocks": {
     "roadmap-morning": {
       "id": "roadmap-morning",
+      "headings": [
+        {
+          "title": "Опечатывание ящиков (до 08:00)",
+          "beforeTaskId": "roadmap-morning:item-09"
+        }
+      ],
       "title": "Утренний приход",
       "time": "До 08:00",
       "sourceHeading": "📋 ЧЕК-ЛИСТ 1. УТРЕННИЙ ПРИХОД (ПТ, СБ, ВС до 08:00)",

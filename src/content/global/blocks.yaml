@@ -1,5 +1,8 @@
 roadmap-morning:
   id: roadmap-morning
+  headings:
+    - title: Опечатывание ящиков (до 08:00)
+      beforeTaskId: roadmap-morning:item-09
   title: Утренний приход
   time: До 08:00
   sourceHeading: 📋 ЧЕК-ЛИСТ 1. УТРЕННИЙ ПРИХОД (ПТ, СБ, ВС до 08:00)

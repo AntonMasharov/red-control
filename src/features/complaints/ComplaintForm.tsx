@@ -1,6 +1,6 @@
-import { StyleSheet } from 'react-native';
-import { exportText } from '../../data/export';
-import { Button, Field, Notice, Sheet } from '../../ui/components';
+import { StyleSheet, Text } from 'react-native';
+import { Button, Field, Sheet } from '../../ui/components';
+import { s } from '../../ui/theme';
 import type { useComplaintGenerator } from './useComplaintGenerator';
 export function ComplaintForm({
   controller,
@@ -22,7 +22,6 @@ export function ComplaintForm({
     prepare,
     setText,
     save,
-    notify,
     options,
     selected,
   } = controller;
@@ -59,10 +58,6 @@ export function ComplaintForm({
         </>
       ) : (
         <>
-          <Notice>
-            Пример жалобы для этого нарушения. Замените пропуски и проверьте обстоятельства
-            перед использованием.
-          </Notice>
           <Field
             label="Текст обращения"
             multiline
@@ -70,10 +65,11 @@ export function ComplaintForm({
             onChangeText={setText}
             style={localStyles.documentInput}
           />
-          <Button title="Сохранить черновик" icon="save" onPress={save} />
-          <Button title="Экспортировать текст" secondary icon="share" onPress={() => {
-            void exportText('zhaloba.txt', text).catch(() => notify('Не удалось экспортировать текст.'));
-          }} />
+          <Button title="Сохранить черновик" icon="save" onPress={() => save()} />
+          <Text style={s.small}>
+            Подготовьте два экземпляра жалобы: один для подачи, второй — для себя.
+          </Text>
+          <Button title="Подано" icon="check" onPress={() => save(true)} />
           <Button title="Изменить сведения" secondary onPress={() => setText('')} />
         </>
       )}

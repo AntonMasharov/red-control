@@ -71,6 +71,7 @@ export interface ChecklistTask {
   media: Media[];
 }
 export interface ChecklistBlock {
+  headings?: { title: string; beforeTaskId: string }[];
   id: string;
   title: string;
   time: string;

@@ -488,6 +488,27 @@
             "minLength": 1
           },
           "uniqueItems": true
+        },
+        "headings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "beforeTaskId": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "title",
+              "beforeTaskId"
+            ],
+            "additionalProperties": false
+          }
         }
       },
       "required": [

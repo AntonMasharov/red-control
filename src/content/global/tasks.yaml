@@ -68,8 +68,6 @@ roadmap-morning:item-07:
 roadmap-morning:item-09:
   id: roadmap-morning:item-09
   text: |-
-    Опечатывание ящиков (до 08:00):
-
     Осмотрел ПУСТЫЕ переносные и стационарные ящики.
   lawIds:
     - fz67:article-64:clause-3
@@ -80,8 +78,6 @@ roadmap-morning:item-09:
 roadmap-morning:item-10:
   id: roadmap-morning:item-10
   text: |-
-    Опечатывание ящиков (до 08:00):
-
     Сфотографировал пломбы.
   lawIds:
     - fz67:article-64:clause-3
@@ -92,8 +88,6 @@ roadmap-morning:item-10:
 roadmap-morning:item-11:
   id: roadmap-morning:item-11
   text: |-
-    Опечатывание ящиков (до 08:00):
-
     Записал в Дорожную Карту число стационарных и переносных ящиков.
   lawIds:
     - fz67:article-66:clause-8

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { openSource } from '../content/repository';
 import { time } from '../data/model';
@@ -17,8 +18,12 @@ export function Complaints() {
     draft,
     setDraft,
     complaints,
-    share,
+    markSubmitted,
   } = controller;
+  const [tab, setTab] = useState<'draft' | 'submitted'>('draft');
+  const visible = complaints.filter((entry) =>
+    tab === 'submitted' ? !!entry.submittedAt : !entry.submittedAt,
+  );
   return (
     <View style={s.stack}>
       <Text style={s.title}>Подготовить жалобу</Text>
@@ -44,24 +49,39 @@ export function Complaints() {
       />
       <View style={localStyles.draftDivider} />
       <View style={[s.between, localStyles.draftHeading]}>
-        <Text style={s.sectionTitle}>Мои черновики</Text>
-        <Text style={s.small}>{complaints.length}</Text>
+        <Text style={s.sectionTitle}>Мои жалобы</Text>
       </View>
-      {!complaints.length ? (
+      <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 8 }}>
+        <View>
+          <Button
+            title={`Черновики (${complaints.filter((entry) => !entry.submittedAt).length})`}
+            secondary={tab !== 'draft'}
+            onPress={() => setTab('draft')}
+          />
+        </View>
+        <View>
+          <Button
+            title={`Поданные (${complaints.filter((entry) => !!entry.submittedAt).length})`}
+            secondary={tab !== 'submitted'}
+            onPress={() => setTab('submitted')}
+          />
+        </View>
+      </View>
+      {!visible.length ? (
         <Empty
           icon="file-text"
-          title="Здесь будут ваши обращения"
-          text="Сохранённые черновики доступны без интернета."
+          title={tab === 'submitted' ? 'Поданных жалоб пока нет' : 'Черновиков пока нет'}
+          text=""
         />
       ) : (
-        complaints.map((entry) => (
+        visible.map((entry) => (
           <Pressable
             accessibilityRole="button"
             key={entry.id}
             onPress={() => setDraft(entry)}
             style={s.card}
           >
-            <Tag text="Черновик · не подано" />
+            <Tag text={entry.submittedAt ? 'Подано' : 'Черновик'} green={!!entry.submittedAt} />
             <Text style={[s.sectionTitle, localStyles.draftTitle]}>{entry.category}</Text>
             <Text style={[s.small, localStyles.draftDate]}>
               {new Date(entry.at).toLocaleDateString('ru-RU')} · {time(entry.at)}
@@ -71,12 +91,23 @@ export function Complaints() {
       )}
       {form && <ComplaintForm controller={controller} />}
       {draft && (
-        <Sheet title="Черновик обращения" onClose={() => setDraft(null)}>
-          <Tag text="Не подано в комиссию" />
+        <Sheet
+          title={draft.submittedAt ? 'Поданная жалоба' : 'Черновик обращения'}
+          onClose={() => setDraft(null)}
+        >
+          <Tag text={draft.submittedAt ? 'Подано' : 'Черновик'} green={!!draft.submittedAt} />
           <Text selectable style={s.text}>
             {draft.text}
           </Text>
-          <Button title="Экспортировать текст" icon="share" onPress={() => share(draft)} />
+          <Button
+            title={draft.submittedAt ? 'Вернуть в черновики' : 'Подано'}
+            onPress={() => {
+              if (markSubmitted(draft, !draft.submittedAt)) {
+                setTab(draft.submittedAt ? 'draft' : 'submitted');
+                setDraft(null);
+              }
+            }}
+          />
         </Sheet>
       )}
     </View>
@@ -89,4 +120,3 @@ const localStyles = StyleSheet.create({
   draftTitle: { fontSize: 16, marginTop: 10 },
   draftDate: { marginTop: 8 },
 });
-

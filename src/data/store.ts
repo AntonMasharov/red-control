@@ -305,6 +305,15 @@ export const actions = {
     const entry = { id: randomUUID(), title: title.trim(), text };
     commit('note.template', entry, (s) => ({ ...s, noteTemplates: [...s.noteTemplates, entry] }));
   },
+  setComplaintSubmitted: (id: string, submitted: boolean) => {
+    if (!current.complaints.some((c) => c.id === id && inContext(current, c)))
+      throw new Error('Жалоба не найдена.');
+    const submittedAt = submitted ? new Date().toISOString() : undefined;
+    commit('complaint.status', { id, submittedAt }, (s) => ({
+      ...s,
+      complaints: s.complaints.map((c) => (c.id === id ? { ...c, submittedAt } : c)),
+    }));
+  },
   complaint: (draft: Omit<Complaint, 'id' | 'at'>) => {
     if (!draft.text.trim()) throw new Error('Текст жалобы не может быть пустым.');
     const entry = {

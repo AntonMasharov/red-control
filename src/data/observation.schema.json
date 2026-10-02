@@ -182,6 +182,10 @@
               },
               "text": {
                 "type": "string"
+              },
+              "submittedAt": {
+                "type": "string",
+                "minLength": 1
               }
             },
             "required": [

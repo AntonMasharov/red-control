@@ -50,6 +50,17 @@ export function validateShape(value, rule = schema, path = '$') {
 }
 export function validateCatalog(c) {
   validateShape(c);
+  for (const block of Object.values(c.blocks)) {
+    const anchors = new Set();
+    for (const heading of block.headings || []) {
+      assert.ok(
+        block.taskIds.includes(heading.beforeTaskId),
+        'Heading must precede a task in its block',
+      );
+      assert.ok(!anchors.has(heading.beforeTaskId), 'Duplicate heading anchor');
+      anchors.add(heading.beforeTaskId);
+    }
+  }
   if (c.problemSolving) {
     const check = (ids) =>
       ids.forEach((id) =>
