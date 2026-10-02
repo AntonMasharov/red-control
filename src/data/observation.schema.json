@@ -392,6 +392,37 @@
             ],
             "additionalProperties": false
           }
+        },
+        "problems": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "completed": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "waiting": {
+                "type": "boolean"
+              },
+              "resolved": {
+                "type": "boolean"
+              },
+              "reviewing": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "completed",
+              "waiting",
+              "resolved"
+            ],
+            "additionalProperties": false
+          }
         }
       },
       "required": [

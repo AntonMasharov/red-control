@@ -52,7 +52,18 @@ export interface TheoryBlock {
   references: SourceReference[];
   media: Media[];
 }
+export interface ProblemSolvingConfig {
+  default: string[];
+  stages: Table<{
+    title: string;
+    description: string;
+    completedLabel: string;
+    kind: 'oral' | 'complaint' | 'action';
+  }>;
+}
 export interface ChecklistTask {
+  problemSolving?: string[];
+  complaintId?: string;
   id: string;
   text: string;
   lawIds: string[];
@@ -125,6 +136,7 @@ export interface CampaignFile extends Omit<Campaign, 'commissions'> {
   commissionsFile: string;
 }
 export interface Catalog {
+  problemSolving: ProblemSolvingConfig;
   schemaVersion: 1;
   revision: string;
   campaigns: Table<Campaign>;

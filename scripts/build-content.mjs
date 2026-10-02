@@ -24,6 +24,7 @@ for (const key of [
   catalog[key] = read(
     'global/' + (key === 'laws' ? 'laws/' : key === 'sources' ? 'documents/' : '') + key + '.yaml',
   );
+catalog.problemSolving = read('global/problem-solving.yaml');
 catalog.sources = mergeSourceTables(catalog.sources, read('global/videos/sources.yaml'));
 for (const path of manifest.campaigns) {
   assert.ok(

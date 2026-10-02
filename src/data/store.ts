@@ -4,6 +4,7 @@ import { load, persist } from './storage';
 import {
   AppState,
   ComplaintComposer,
+  ProblemProgress,
   Member,
   CounterEvent,
   Complaint,
@@ -92,6 +93,18 @@ function addEvent(delta: number, kind: CounterEvent['kind'], note: string, undoO
   commit('turnout.event', event, (s) => ({ ...s, counter: [...s.counter, event] }));
 }
 export const actions = {
+  problem: (stageId: string, item: string, trip: string, progress: ProblemProgress) => {
+    if (!canCheck(current, stageId, item, trip)) throw new Error('Действие недоступно.');
+    const stage = electionStages(activeElection(current), current.day).find(
+      (s) => s.id === stageId,
+    )!;
+    const key = recordKey(current, taskRecordId(stage, item, trip));
+    commit('roadmap.problem', { key, progress }, (s) => ({
+      ...s,
+      problems: { ...s.problems, [key]: { ...progress, completed: [...progress.completed] } },
+      checks: { ...s.checks, [key]: progress.resolved },
+    }));
+  },
   saveComplaintComposer: (draft: ComplaintComposer) => {
     const key = JSON.stringify([current.electionId, current.precinctId]);
     commit('complaint.composer', { key, draft }, (state) => ({
@@ -253,6 +266,16 @@ export const actions = {
     commit('roadmap.check', { key, value }, (s) => ({
       ...s,
       checks: { ...s.checks, [key]: value },
+      problems: s.problems?.[key]
+        ? {
+            ...s.problems,
+            [key]: {
+              ...s.problems[key],
+              resolved: value,
+              waiting: value ? false : s.problems[key].waiting,
+            },
+          }
+        : s.problems,
     }));
   },
   note: (stage: string, note: string) => {

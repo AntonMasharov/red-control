@@ -115,7 +115,14 @@ export type ComplaintComposer = {
   text: string;
   variables?: Record<string, string>;
 };
+export type ProblemProgress = {
+  reviewing?: boolean;
+  completed: string[];
+  waiting: boolean;
+  resolved: boolean;
+};
 export type AppState = {
+  problems?: Record<string, ProblemProgress>;
   complaintComposers?: Record<string, ComplaintComposer>;
   version: 3;
   contextSelected?: boolean;
@@ -369,6 +376,8 @@ export function readState(raw: string): AppState {
     validateComposers(data.observer.complaintComposers);
   if (data?.version !== 4 && data?.complaintComposers !== undefined)
     validateComposers(data.complaintComposers);
+  const problems = data?.version === 4 ? data.observer?.problems : data?.problems;
+  if (problems !== undefined) validateProblems(problems);
   if (data?.version === 4) {
     if (!data.observer || !data.contexts || typeof data.catalogRevision !== 'string')
       throw new Error('Повреждены локальные данные.');
@@ -614,6 +623,7 @@ export function serializeState(state: AppState): string {
   ])
     if (row.electionId) used.add(row.electionId);
   for (const key of [
+    ...Object.keys(state.problems || {}),
     ...Object.keys(state.checks),
     ...Object.keys(state.notes),
     ...state.noteCopies.map((n) => n.targetKey),
@@ -694,5 +704,22 @@ function validateComposers(value: unknown): void {
           !Object.values(row.variables).every((value) => typeof value === 'string')))
     )
       throw new Error('Повреждён черновик жалобы.');
+  }
+}
+
+function validateProblems(value: unknown): void {
+  if (!value || typeof value !== 'object' || Array.isArray(value))
+    throw new Error('Повреждены данные решения проблем.');
+  for (const row of Object.values(value) as ProblemProgress[]) {
+    if (
+      !row ||
+      !Array.isArray(row.completed) ||
+      !row.completed.every((id) => typeof id === 'string') ||
+      new Set(row.completed).size !== row.completed.length ||
+      typeof row.waiting !== 'boolean' ||
+      typeof row.resolved !== 'boolean' ||
+      (row.reviewing !== undefined && typeof row.reviewing !== 'boolean')
+    )
+      throw new Error('Повреждены данные решения проблем.');
   }
 }

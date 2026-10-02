@@ -50,6 +50,29 @@ export function validateShape(value, rule = schema, path = '$') {
 }
 export function validateCatalog(c) {
   validateShape(c);
+  if (c.problemSolving) {
+    const check = (ids) =>
+      ids.forEach((id) =>
+        assert.ok(c.problemSolving.stages[id], 'Unknown problem-solving stage: ' + id),
+      );
+    check(c.problemSolving.default);
+    Object.values(c.tasks).forEach((task) => {
+      if (task.problemSolving) check(task.problemSolving);
+    });
+    for (const campaign of Object.values(c.campaigns)) {
+      const route = c.roadmaps[campaign.election.roadmapConfigId];
+      const tasks = [...route.steps, ...route.anytime].flatMap((step) =>
+        c.blocks[step.blockId].taskIds.map((id) => c.tasks[id]),
+      );
+      const complaints = new Set(
+        (campaign.complaints || []).flatMap((t) => t.checkbox_items.map((i) => i.id)),
+      );
+      tasks.forEach((task) => {
+        if (task.complaintId)
+          assert.ok(complaints.has(task.complaintId), 'Unknown complaint for task: ' + task.id);
+      });
+    }
+  }
   const ref = (table, id) => assert.ok(Object.hasOwn(table, id), 'Unknown reference: ' + id);
   const unique = (rows) =>
     assert.equal(new Set(rows.map((r) => r.id)).size, rows.length, 'Duplicate ID');

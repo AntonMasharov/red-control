@@ -2404,6 +2404,7 @@
     },
     "roadmap-evidence:item-12": {
       "id": "roadmap-evidence:item-12",
+      "complaintId": "turnout-figures-not-announced",
       "text": "📝 Что записать:\n\nДанные явки на 10:00, 12:00, 15:00, 18:00.",
       "lawIds": [],
       "sourceIds": [],
@@ -2529,6 +2530,7 @@
     },
     "roadmap-home:item-03": {
       "id": "roadmap-home:item-03",
+      "complaintId": "home-voting-departure-marks",
       "text": "Список УИК: В списке избирателей поставлена отметка «Вне помещения для голосования».",
       "lawIds": [
         "fz67:article-66:clause-9"
@@ -3298,5 +3300,39 @@
       "contactIds": []
     }
   },
-  "contacts": {}
+  "contacts": {},
+  "problemSolving": {
+    "default": [
+      "oral",
+      "complaint",
+      "police",
+      "prosecutor"
+    ],
+    "stages": {
+      "oral": {
+        "title": "Попросить устно, сославшись на статью",
+        "description": "Попросите устранить проблему. Правовые основания этого пункта доступны ниже.",
+        "completedLabel": "Попросил устно",
+        "kind": "oral"
+      },
+      "complaint": {
+        "title": "Написать жалобу",
+        "description": "Откройте подходящий пример, уточните обстоятельства и подготовьте текст. После подачи отметьте действие выполненным.",
+        "completedLabel": "Подана жалоба",
+        "kind": "complaint"
+      },
+      "police": {
+        "title": "Позвонить в полицию",
+        "description": "Сообщите обстоятельства проблемы и зафиксируйте время звонка и результат в заметке.",
+        "completedLabel": "Позвонил в полицию",
+        "kind": "action"
+      },
+      "prosecutor": {
+        "title": "Обращение в прокуратуру",
+        "description": "Подготовьте обращение с обстоятельствами и имеющимися материалами. Отметьте действие после подачи.",
+        "completedLabel": "Обращение в прокуратуру подано",
+        "kind": "action"
+      }
+    }
+  }
 }
