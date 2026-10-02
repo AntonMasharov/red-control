@@ -1,22 +1,22 @@
-# Roadmap import
+# Импорт дорожной карты
 
-Checklist wording comes from [the supplied Google Doc](https://docs.google.com/document/d/1SM58QzuWTpygzH_jHyAblsd__kxxEuvhfhhEP1VKRE0/edit?tab=t.0), read on 2 October 2026. `google-doc-source.txt` preserves the fetched text. The Google Doc was not edited.
+Формулировки чек-листа взяты из [предоставленного Google Документа](https://docs.google.com/document/d/1SM58QzuWTpygzH_jHyAblsd__kxxEuvhfhhEP1VKRE0/edit?tab=t.0), прочитанного 2 октября 2026 года. Полученный текст сохранён в `google-doc-source.txt`. Исходный Google Документ не изменялся.
 
-The app contains eight global blocks and 89 checklist items. Seven checklists are accompanied by the violations memo. Heading-only bullets become context for their child items, not extra checkboxes. The introductory document glossary stays in the saved source; it is not turned into a checklist or substituted for the existing theory content.
+Приложение содержит восемь общих блоков и 89 пунктов чек-листа. Семь чек-листов сопровождаются памяткой о нарушениях. Пункты, состоящие только из заголовка, становятся контекстом для вложенных пунктов, а не отдельными флажками. Вводный словарь документов остаётся в сохранённом источнике; он не превращён в чек-лист и не заменяет существующие учебные материалы.
 
-Editable content:
+Редактируемые исходники:
 
-- `src/content/global/tasks.yaml`: checklist wording and atomic `lawIds`.
-- `src/content/global/blocks.yaml`: groups of checklist items.
-- `src/content/global/roadmaps.yaml`: the reusable `observer-multiday-route`.
-- `src/content/elections/deputy-2026/manifest.yaml`: connects the election to that route.
+- `src/content/global/tasks.yaml`: формулировки пунктов и ссылки `lawIds` на отдельные правовые нормы.
+- `src/content/global/blocks.yaml`: группы пунктов чек-листа.
+- `src/content/global/roadmaps.yaml`: общий маршрут `observer-multiday-route`.
+- `src/content/elections/deputy-2026/manifest.yaml`: привязка кампании к маршруту.
 
-Morning and in-room voting appear each day. The early-evening block appears on all days except the last. Counting and protocol checks appear on the last day. Evidence reminders and the violations memo are available at any time. Home voting is an anytime block with a separate checklist for each trip.
+Утренние действия и голосование в помещении доступны каждый день. Блок перед завершением голосования появляется во все дни, кроме последнего. Подсчёт голосов и проверка протокола доступны в последний день. Напоминания о фиксации доказательств и памятка о нарушениях доступны в любое время. Надомное голосование — отдельный доступный в любое время блок с собственным чек-листом для каждого выезда.
 
-`task-law-map.json` records the Google heading, item wording and the DOCX legal-citation paragraphs used for each task. Only the legal-reference map from `dk-uik-2026.docx` supplies those links; none of its checklist wording was imported. The links open individual provisions through the `(i)` button, then their original files from the legal reader.
+`task-law-map.json` сохраняет заголовок из Google Документа, формулировку пункта и абзацы правовых ссылок из DOCX, использованные для каждого пункта. Эти ссылки взяты только из карты правовых оснований документа `dk-uik-2026.docx`; формулировки его чек-листа не импортировались. Кнопка `(i)` открывает отдельные нормы, а из окна чтения можно открыть их оригиналы.
 
-83 items have related legal citations. Six practical reminders have no direct citation in the DOCX: recording officer names, recording turnout intervals, later checking published results, delivering protocol copies, requesting a receipt on a complaint, and contacting headquarters/escalating a complaint. No legal reference was invented for these reminders.
+У 83 пунктов есть правовые ссылки. Шесть практических напоминаний не имеют прямой ссылки в DOCX: записать ФИО должностных лиц, фиксировать явку по интервалам, позже проверить опубликованные результаты, передать копии протоколов, получить отметку о принятии жалобы и связаться со штабом либо продолжить обжалование. Для этих напоминаний правовые основания не добавлялись предположительно.
 
-The Google Doc's operational recommendations, phone numbers, dates and delivery address were preserved. Related-law links do not certify every recommendation as a statutory obligation; specific checklist claims may need editorial review against the linked provisions. In particular, 07:00–07:30 arrival, the more-than-30-applications threshold, mandatory photographs, and the delivery address are instructions from the Google Doc.
+Рабочие рекомендации, телефоны, даты и адрес доставки из Google Документа сохранены. Ссылки на законы не подтверждают, что каждая рекомендация является юридической обязанностью; отдельные формулировки требуют редакторской проверки по указанным нормам. В частности, прибытие в 07:00–07:30, порог более 30 заявлений, обязательные фотографии и адрес доставки — инструкции из Google Документа.
 
-After editing YAML, run `npm run build:content` and `npm run check:content`. Changing a used task or step ID changes its saved progress identity; keep IDs stable when editing wording.
+После изменения YAML выполните `npm run build:content` и `npm run check:content`. Изменение используемого ID пункта или шага меняет его связь с сохранённым прогрессом; при правке текста сохраняйте идентификаторы.

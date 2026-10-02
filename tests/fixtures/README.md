@@ -1,5 +1,7 @@
-# Historical test data
+# Исторические тестовые данные
 
-`catalog.json` exercises populated-catalog workflows and migration behavior. It is test-only and is not imported into the application or exported bundles.
+`catalog.json` используется для проверки сценариев с заполненным каталогом и миграции данных. Это тестовый набор: он не подключается к приложению и не включается в сборки.
 
-Node domain tests redirect catalog imports with `fixture-catalog-loader.mjs`; Jest uses its test-only module mapping. `empty-catalog.test.mjs` launches a separate process without that mapping to verify the actual empty application catalog and storage behavior. Browser tests exercise the actual empty app.
+Тесты логики на Node.js перенаправляют импорт каталога через `fixture-catalog-loader.mjs`; Jest использует отдельное сопоставление модулей для тестов. `empty-catalog.test.mjs` запускает отдельный процесс без подмены импорта, чтобы проверить настоящий каталог приложения и хранение данных. Браузерные тесты также используют настоящий каталог приложения.
+
+Название `empty-catalog.test.mjs` историческое: актуальное содержимое каталога определяется исходниками проекта.

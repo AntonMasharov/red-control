@@ -1,39 +1,46 @@
-# Offline content authoring
+# Подготовка материалов для работы без сети
 
-For step-by-step examples and the editable file map, read [the practical election-data tutorial](content-authoring-tutorial.md). A complete fictional starter is in `examples/authoring/example-city-2027/`.
+Пошаговые примеры и карта редактируемых файлов находятся в [руководстве по наполнению](content-authoring-tutorial.md). Полный вымышленный пример кампании расположен в `examples/authoring/example-city-2027/`.
 
-Source file registrations are generated from `sources.yaml` during the content build. A non-null `assetKey` uses `global/documents/<name>` by default for documents, and `global/videos/<name>` for videos. Set optional `file` to an explicit path relative to `src/content/` for manual control, or `assetKey: null` to leave a source unpublished. Do not edit `source-assets.generated.ts`.
+Регистрация исходных файлов создаётся из `sources.yaml` при сборке материалов. Если `assetKey` не равен `null`, документ по умолчанию берётся из `global/documents/<name>`, а видео — из `global/videos/<name>`. Необязательное поле `file` задаёт явный путь относительно `src/content/`. Значение `assetKey: null` оставляет источник неопубликованным. Не редактируйте `source-assets.generated.ts` вручную.
 
-Run `npm run build:content` after editing YAML, then `npm run check:content` to verify the generated bundle. YAML is parsed and validated at build time; the mobile app reads only the precompiled, immutable catalog and never needs a YAML parser or network connection at runtime.
+После изменения YAML выполните `npm run build:content`, затем `npm run check:content`. YAML разбирается и проверяется при сборке; приложение использует готовый неизменяемый каталог и не требует разбора YAML или подключения к сети во время работы.
 
-- `src/content/catalog-manifest.yaml` lists election manifests.
-- `src/content/global/laws/laws.yaml` contains shared legal citations.
-- `src/content/global/documents/sources.yaml` describes bundled document originals.
-- `src/content/global/videos/sources.yaml` describes videos; lesson video registration is generated automatically.
-- Other global YAML tables contain reusable theory, tasks, stages, roadmaps, contacts and headquarters.
-- `src/content/elections/<id>/manifest.yaml` identifies a campaign and its theory and roadmap selections.
-- `commissions.yaml` stores the campaign's commission tree through stable parent IDs.
-- `global/complaints.yaml` contains reusable bodies, `templateId` and `lawIds`.
-- `global/complaint-templates.yaml` contains reusable headers/footers. Election `complaintIds` adds complaints manually; links from selected roadmap tasks (`complaintId`) are added automatically. Laws do not select complaints.
-- Optional `content/<table>/*.yaml` files override nothing: they add campaign-prefixed entries to global tables.
+## Исходники
 
-Use YAML block scalars (`|-`) for Markdown and multiline complaint text. Preserve IDs once users have observations; changing an ID creates a new record identity. Duplicate keys, broken references, impossible dates, hierarchy cycles and missing bundled asset keys cause the build to fail.
+- `src/content/catalog-manifest.yaml` перечисляет манифесты кампаний.
+- `src/content/global/laws/laws.yaml` содержит общие правовые нормы.
+- `src/content/global/documents/sources.yaml` описывает встроенные оригиналы документов.
+- `src/content/global/videos/sources.yaml` описывает видео; их регистрация для уроков создаётся автоматически.
+- Остальные общие YAML-таблицы содержат учебные материалы, задачи, этапы, маршруты, контакты и штабы.
+- `src/content/elections/<id>/manifest.yaml` задаёт кампанию, её учебные материалы и маршрут.
+- `commissions.yaml` хранит дерево комиссий через постоянные родительские ID.
+- `global/complaints.yaml` содержит общие тексты жалоб, `templateId` и `lawIds`.
+- `global/complaint-templates.yaml` содержит общие шапки и концовки жалоб. Поле кампании `complaintIds` добавляет жалобы вручную; ссылки `complaintId` из выбранных задач маршрута добавляют их автоматически. Законы не определяют выбор жалоб.
+- Необязательные файлы `content/<таблица>/*.yaml` добавляют записи с префиксом кампании в общие таблицы, не заменяя существующие записи.
 
-Complaint placeholders are `{{recipient}}`, `{{observer_name}}`, `{{uik_number}}`, `{{date}}` `{{time}}`, and additional variables discovered automatically from the selected template. Extra fields appear in the existing complaint form. Missing variables fail generation instead of leaving unresolved placeholders. Additional facts remain literal user text. Legal references are appended once for the selected violations.
+Для Markdown и многострочного текста жалоб используйте YAML-блоки `|-`. Сохраняйте идентификаторы после начала работы наблюдателей: изменение ID создаёт новую сущность. Повторяющиеся ключи, неверные ссылки, невозможные даты, циклы в иерархии и отсутствующие встроенные файлы приводят к ошибке сборки.
 
-Laws are derived from theory, roadmap tasks and complaint checkboxes. Sources are derived from those laws. Election manifests contain no manual law/source lists; the builder derives `lawIds` and `sourceIds` in the normalized runtime schema. Source documents must be registered with a literal `require` in `src/content/repository.ts`; no remote fallback is used.
+## Жалобы и источники
 
-Observer data stays in SQLite on mobile and local browser storage on web. Members, contacts, progress, repeated stages (including home-voting trips), stage/item notes, unfinished complaint inputs and saved drafts survive reloads. Existing snapshots are migrated and retained; refactoring does not erase observations.
+Подстановки жалоб: `{{recipient}}`, `{{observer_name}}`, `{{uik_number}}`, `{{date}}`, `{{time}}`. Дополнительные переменные определяются по выбранному шаблону и становятся полями формы. Отсутствующие значения приводят к ошибке генерации вместо текста с нераскрытыми подстановками. Дополнительные обстоятельства сохраняются как обычный текст пользователя. Правовые ссылки добавляются однократно для выбранных нарушений.
 
-## Verification
+Список законов определяется учебными материалами, задачами маршрута и примерами нарушений. Источники определяются ссылками из законов. В манифесте кампании нет ручных списков законов и источников: сборщик вычисляет `lawIds` и `sourceIds` для готового каталога. Регистрация локальных файлов с буквальными вызовами `require` генерируется автоматически; загрузка удалённого файла вместо отсутствующего оригинала не предусмотрена.
 
-- `npm test`: domain, storage migration and failure, scoping, complaint assembly tests.
-- `npm run test:integration`: Jest and React Native Testing Library workflows.
-- `npm run typecheck`: strict TypeScript.
-- `npm run build:web`: production bundle, including local originals and media.
-- `npm run test:e2e`: Cypress happy paths; first run `npm run build:web` and keep `npm run preview` running on port 8082. Run `npx cypress install` once on a new machine.
+## Записи наблюдателя
 
-The federal and municipal 2026 campaigns are explicitly labelled training examples. Existing sourced legal placeholders retain their status; the rewrite does not invent missing law text or confirm real election schedules. Native iOS/Android device validation requires the corresponding build environment.
+Данные хранятся в SQLite на телефоне и в локальном хранилище браузера в веб-версии. Состав комиссии, контакты, прогресс, повторяемые этапы, заметки, незавершённые формы жалоб и сохранённые черновики сохраняются после перезапуска. Предыдущие форматы состояния мигрируют с сохранением записей.
 
-Compatibility choices: the rewrite retains the existing atomic SQLite snapshots and typed tab/modal navigation, instead of replacing them with AsyncStorage/MMKV and React Navigation. YAML uses the normalized catalog contracts to preserve existing content IDs and observation keys; it does not use every illustrative field name from the specification verbatim. Test execution covers the main workflows; no claim of measured 100% coverage is made.
+## Проверки
 
+- `npm test`: логика, миграции, ошибки хранения, разделение данных по контекстам и формирование жалоб.
+- `npm run test:integration`: сценарии интерфейса через Jest и React Native Testing Library.
+- `npm run typecheck`: строгая проверка TypeScript.
+- `npm run build:web`: веб-сборка с локальными оригиналами и медиафайлами.
+- `npm run test:e2e`: браузерные сценарии Cypress. Сначала выполните `npm run build:web` и запустите `npm run preview` на порту 8082. На новом компьютере может потребоваться `npx cypress install`.
+
+Актуальный набор кампаний определяется `catalog-manifest.yaml`. Статусы материалов не подтверждают применимость правовых норм или достоверность расписания конкретных выборов. Проверка на реальных Android- и iOS-устройствах требует соответствующего окружения сборки.
+
+## Архитектурные решения
+
+Используются атомарные снимки состояния в SQLite и типизированная навигация по вкладкам и модальным окнам. Форматы YAML соответствуют текущим контрактам каталога и сохраняют существующие ID материалов и ключи наблюдений; отдельные иллюстративные поля из первоначальной спецификации не используются. Автоматические тесты проверяют основные сценарии, но измеренное полное покрытие не заявлено.

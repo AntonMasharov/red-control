@@ -1,32 +1,32 @@
-# Legal provisions from the 2026 UIK checklist
+# Правовые нормы из чек-листа УИК 2026 года
 
-The authored set is in `src/content/global/laws/laws.yaml`: 107 distinct entries, comprising 84 provisions of 67-ФЗ and 23 CEC provisions/annexes. Repeated citations reuse an ID. The reference map records 116 citation locations from `dk-uik-2026.docx`, including its complaint example and observer-status appendix.
+Подготовленные нормы находятся в `src/content/global/laws/laws.yaml`: 107 отдельных записей, включая 84 нормы 67-ФЗ и 23 нормы либо приложения ЦИК. Повторные ссылки используют тот же ID. Карта ссылок содержит 116 мест цитирования из `dk-uik-2026.docx`, включая пример жалобы и приложение о статусе наблюдателя.
 
-## Sources and editions
+## Источники и редакции
 
-- **67-ФЗ:** the uploaded `fz-67.docx` contains older wording, including article 30(9)(a) without electronic voter lists. It was preserved and was not used for the final excerpts. The cited articles were retrieved from КонсультантПлюс on 2 October 2026, in the edition identified by that site as 26 July 2026. Their offline copy is `src/content/global/documents/fz67-2026-cited-articles.txt`, registered as `fz67-2026-excerpts`. This copy includes only the 13 cited articles, not the entire statute. Each article's retrieval URL is in the file and the reference map.
-- **CEC № 86/718-8:** excerpts come from the uploaded `cik-08_06_2022_N_86_718_8.rtf`, identified as amended on 24 June 2026. Entries link to `cik-multiday-voting`.
-- The voter-list instruction `pril-6-66-9.1.docx` is not separately cited by the checklist's legal-reference column, so no provisions from it were added by inference.
+- **67-ФЗ:** предоставленный `fz-67.docx` содержит более ранние формулировки, в том числе подпункт «а» пункта 9 статьи 30 без электронных списков избирателей. Он сохранён, но не использовался для итоговых выдержек. Цитируемые статьи получены из КонсультантПлюс 2 октября 2026 года в редакции, обозначенной сайтом как редакция от 26 июля 2026 года. Копия для работы без сети — `src/content/global/documents/fz67-2026-cited-articles.txt`, зарегистрированная как `fz67-2026-excerpts`. Она содержит только 13 цитируемых статей, а не весь закон. Адрес получения каждой статьи указан в файле и карте ссылок.
+- **Постановление ЦИК № 86/718-8:** выдержки взяты из предоставленного `cik-08_06_2022_N_86_718_8.rtf`, обозначенного как редакция от 24 июня 2026 года. Записи ссылаются на `cik-multiday-voting`.
+- Инструкция о списках избирателей `pril-6-66-9.1.docx` отдельно не цитируется в столбце правовых оснований чек-листа. Поэтому нормы из неё не добавлялись предположительно.
 
-These are source excerpts, not a certification that each checklist instruction or reference is legally correct for a particular election. The checklist's text and the newer statute can differ; the extracted legal wording was not rewritten to match the checklist.
+Это выдержки из источников. Они не подтверждают юридическую корректность каждой инструкции или ссылки для конкретных выборов. Текст чек-листа может отличаться от более новой редакции закона; извлечённые нормы не переписывались под формулировки чек-листа.
 
-## Splitting rules
+## Правила разделения норм
 
-- `п. 3, 5 ст. 30` produces two entries.
-- `п. 10–11.1 ст. 66` produces points 10, 11 and 11.1.
-- A continuous range includes existing decimal-numbered points between its endpoints: `п. 3–8 ст. 61` includes 3.1 and 7.1 as well as the integer points. This interpretation is explicit in the reference map and can be narrowed by editing those mappings before authoring tasks.
-- A cited subclause such as `подп. «к» п. 9 ст. 30` is its own entry containing that subclause, rather than the whole point.
-- The observer-status appendix separately cites whole points 9 and 10 of article 30; those full-point entries coexist with individually cited subclauses.
-- CEC annexes 1 and 2 are separate entries containing their form text and explanatory footnotes. Table cells are represented as plain text, so use the original RTF for form layout.
-- Repealed provisions explicitly cited by a range are retained with `status: repealed-in-source`; article 61(5) is one such entry. They must not be treated as a current requirement.
-- Cross-references embedded inside the quoted laws are preserved as text, not recursively expanded into additional entries.
+- `п. 3, 5 ст. 30` создаёт две записи.
+- `п. 10–11.1 ст. 66` создаёт записи для пунктов 10, 11 и 11.1.
+- Непрерывный диапазон включает существующие пункты с дробными номерами между границами: `п. 3–8 ст. 61` включает 3.1 и 7.1 вместе с целыми номерами. Такое толкование явно отражено в карте ссылок; его можно сузить, изменив сопоставления до наполнения задач.
+- Ссылка на подпункт, например `подп. «к» п. 9 ст. 30`, создаёт отдельную запись с этим подпунктом, а не со всем пунктом.
+- Приложение о статусе наблюдателя отдельно ссылается на полные пункты 9 и 10 статьи 30; эти записи существуют вместе с записями отдельных подпунктов.
+- Приложения 1 и 2 ЦИК представлены отдельно с текстом форм и поясняющими сносками. Ячейки таблиц переданы обычным текстом; для исходного оформления формы используйте оригинальный RTF.
+- Утратившие силу нормы, явно включённые в цитируемый диапазон, сохранены со статусом `repealed-in-source`; один из примеров — пункт 5 статьи 61. Их нельзя считать действующими требованиями.
+- Перекрёстные ссылки внутри цитируемого закона сохраняются как текст и не разворачиваются рекурсивно в дополнительные записи.
 
-Formatting-only cleanup removes document hyperlink field instructions, amendment-history annotations, and empty paragraphs. It preserves statutory wording, clause numbers and substantive paragraphs.
+При очистке оформления удаляются служебные инструкции полей гиперссылок, примечания об истории поправок и пустые абзацы. Формулировки норм, номера пунктов и содержательные абзацы сохраняются.
 
-## Traceability and editing
+## Проверяемость и редактирование
 
-`dk-uik-2026-reference-map.json` records each checklist citation, its separate `lawIds`, source paragraph ranges, file hashes, excerpt hashes and retrieval URLs. Paragraph numbers are one-based extracted-text positions, not Word page numbers. Federal-law paragraph ranges refer to the combined extracted article paragraphs; CEC ranges refer to the RTF's extracted text lines.
+`dk-uik-2026-reference-map.json` хранит каждую ссылку чек-листа, отдельные `lawIds`, диапазоны абзацев источников, хеши файлов и выдержек, а также адреса получения. Номера абзацев начинаются с единицы и относятся к извлечённому тексту, а не страницам Word. Диапазоны федерального закона относятся к объединённым абзацам извлечённых статей; диапазоны ЦИК — к строкам извлечённого текста RTF.
 
-To connect a checklist task, copy its `lawIds` from the reference map into the task's `lawIds` field. No elections, tasks or roadmaps were added during this import. Laws become visible when election material references them.
+Чтобы связать пункт чек-листа с нормами, перенесите его `lawIds` из карты ссылок в поле `lawIds` задачи. При этом импорте кампании, задачи и маршруты не добавлялись. Законы становятся видимыми, когда на них ссылаются материалы кампании.
 
-Edit the YAML if you need to correct an excerpt, preserving IDs used by tasks. Then run `npm run build:content` and `npm run check:content`. Update the audit record when replacing source excerpts; its hashes describe this import, not all future edits.
+При исправлении выдержки редактируйте YAML, сохраняя ID, используемые задачами. Затем выполните `npm run build:content` и `npm run check:content`. При замене выдержек обновите запись аудита: её хеши описывают этот импорт, а не все будущие изменения.

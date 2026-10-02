@@ -1,85 +1,88 @@
-# Tutorial: authoring real election data
+# Руководство по наполнению: данные избирательной кампании
 
-Start with the [complete starter folder](../examples/authoring/example-city-2027/manifest.yaml). It contains a fictional election with two polling stations, one lesson, a checklist, a repeatable stage and a complaint. It is **not registered in the app**, so it does not change the current campaigns.
+Начните с [полного примера кампании](../examples/authoring/example-city-2027/manifest.yaml). Он содержит вымышленные выборы с двумя участками, учебным материалом, чек-листом, повторяемым этапом и примером жалобы. Пример **не зарегистрирован в приложении** и не меняет действующие кампании.
 
-The starter's dates, addresses, commission names and legal text are placeholders. Replace them with your real material.
+Даты, адреса, названия комиссий и правовые тексты в примере — образцы. Замените их проверенными сведениями.
 
-## 1. What is happening here?
+## 1. Как устроены данные
 
-There are three different things:
+| Вид данных | Где находятся | Кто изменяет |
+| --- | --- | --- |
+| Материалы кампании, включённые в приложение | YAML и оригиналы в `src/content/` | Автор материалов |
+| Собранная копия материалов | Файлы `*.generated.*` | Команда сборки |
+| Заметки, отметки, состав комиссии, контакты и жалобы наблюдателя | Локальное хранилище устройства | Наблюдатель через приложение |
 
-| Thing | Where it lives | Who changes it |
-|---|---|---|
-| Election material shipped with the app | YAML and original files under `src/content/` | You, as the content author |
-| A compiled copy of that material | Files ending in `.generated.json` | The build command |
-| An observer's notes, checks, member edits, contacts and complaints | Local storage on their device | The observer, through the app |
+**Редактируйте YAML, затем запускайте сборку. Приложение читает сгенерированную копию.** Правки сгенерированного файла будут перезаписаны следующей сборкой.
 
-**Edit the YAML. Run the build. The app reads the generated copy.** Editing a generated JSON file will be undone by the next build.
+Добавление YAML-файла само по себе не подключает кампанию: её манифест должен быть указан в `catalog-manifest.yaml`.
 
-Adding a YAML file does not automatically publish an election. Its manifest must be listed in `catalog-manifest.yaml`.
+Используйте текущие поля: `title`, `topicIds`, `taskIds` и другие из этого руководства. Иллюстративные структуры `name`, `tik_list` или `days/stages/items` из первоначальной спецификации напрямую не поддерживаются.
 
-The current implementation uses the field names below. They differ from some illustrative YAML in the original specification: use `title`, `topicIds`, `taskIds`, etc. Do not paste the specification's `name`, `tik_list`, or `days/stages/items` structures directly into these files.
+## 2. Карта файлов
 
-## 2. The file map
-
-All paths below are relative to the project folder.
+Все пути указаны относительно папки проекта. РЕД. — редактировать, ДОБ. — добавлять файлы, АВТО — не редактировать вручную.
 
 ```text
 src/content/
-  catalog-manifest.yaml                 EDIT: which elections are included
-  catalog.generated.json               DO NOT EDIT: compiled content
-  catalog.schema.json                  Developer validation rules
+  catalog-manifest.yaml                 РЕД. Список кампаний и ревизия каталога
+  catalog.generated.json                АВТО Собранные материалы
+  source-assets.generated.ts            АВТО Регистрация оригиналов и медиафайлов
+  lesson-videos.generated.ts            АВТО Регистрация видео для уроков
+  catalog.schema.json                   Правила проверки структуры для разработчиков
 
   global/
-    app-settings.yaml                  EDIT: common notice and reconciliation times
-    laws/laws.yaml                     EDIT: laws shared between elections
-    documents/sources.yaml             EDIT: original-file descriptions
-    documents/*.docx, *.pdf, *.rtf      ADD: original files
-    videos/sources.yaml                EDIT: video descriptions
-    videos/*.mp4                       ADD: local videos
-    topics.yaml                        EDIT: shared lessons
-    tasks.yaml                         EDIT: shared checklist questions
-    blocks.yaml                        EDIT: groups of checklist questions
-    roadmaps.yaml                      EDIT: order and days of those groups
-    documents.yaml                     EDIT: named document entries
-    contacts.yaml                      EDIT: default contact directory
-    headquarters.yaml                  EDIT: headquarters and their contact lists
+    app-settings.yaml                   РЕД. Общее уведомление и время сверок
+    laws/laws.yaml                      РЕД. Общие правовые нормы
+    documents/sources.yaml              РЕД. Описания оригиналов документов
+    documents/*.docx, *.pdf, *.rtf       ДОБ. Оригиналы документов
+    videos/sources.yaml                 РЕД. Описания видео
+    videos/*.mp4                        ДОБ. Локальные видео
+    topics.yaml                         РЕД. Общие учебные материалы
+    tasks.yaml                          РЕД. Пункты чек-листа
+    blocks.yaml                         РЕД. Группы пунктов
+    roadmaps.yaml                       РЕД. Порядок и дни выполнения этапов
+    problem-solving.yaml                РЕД. Шаги решения проблем
+    complaints.yaml                     РЕД. Жалобы и примеры нарушений
+    complaint-templates.yaml             РЕД. Шапки и концовки жалоб
+    documents.yaml                      РЕД. Карточки документов
+    contacts.yaml                       РЕД. Общий справочник контактов
+    headquarters.yaml                   РЕД. Штабы и списки их контактов
 
   elections/
-    YOUR-ELECTION-ID/
-      manifest.yaml                    REQUIRED: election name, dates and selections
-      commissions.yaml                 REQUIRED: commissions and polling stations
-      content/                         OPTIONAL: material specific to this election
-        topics/*.yaml                  Lessons
-        tasks/*.yaml                   Checklist questions
-        blocks/*.yaml                  Groups of questions
-        roadmaps/*.yaml                Checklist order
-        laws/*.yaml                    Election-specific legal entries
-        sources/*.yaml                 Election-specific file descriptions
-        documents/*.yaml               Election-specific document entries
+    <id-кампании>/
+      manifest.yaml                     ОБЯЗАТЕЛЬНО: название, даты, выбор материалов
+      commissions.yaml                  ОБЯЗАТЕЛЬНО: комиссии и участки
+      content/                          НЕОБЯЗАТЕЛЬНО: материалы этой кампании
+        topics/*.yaml                   Учебные материалы
+        tasks/*.yaml                    Пункты чек-листа
+        blocks/*.yaml                   Группы пунктов
+        roadmaps/*.yaml                  Порядок этапов
+        laws/*.yaml                      Правовые нормы кампании
+        sources/*.yaml                   Описания файлов кампании
+        documents/*.yaml                 Карточки документов кампании
 ```
 
-You may create more `.yaml` files and subfolders inside the listed `content/<table>/` folders. The loader reads them recursively. A file can be named `index.yaml`, `opening.yaml`, or another descriptive name.
+В перечисленных папках `content/<таблица>/` можно создавать несколько `.yaml`-файлов и вложенные папки: загрузчик обходит их рекурсивно. Подойдут имена `index.yaml`, `opening.yaml` или другие понятные названия.
 
-It does **not** automatically load an arbitrary `theory.yaml`, `roadmap.yaml`, `.yml` file, or standalone `.md` file beside the manifest. Put Markdown inside a lesson's `markdown: |-` field.
+Произвольные `theory.yaml`, `roadmap.yaml`, файлы `.yml` и отдельные `.md` рядом с манифестом автоматически не загружаются. Markdown размещайте в поле учебного материала `markdown: |-`.
 
-For a new election, use the election-local `content/` folders. Use `global/` only when the material should be shared. Editing shared material changes every election that references it.
+Для материалов отдельной кампании используйте её папку `content/`. В `global/` размещайте общие материалы: их изменение влияет на все кампании, которые на них ссылаются.
 
-### Files outside that map
+### Остальные файлы
 
-| File/location | What to do |
-|---|---|
-| `src/core/constants/app-settings.generated.json` | Do not edit; generated from `global/app-settings.yaml` |
-| `src/content/source-assets.generated.ts` | Do not edit; file registrations are generated from source metadata |
-| `src/content/lesson-videos.generated.ts` | Do not edit; generated from published `procedure-video` sources |
-| Original files | Old bundled originals were removed; add your new files under `src/content/` |
-| `src/screens/`, `src/features/`, `src/data/`, `src/ui/` | Application code; ordinary election authoring does not require changes |
-| `catalog.schema.json`, `src/data/observation.schema.json` | Developer-maintained validation rules |
-| `dist/`, `dist-native/`, `.expo/`, `node_modules/` | Build/runtime output; not content authoring locations |
+| Файл или папка | Назначение |
+| --- | --- |
+| `src/core/constants/app-settings.generated.json` | Не редактировать: собирается из `global/app-settings.yaml` |
+| `src/content/source-assets.generated.ts` | Не редактировать: регистрация файлов из описаний источников |
+| `src/content/lesson-videos.generated.ts` | Не редактировать: список опубликованных источников `procedure-video` |
+| Оригиналы документов | Добавляйте в `src/content/` и регистрируйте в описаниях источников |
+| `src/screens/`, `src/features/`, `src/data/`, `src/ui/` | Код приложения; обычное наполнение не требует изменений |
+| `catalog.schema.json`, `src/data/observation.schema.json` | Правила проверки, поддерживаемые разработчиками |
+| `dist/`, `dist-native/`, `.expo/`, `node_modules/` | Результаты сборки и служебные файлы; здесь материалы не редактируют |
 
-## 3. IDs: the connections between files
+## 3. Идентификаторы: связи между файлами
 
-An ID is a permanent internal name, not the text shown to the observer.
+ID — постоянное внутреннее имя, а не текст, который видит наблюдатель.
 
 ```yaml
 example-city-2027:arrival-block:
@@ -87,44 +90,30 @@ example-city-2027:arrival-block:
   title: Прибытие на участок
 ```
 
-The outer key and `id` must match. You can change the title later without changing the ID.
+Внешний ключ и поле `id` должны совпадать. Заголовок можно изменить позже, сохранив ID.
 
-Rules:
+- Выберите ID кампании один раз, например `city-council-2027`.
+- ID локальных материалов начинаются с ID кампании и двоеточия: `city-council-2027:arrival-block`.
+- ID внутри таблицы уникальны. Локальная запись не может заменить общую.
+- ID участков уникальны среди кампаний. Номер `1001` может повторяться, ID участка — нет.
+- Для понятности назовите папку по ID кампании, хотя определяющим остаётся ID в манифесте.
+- После начала работы наблюдателей сохраняйте ID и даты кампании. Для других выборов создавайте новый ID. Изменение дат существующей кампании может помешать загрузке сохранённого состояния.
 
-- Choose the election ID once: for example, `city-council-2027`.
-- Election-local content IDs must begin with that ID plus `:`: `city-council-2027:arrival-block`.
-- IDs in a table must be unique. A local entry cannot overwrite a global entry.
-- Polling-station IDs must also be unique across elections. Two elections may both have station number `1001`, but their station IDs must differ.
-- The folder name should match the election ID for clarity, although the manifest's ID is authoritative.
-- Once observers use an election, preserve its IDs and dates. For a different election or corrected campaign identity, create a new ID. Changing existing dates can make saved snapshots fail to load.
+`city-council-2027:arrival-block` — одна строка. Двоеточие является соглашением об именовании, а не разделителем папок. Длинные сгенерированные ID старых примеров воспроизводить не требуется.
 
-`city-council-2027:arrival-block` is just one string. The colon is a naming convention, not a folder path.
+## 4. Добавление кампании
 
-Older samples contain long generated IDs, including repeated prefixes. You do not have to imitate them. The starter uses short, readable IDs.
+### Шаг А. Скопируйте пример
 
-## 4. Create your first real election
+Скопируйте папку `examples/authoring/example-city-2027/` в `src/content/elections/city-council-2027/`.
 
-### Step A: copy the starter
+В копии замените **все вхождения** `example-city-2027` на `city-council-2027`: внешние YAML-ключи, поля `id`, `parentId`, `electionId` и ссылки. ID общих материалов оставьте прежними. Пример содержит собственное описание источника-заготовки.
 
-Copy this entire folder:
+Участки примера ссылаются на штаб `shared`. Убедитесь, что он существует в `src/content/global/headquarters.yaml`. При необходимости добавьте запись из `examples/authoring/global/headquarters.yaml`, сохраняя существующие штабы. Название и контакты замените реальными сведениями.
 
-```text
-examples/authoring/example-city-2027/
-```
+### Шаг Б. Заполните манифест
 
-into:
-
-```text
-src/content/elections/city-council-2027/
-```
-
-Inside the copied folder, replace **every occurrence** of `example-city-2027` with `city-council-2027`. This includes outer YAML keys, `id`, `parentId`, `electionId` and references in other files. The starter now includes its own placeholder source. Keep any IDs for shared material unchanged.
-
-The app currently has an empty catalog. Before building this starter, copy `examples/authoring/global/headquarters.yaml` to `src/content/global/headquarters.yaml` (or add a headquarters with ID `shared` yourself). The starter polling stations reference this headquarters. Its title is a placeholder; fill your real headquarters and contacts later.
-
-### Step B: edit the manifest
-
-[Starter manifest](../examples/authoring/example-city-2027/manifest.yaml):
+[Манифест примера](../examples/authoring/example-city-2027/manifest.yaml):
 
 ```yaml
 schemaVersion: 1
@@ -148,78 +137,69 @@ info:
 commissionsFile: commissions.yaml
 ```
 
-| Field | Meaning |
-|---|---|
-| `schemaVersion` | Keep `1` |
-| `election.id` | Permanent campaign ID |
-| `title` | Name shown in the election selector |
-| `dates` | Actual voting dates, quoted, in ascending order; one date per line |
-| `roadmapConfigId` | ID of the route this election uses |
-| `status` | `draft`, `active`, `archived`, or `training` |
-| `infoId` / `info.id` | Must match |
-| `topicIds` | Which lessons to show, in this order |
-| `documentIds` | Named document entries, or `[]`; see the Sources limitation in section 9 |
-| `info.markdown` | Election introduction shown in the information screen |
-| `commissionsFile` | Relative path to the commission file; normally keep `commissions.yaml` |
+| Поле | Значение |
+| --- | --- |
+| `schemaVersion` | Оставьте `1` |
+| `election.id` | Постоянный ID кампании |
+| `title` | Название в окне выбора выборов |
+| `dates` | Реальные даты голосования в кавычках, по возрастанию, каждая с новой строки |
+| `roadmapConfigId` | ID маршрута кампании |
+| `status` | `draft` — черновик, `active` — действующая, `archived` — архивная, `training` — учебная |
+| `infoId` / `info.id` | Должны совпадать |
+| `topicIds` | Учебные материалы в порядке отображения |
+| `documentIds` | ID карточек документов или `[]`; ограничения описаны в разделе 9 |
+| `info.markdown` | Вводная информация о кампании |
+| `commissionsFile` | Относительный путь к файлу комиссий; обычно `commissions.yaml` |
 
-Do **not** add manual `lawIds` or `sourceIds` to the manifest. They are calculated from the content.
+Не добавляйте в манифест ручные `lawIds` и `sourceIds`: они вычисляются по материалам.
 
-Currently, `status` is descriptive: `draft` and `archived` do not hide an election. Registration in the next step controls whether it is included.
+Сейчас `status` носит описательный характер: `draft` и `archived` не скрывают кампанию. Включение определяется регистрацией в каталоге.
 
-### Step C: register the election
+### Шаг В. Зарегистрируйте кампанию
 
-In `src/content/catalog-manifest.yaml`, append one line to `campaigns`:
+Добавьте путь в `campaigns` файла `src/content/catalog-manifest.yaml`:
 
 ```yaml
 schemaVersion: 1
 revision: "2027-08-01.1"
 campaigns:
-  # Keep the existing campaigns you still want.
+  # Сохраните строки существующих кампаний, которые нужны в приложении.
   - elections/city-council-2027/manifest.yaml
 ```
 
-The example above shows the shape, not a request to remove all existing entries. Advance `revision` when publishing changed content; it is a revision label, not the election's voting date.
+Это пример формата, а не указание удалить существующие записи. Обновляйте `revision` при публикации изменённых материалов: это метка ревизии, а не дата голосования.
 
-### Step D: fill the commissions and material
+### Шаг Г. Заполните комиссии и материалы
 
-Use sections 5–9 below. Replace all `EXAMPLE` text in the copied starter.
+Используйте разделы 5–10 ниже. Замените все образцы и пометки о вымышленных данных в скопированной папке.
 
-### Step E: rebuild and check
+### Шаг Д. Соберите и проверьте
 
-From the project folder:
+Из папки проекта выполните:
 
-```text
+```sh
 npm run build:content
 npm run check:content
 npm run typecheck
-```
-
-Then start or rebuild the app:
-
-```text
 npm run web
 ```
 
-For exported previews, run `npm run build:web` and `npm run preview`. For mobile JavaScript bundles, run `npm run build:mobile`.
+Для веб-сборки выполните `npm run build:web` и `npm run preview`; для экспорта ресурсов мобильных платформ — `npm run build:mobile`.
 
-Existing installed mobile apps will not read new files from your computer. Distribute a new app build/update containing the new bundle.
+Установленное мобильное приложение не читает новые файлы с вашего компьютера. Для распространения изменений нужна новая сборка или обновление с новым каталогом.
 
-## 5. Commissions and polling stations
+## 5. Комиссии и участки
 
-Open [starter commissions](../examples/authoring/example-city-2027/commissions.yaml). It contains two stations under one commission hierarchy.
-
-The file is a flat table linked by `parentId`:
+[Файл комиссий примера](../examples/authoring/example-city-2027/commissions.yaml) содержит два участка в одном дереве комиссий. Данные представлены плоской таблицей со связями `parentId`:
 
 ```text
-IKSRF: regional commission, parentId: null
-  OIK: district commission, parentId: regional commission ID
-    TIK: territorial commission, parentId: district commission ID
-      UIK: polling station, parentId: territorial commission ID
+IKSRF: комиссия субъекта РФ, parentId: null
+  OIK: окружная комиссия, parentId: ID комиссии субъекта
+    TIK: территориальная комиссия, parentId: ID окружной комиссии
+      UIK: участковая комиссия, parentId: ID территориальной комиссии
 ```
 
-The current validator requires a regional `IKSRF` root. You may skip OIK and attach a TIK directly to IKSRF. UIK must be attached to TIK.
-
-A polling station looks like this:
+Корнем должна быть `IKSRF`. Можно пропустить `OIK` и подчинить `TIK` напрямую `IKSRF`. `UIK` должна подчиняться `TIK`.
 
 ```yaml
 city-council-2027:uik-1001:
@@ -252,19 +232,17 @@ city-council-2027:uik-1001:
       party: ""
 ```
 
-To add station `1003`, copy one UIK entry and change its outer key, `id`, `title`, `number` and address. Keep the same `parentId` if it belongs to the same TIK. Otherwise add the new parent commission first.
+Для добавления участка `1003` скопируйте запись УИК, измените внешний ключ, `id`, `title`, `number` и адрес. Оставьте `parentId`, если участок относится к той же ТИК; иначе сначала добавьте родительскую комиссию.
 
-Keep station numbers quoted. `hqId` must exist in global `headquarters.yaml`. `demo: true` labels fictional data; use `false` for real data.
+Номера участков заключайте в кавычки. `hqId` должен существовать в общем `headquarters.yaml`. `demo: true` помечает вымышленные данные; для реальных используйте `false`.
 
-Use `officer-0`, `officer-1`, and `officer-2` for the three standard officers. Other member IDs need only be unique within that station. Unknown names may be empty strings.
+Для трёх основных должностных лиц используйте `officer-0`, `officer-1`, `officer-2`. Остальные ID членов должны быть уникальны внутри участка. Неизвестные ФИО можно оставить пустыми строками.
 
-These are the **initial** members. Once an observer saves local member edits, those edits take precedence on that device. Editing the seed does not erase their edits.
+Это начальный состав комиссии. Сохранённые наблюдателем изменения имеют приоритет на его устройстве; обновление исходного состава их не стирает.
 
-## 6. Lessons: `content/topics/`
+## 6. Учебные материалы: `content/topics/`
 
-Open [starter lesson](../examples/authoring/example-city-2027/content/topics/index.yaml).
-
-Each lesson needs `id`, `title`, `description`, `icon`, `minutes`, `markdown`, `lawIds`, `sourceIds`, `references`, and `media`. Keep unused lists as `[]`.
+Откройте [пример учебного материала](../examples/authoring/example-city-2027/content/topics/index.yaml). Каждая запись содержит `id`, `title`, `description`, `icon`, `minutes`, `markdown`, `lawIds`, `sourceIds`, `references`, `media`. Неиспользуемые списки оставляйте как `[]`.
 
 ```yaml
 city-council-2027:observer-introduction:
@@ -286,23 +264,21 @@ city-council-2027:observer-introduction:
   media: []
 ```
 
-To add a lesson, add an entry in this folder **and** add its ID to the manifest's `topicIds`. An unselected lesson will not appear merely because its file exists.
+Добавьте запись в эту папку **и** её ID в `topicIds` манифеста. Само наличие файла не делает материал видимым.
 
-Use known icon names such as `book-open`, `shield`, `home`, or `file-text`. `minutes` is the reading-time value; it does not schedule a lesson.
+Используйте известные имена значков: `book-open`, `shield`, `home`, `file-text`. `minutes` задаёт время чтения, а не расписание.
 
-## 7. Roadmap: three small pieces
-
-The separation is deliberate:
+## 7. Дорожная карта: три составляющие
 
 ```text
-route: which stages, in what order and on which days
-  block: stage heading + list of task IDs
-    task: the individual checkbox text + legal/media references
+Маршрут: какие этапы, в каком порядке и в какие дни
+  Блок: заголовок этапа и список ID задач
+    Задача: текст отдельного пункта, правовые ссылки и медиафайлы
 ```
 
-Complete examples: [tasks](../examples/authoring/example-city-2027/content/tasks/index.yaml), [blocks](../examples/authoring/example-city-2027/content/blocks/index.yaml), [route](../examples/authoring/example-city-2027/content/roadmaps/index.yaml).
+Полные примеры: [задачи](../examples/authoring/example-city-2027/content/tasks/index.yaml), [блоки](../examples/authoring/example-city-2027/content/blocks/index.yaml), [маршрут](../examples/authoring/example-city-2027/content/roadmaps/index.yaml).
 
-### A. Write checkbox items in `content/tasks/`
+### А. Пункты чек-листа в `content/tasks/`
 
 ```yaml
 city-council-2027:record-arrival:
@@ -313,7 +289,7 @@ city-council-2027:record-arrival:
   media: []
 ```
 
-### B. Put items into a stage in `content/blocks/`
+### Б. Группировка в этапы в `content/blocks/`
 
 ```yaml
 city-council-2027:arrival-block:
@@ -325,9 +301,9 @@ city-council-2027:arrival-block:
     - city-council-2027:record-arrival
 ```
 
-`taskIds` controls the checkbox order. `time` is displayed text, not an alarm. `sourceHeading` records the heading from the material you used.
+`taskIds` задаёт порядок пунктов. `time` — отображаемый текст, а не будильник. `sourceHeading` сохраняет заголовок исходного материала.
 
-### C. Put stages into a route in `content/roadmaps/`
+### В. Порядок этапов в `content/roadmaps/`
 
 ```yaml
 city-council-2027:route:
@@ -339,20 +315,20 @@ city-council-2027:route:
   anytime: []
 ```
 
-`steps` is the main ordered checklist. `anytime` contains stages available independently of that order. The manifest selects this route through `roadmapConfigId`.
+`steps` — основной упорядоченный список этапов. `anytime` — этапы, доступные независимо от этого порядка. Манифест выбирает маршрут через `roadmapConfigId`.
 
-| `days` value | When the stage appears |
-|---|---|
-| `each` | Every voting day |
-| `first` | First voting day |
-| `middle` | Days between the first and last |
-| `last` | Last voting day, including a one-day election |
-| `except-last` | All voting days except the last |
-| `last-after-first` | Last day only when the election has more than one day |
+| Значение `days` | Когда появляется этап |
+| --- | --- |
+| `each` | Каждый день голосования |
+| `first` | Первый день |
+| `middle` | Дни между первым и последним |
+| `last` | Последний день, включая однодневное голосование |
+| `except-last` | Все дни, кроме последнего |
+| `last-after-first` | Последний день, только если голосование длится более одного дня |
 
-The order refers to the manifest's `dates`, not Monday/Tuesday or consecutive calendar days.
+Порядок определяется списком `dates` в манифесте, а не днями недели или непрерывностью календарных дат.
 
-To make an anytime stage repeatable:
+Для повторяемого этапа:
 
 ```yaml
 anytime:
@@ -361,61 +337,57 @@ anytime:
     repeatable: true
 ```
 
-`home-block` must exist. Each repetition receives separate checks and notes. Main `steps` also accept `repeatable: true`.
+Блок `home-block` должен существовать. Каждое повторение имеет отдельные отметки и заметки. Основные `steps` также поддерживают `repeatable: true`.
 
-The step's `id` and the block's `id` serve different purposes: the step identifies its place in the route; the block identifies its content. Keep both stable once the election is in use. Do not reuse a step ID twice in one route.
+ID шага обозначает место в маршруте, ID блока — содержимое. Сохраняйте оба после начала использования кампании. Не повторяйте ID шага внутри маршрута.
 
-YAML supports aliases such as `&a1` and `*a1`: `*a1` reuses the object marked `&a1`. They are not IDs. **The starter avoids aliases; keep your authored entries explicit** so an edit does not unexpectedly affect another shared route.
+YAML поддерживает якоря `&a1` и псевдонимы `*a1`: второй повторно использует объект первого. Это не ID. В примере якоря не используются; задавайте записи явно, чтобы правка не затронула другой маршрут неожиданно.
 
-## 8. Complaints and legal references
+## 8. Жалобы и правовые ссылки
 
-Open [starter complaint](../examples/authoring/global/complaints.yaml) and [starter template](../examples/authoring/global/complaint-templates.yaml).
+Откройте [пример жалобы](../examples/authoring/global/complaints.yaml) и [пример шаблона](../examples/authoring/global/complaint-templates.yaml).
 
-Bodies live in `global/complaints.yaml`: `id`, `templateId`, `title`, `description`, `text`, `lawIds`. Templates live in `global/complaint-templates.yaml`: `id`, `title`, `category`, `header_template`, `footer_template`.
+Тексты жалоб находятся в `global/complaints.yaml`: `id`, `templateId`, `title`, `description`, `text`, `lawIds`. Шаблоны — в `global/complaint-templates.yaml`: `id`, `title`, `category`, `header_template`, `footer_template`.
 
-Complaints are selected automatically by `complaintId` links in tasks used by the election roadmap. Election `complaintIds` adds entries manually. Duplicates are removed. `lawIds` provides legal citations only; laws do not select complaints. Task `complaintId` also opens its complaint directly.
+Жалобы выбираются автоматически по `complaintId` задач выбранного маршрута. Поле кампании `complaintIds` добавляет жалобы вручную. Повторы удаляются. `lawIds` задаёт только правовые ссылки; законы не определяют выбор жалоб. Поле задачи `complaintId` также позволяет открыть нужную жалобу напрямую.
 
-| Placeholder | Filled from |
-|---|---|
-| `{{recipient}}` | Recipient field |
-| `{{observer_name}}` | Observer name field |
-| `{{uik_number}}` | Selected polling station |
-| `{{date}}` | Current device date |
-| `{{time}}` | Editable time field |
-| Another name, e.g. `{{incident_location}}` | An extra field generated in the form |
+| Подстановка | Откуда берётся значение |
+| --- | --- |
+| `{{recipient}}` | Поле адресата |
+| `{{observer_name}}` | ФИО наблюдателя |
+| `{{uik_number}}` | Выбранный участок |
+| `{{date}}` | Текущая дата устройства |
+| `{{time}}` | Редактируемое поле времени |
+| Другое имя, например `{{incident_location}}` | Дополнительное поле, созданное в форме |
 
-Extra placeholder names must use letters, numbers or underscores. Blank observer names are shown as an editable placeholder. Use «Изменить сведения» to enter the recipient, observer name, time and facts, then regenerate the individual complaint. Facts entered by the observer are appended as literal text.
+Имена дополнительных подстановок используют буквы, цифры и подчёркивания. При пустом ФИО выводится редактируемая заготовка. Через «Изменить сведения» заполните адресата, ФИО, время и обстоятельства, затем заново сформируйте жалобу. Обстоятельства наблюдателя добавляются как обычный текст.
 
-Multiple templates are supported using `templateId`. The dedicated original-template button opens the shared `complaint-source` file.
+Несколько шаблонов поддерживаются через `templateId`. Кнопка оригинала шаблона открывает общий файл `complaint-source`.
 
-### How a law reaches the Laws screen
+### Как закон появляется в разделе «Законы»
 
 ```text
-selected lesson's lawIds
-OR selected route's task lawIds
-OR selected complaint lawIds
-    → legal entry
-        → its sourceIds
-            → original document
+lawIds выбранного учебного материала
+ИЛИ lawIds задачи выбранного маршрута
+ИЛИ lawIds выбранной жалобы
+    → правовая норма
+        → её sourceIds
+            → оригинал документа
 ```
 
-You do not maintain a separate election law list.
+Отдельный список законов кампании вручную не ведётся. Общие нормы добавляйте в `global/laws/laws.yaml`, нормы отдельной кампании — в `content/laws/` с префиксом кампании.
 
-Add laws shared between campaigns to `global/laws/laws.yaml`. A campaign-only entry may live in `content/laws/` and needs the campaign prefix.
+Запись нормы содержит `title`, `text`, `status`, `source`, `sourceIds`, `references`. Поле `source` описывает происхождение текстом; `sourceIds` связывает с оригиналами. Запись `references` содержит `sourceId`, `label` и при необходимости `locator`.
 
-A legal entry uses `title`, `text`, `status`, `source`, `sourceIds`, and `references`. `source` is a text description of provenance; `sourceIds` is the actual link to original files. A `references` item uses `sourceId`, `label`, and optionally `locator`.
+Правовая норма в примере помечена как вымышленная. Заменяйте вместе заголовок, точную выдержку, происхождение, указатель положения и связь с источником. `status` — описание; его изменение не проверяет закон и не скрывает запись.
 
-The starter legal entry intentionally says **EXAMPLE**. Replace its title, exact excerpt, provenance, locator and source association together. `status` is descriptive text; changing it does not verify the law or hide the entry.
+## 9. Оригиналы, изображения и видео
 
-## 9. Original files, images and videos
+### Документ: скопировать, описать, собрать
 
-### Original document: copy, describe and build
-
-1. Copy the original into `src/content/global/documents/`.
-2. Describe it in `global/documents/sources.yaml` (or a campaign-local `content/sources/` file).
-3. Run `npm run build:content`. The file registration is generated automatically.
-
-Example source entry:
+1. Скопируйте оригинал в `src/content/global/documents/`.
+2. Опишите его в `global/documents/sources.yaml` или локальном файле `content/sources/`.
+3. Выполните `npm run build:content`: регистрация создаётся автоматически.
 
 ```yaml
 city-council-2027:regional-law-original:
@@ -427,26 +399,23 @@ city-council-2027:regional-law-original:
   assetKey: regionalLaw2027
 ```
 
-By default, a source with a non-null `assetKey` loads `global/documents/<name>` relative to `src/content/`. You do not edit TypeScript for each document.
+При непустом `assetKey` документ по умолчанию берётся из `global/documents/<name>` относительно `src/content/`. Редактировать TypeScript для каждого документа не требуется.
 
-For manual control, add an explicit `file` path:
+Для явного пути добавьте `file`:
 
 ```yaml
-  name: Regional law.pdf
+  name: Региональный закон.pdf
   file: elections/city-council-2027/originals/regional-law.pdf
 ```
 
-`file` chooses the physical file; `name` is the filename offered when opening/sharing. If you omit `file`, `name` also determines the physical filename. Keep the file inside `src/content/`.
+`file` определяет физический файл; `name` — имя при открытии или отправке. Без `file` поле `name` определяет и физическое имя. Файл должен находиться внутри `src/content/`.
 
-`assetKey` is a stable bundle key, generated into `source-assets.generated.ts`. `assetKey: null` deliberately leaves a source unavailable. Nothing is downloaded or discovered automatically. Only sources you list are bundled; missing files and conflicting keys fail the build. `npm run check:content` detects stale generated registrations.
+`assetKey` — постоянный ключ встроенного ресурса в `source-assets.generated.ts`. `assetKey: null` оставляет источник недоступным. Автоматической загрузки или поиска файлов нет. В сборку входят только описанные источники; отсутствие файла и конфликт ключей приводят к ошибке. `npm run check:content` проверяет актуальность регистрации.
 
+Добавьте ID источника в `sourceIds` нормы и при необходимости в `references`. Источник, связанный с законом, должен иметь `purpose: raw-law`.
 
-Put the source ID in the legal entry's `sourceIds` and, when appropriate, its `references`. A law-linked source must have `purpose: raw-law`.
-
-Useful file descriptions:
-
-| File | `mime` |
-|---|---|
+| Формат | `mime` |
+| --- | --- |
 | PDF | `application/pdf` |
 | DOCX | `application/vnd.openxmlformats-officedocument.wordprocessingml.document` |
 | RTF | `application/rtf` |
@@ -454,11 +423,11 @@ Useful file descriptions:
 | JPEG | `image/jpeg` |
 | MP4 | `video/mp4` |
 
-Other `purpose` values are `template`, `filled-example`, `photo-example`, `procedure-video`, and `unclassified`.
+Другие значения `purpose`: `template` — шаблон, `filled-example` — заполненный пример, `photo-example` — пример фотографии, `procedure-video` — обучающее видео, `unclassified` — без категории.
 
-### Images in lessons or checklist items
+### Изображение в учебном материале или задаче
 
-Describe the image as a source as above; set `file: global/images/your-image.png`. The build generates its registration. You may create `global/images/` for the image itself. In the lesson/task, include both the source link and the media description:
+Опишите изображение как источник с `file: global/images/your-image.png`. Папку `global/images/` можно создать. Сборка зарегистрирует файл. В материале укажите и ссылку, и описание изображения:
 
 ```yaml
 sourceIds:
@@ -469,11 +438,11 @@ media:
     alt: Схема помещения для голосования
 ```
 
-The image source could use `purpose: photo-example`. Keep its ID in `sourceIds` as well as `media`; the current scope validator expects the source to be included. A path or URL alone does not bundle an image.
+Источник может иметь `purpose: photo-example`. ID должен присутствовать и в `sourceIds`, и в `media`: этого требует проверка доступности источников кампании. Одного пути или URL недостаточно для включения изображения в сборку.
 
-### Video at the top of a lesson
+### Видео в начале учебного материала
 
-Copy the MP4 to `src/content/global/videos/` and describe it in `src/content/global/videos/sources.yaml`:
+Скопируйте MP4 в `src/content/global/videos/` и опишите в `src/content/global/videos/sources.yaml`:
 
 ```yaml
 introduction-video:
@@ -486,36 +455,35 @@ introduction-video:
   assetKey: introduction-video
 ```
 
-Run `npm run build:content`. Both the bundled file registration and the lesson video list are generated automatically. No TypeScript edit is required. Video descriptions stay in `global/videos/sources.yaml`; document descriptions stay in `global/documents/sources.yaml`. Source IDs must be unique across both files.
+Выполните `npm run build:content`: регистрация файла и список видео создаются автоматически. Правки TypeScript не нужны. Описания видео находятся в `global/videos/sources.yaml`, документов — в `global/documents/sources.yaml`; ID источников должны быть уникальны среди обоих файлов.
 
-Add the source ID to the lesson:
+В учебный материал добавьте:
 
 ```yaml
 videoId: introduction-video
 ```
 
-For an election-local source, prefix the source ID with the election ID as usual. `videoId` always matches the source's `id`, which may differ from its `assetKey`. By default, videos use `global/videos/<name>`. Set `file` to control the physical path and `title` to control the displayed title. `assetKey: null` excludes the video from the player list; a lesson referencing an unknown or unpublished video fails the build. Published `procedure-video` sources must have a `video/` MIME type. `npm run check:content` verifies both generated registries.
+Для локального источника используйте префикс кампании. `videoId` совпадает с `id` источника, который может отличаться от `assetKey`. По умолчанию видео берётся из `global/videos/<name>`. Поле `file` задаёт путь, `title` — название. При `assetKey: null` видео не включается в проигрыватель. Ссылка на неизвестное или неопубликованное видео приводит к ошибке сборки. Опубликованный источник `procedure-video` должен иметь MIME-тип `video/`. Проверка `npm run check:content` охватывает оба сгенерированных реестра.
 
+### Ограничение библиотеки источников
 
-### Sources-screen limitation
+Библиотека законов и источников показывает оригиналы, связанные с используемыми законами активной кампании. Регистрация произвольного файла или добавление в `documentIds` не гарантирует появления в ней. Карточка документа содержит `id`, `title`, `sourceId` и показывается только при включении её источника в набор источников законов кампании. Медиафайлы учебных материалов и задач открываются из самих материалов и задач.
 
-The Laws/Sources library shows originals linked to laws used by the active election. Registering an arbitrary file, or adding a `documentIds` entry, does not guarantee it appears there. A named document entry has `id`, `title`, and `sourceId`; it is displayed in that library only if its source is also in the active law-derived source set. Lesson/task media is opened from its lesson/task instead.
+## 10. Общие контакты и штабы
 
-## 10. Default contacts and headquarters
+Эти таблицы поддерживаются **только в `global/`**. Папки кампании `content/contacts/` и `content/headquarters/` не загружаются.
 
-These two tables are currently **global-only**. Election-local `content/contacts/` and `content/headquarters/` folders are not loaded.
-
-Add a verified contact to `global/contacts.yaml`:
+В `global/contacts.yaml` добавьте проверенный контакт:
 
 ```yaml
 city-council-2027:coordinator:
   id: city-council-2027:coordinator
   name: Фамилия Имя Отчество
   role: Координатор штаба
-  phone: "+7XXXXXXXXXX" # Replace with the actual phone number.
+  phone: "+7XXXXXXXXXX" # Замените реальным номером.
 ```
 
-Add its headquarters to `global/headquarters.yaml`:
+В `global/headquarters.yaml` добавьте штаб:
 
 ```yaml
 city-council-2027:headquarters:
@@ -525,68 +493,65 @@ city-council-2027:headquarters:
     - city-council-2027:coordinator
 ```
 
-Set the relevant UIKs' `hqId` to `city-council-2027:headquarters`. That link decides which default contacts the observer sees. Personal contacts added in the app are separate and stay on the device.
+Укажите `hqId: city-council-2027:headquarters` у нужных УИК. Эта связь определяет общие контакты наблюдателя. Личные контакты, добавленные в приложении, хранятся отдельно на устройстве.
 
-If a file currently contains only `{}`, replace it with the new entries; do not leave `{}` above them.
+Если файл содержит только `{}`, замените его записями; не оставляйте `{}` над ними.
 
-## 11. What can I delete?
+## 11. Удаление материалов
 
-| Goal | Safe sequence |
-|---|---|
-| Hide/remove an election from the shipped selector | Remove its line from `catalog-manifest.yaml`; then delete its election folder if no longer needed |
-| Remove a lesson | Remove its ID from `topicIds`; then delete its YAML entry if nothing else uses it |
-| Remove a checkbox item | Remove its ID from every block's `taskIds`; then delete the task entry |
-| Remove a stage | Remove the step from its route; delete the block/tasks only if no other route uses them |
-| Remove a polling station | Delete its UIK entry; remove parent commissions only when they have no remaining children |
-| Remove a complaint checkbox | Delete that item; leave at least one checkbox in the active template |
-| Remove a legal entry | Remove all references to its ID from lessons, tasks and complaint items; then delete it |
-| Remove an original file | Remove every legal/media/document reference and its source entry; remove the matching code registration; then delete the physical file |
-| Remove a default contact | Remove it from every headquarters `contactIds` list, then delete its entry |
+| Что удалить | Порядок действий |
+| --- | --- |
+| Кампанию из окна выбора | Удалите строку из `catalog-manifest.yaml`, затем ненужную папку кампании |
+| Учебный материал | Удалите ID из `topicIds`, затем запись, если она больше нигде не используется |
+| Пункт чек-листа | Удалите ID из `taskIds` всех блоков, затем запись задачи |
+| Этап | Удалите шаг из маршрута; блок и задачи удаляйте только при отсутствии других ссылок |
+| Участок | Удалите запись УИК; родительские комиссии удаляйте только при отсутствии дочерних |
+| Пример нарушения или жалобу | Удалите ссылки `complaintId` из задач и запись из `complaintIds` кампаний, затем соответствующую запись в жалобах; проверьте оставшиеся ссылки |
+| Правовую норму | Удалите ссылки из учебных материалов, задач и жалоб, затем саму норму |
+| Оригинал файла | Удалите ссылки из законов, медиафайлов и карточек, затем описание источника и физический файл; пересоберите регистрацию |
+| Общий контакт | Удалите ID из `contactIds` всех штабов, затем запись контакта |
 
-Do not delete the required `manifest.yaml` or `commissions.yaml` while the election is still registered. Do not delete an entire required global table file; use `{}` for an empty table where appropriate. Global roadmaps/content still need to satisfy all registered elections.
+Не удаляйте обязательные `manifest.yaml` и `commissions.yaml`, пока кампания зарегистрирована. Не удаляйте целиком обязательные общие таблицы: для пустой таблицы используйте `{}`, где это допустимо. Общие маршруты и материалы должны оставаться корректными для зарегистрированных кампаний.
 
-Deleting content does not erase device observations. Removing an election/station requires a new valid selection; historical observations may remain in local storage. It also does not recall an older already-distributed app bundle.
+Удаление материалов не стирает наблюдения на устройствах. После удаления кампании или участка потребуется новый допустимый выбор; исторические записи могут остаться в локальном хранилище. Уже распространённая старая сборка при этом не изменяется.
 
-## 12. YAML basics and common errors
+## 12. Основы YAML и частые ошибки
 
-Use spaces, not tabs. Keep siblings at the same indentation. Use `|-` for multiline text and `[]` for an empty list. Keep phone numbers, station numbers and dates quoted.
+Используйте пробелы вместо табуляции. Поля одного уровня должны иметь одинаковый отступ. Для многострочного текста используйте `|-`, для пустого списка — `[]`. Телефоны, номера участков и даты заключайте в кавычки.
 
-| Error/symptom | Check |
-|---|---|
-| `Table key differs from ID` | Outer YAML key and inner `id` must be identical |
-| `Local IDs must use campaign prefix` | A local entry must start with `election.id + ':'` |
-| `Duplicate content ID` / duplicate YAML key | You copied an entry without giving it a new ID |
-| `Unknown topic/block/task/law` or `Unknown reference` | A referenced ID is missing or misspelled |
-| `missing file` / `Conflicting files for assetKey` | Check `file` (or default `global/documents/<name>`), the physical file and duplicate bundle keys |
-| `Source outside campaign` | Include media/reference source IDs in the lesson/task's `sourceIds` |
-| `Invalid commission hierarchy` | Check commission kinds and `parentId` links |
-| `Only IKSRF can be a root` | Add the regional root instead of making OIK/TIK a root |
-| `Incomplete UIK` | Supply number, region, address and members list |
-| Build succeeds, lesson absent | Add it to `topicIds` |
-| Build succeeds, original absent | Check active law references; Sources is not an unrestricted file list |
-| Your edits disappear after rebuilding | You edited generated JSON instead of YAML |
-| YAML parses but app unchanged | Rebuild/restart; distribute a new mobile bundle if needed |
+Сообщения ниже сохранены в исходном виде, чтобы их можно было найти в выводе проверки.
 
-The command validates relationships and formats. It does not confirm election dates, addresses, phone numbers or legal applicability for you.
+| Ошибка или симптом | Что проверить |
+| --- | --- |
+| `Table key differs from ID` | Внешний YAML-ключ и внутренний `id` должны совпадать |
+| `Local IDs must use campaign prefix` | Локальный ID начинается с `election.id + ':'` |
+| `Duplicate content ID` или повторный YAML-ключ | Скопированной записи нужен новый ID |
+| `Unknown topic/block/task/law` или `Unknown reference` | Указанный ID отсутствует либо содержит опечатку |
+| `missing file` или `Conflicting files for assetKey` | Поле `file`, физический файл и повторяющиеся ключи ресурсов |
+| `Source outside campaign` | Добавьте источник медиафайла или ссылки в `sourceIds` материала или задачи |
+| `Invalid commission hierarchy` | Типы комиссий и связи `parentId` |
+| `Only IKSRF can be a root` | Корнем должна быть комиссия субъекта, а не ОИК или ТИК |
+| `Incomplete UIK` | Номер, регион, адрес и список членов комиссии |
+| Сборка успешна, материал не виден | Добавьте его в `topicIds` |
+| Сборка успешна, оригинал не виден | Проверьте ссылки действующих законов; библиотека не является списком всех файлов |
+| Правки исчезают после сборки | Редактировался сгенерированный JSON вместо YAML |
+| YAML корректен, приложение не изменилось | Пересоберите и перезапустите; при необходимости распространите новую мобильную сборку |
 
-## 13. Before publishing real data
+Команда проверяет связи и форматы. Она не подтверждает достоверность дат, адресов, телефонов или применимость правовых норм.
 
-- Replace all starter placeholders, including the example legal reference and complaint wording.
-- Confirm dates, hierarchy, station numbers, addresses, member information and contact numbers.
-- Check that every selected lesson and route is appropriate for this election.
-- Open each original and media item from the app.
-- Run the content build/check and test the election selector, checklist and complaint form.
-- Keep the election's IDs and dates stable after people begin using it.
+## 13. Перед публикацией реальных данных
 
-The complete starter can be checked without adding it to the app:
+- Замените все образцы, включая правовую норму и формулировки жалоб.
+- Проверьте даты, иерархию комиссий, номера и адреса участков, состав комиссий и телефоны.
+- Убедитесь, что выбранные материалы и маршрут подходят этой кампании.
+- Откройте каждый оригинал и медиафайл из приложения.
+- Соберите и проверьте материалы; проверьте выбор кампании, чек-лист и форму жалобы.
+- Сохраняйте ID и даты после начала работы наблюдателей.
 
-```text
+Полный пример можно проверить без подключения к приложению:
+
+```sh
 npm run check:example
 ```
 
-This uses the actual content builder in a temporary workspace and leaves the active campaigns and generated bundle unchanged.
-
-
-
-
-
+Команда использует настоящий сборщик материалов во временной папке и сохраняет действующие кампании и сгенерированный каталог без изменений.
