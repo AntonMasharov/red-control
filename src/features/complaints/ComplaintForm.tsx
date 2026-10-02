@@ -1,6 +1,6 @@
-import { StyleSheet, Text } from 'react-native';
-import { Button, Field, Sheet } from '../../ui/components';
-import { s } from '../../ui/theme';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, Field, IconButton, Sheet } from '../../ui/components';
+import { colors, s } from '../../ui/theme';
 import type { useComplaintGenerator } from './useComplaintGenerator';
 export function ComplaintForm({
   controller,
@@ -30,6 +30,10 @@ export function ComplaintForm({
       title={options.find((item) => item.id === selected[0])?.title ?? 'Текст жалобы'}
       onClose={() => setForm(false)}
     >
+      <Text style={[s.small, { color: colors.red }]}>
+        Подготовьте два экземпляра жалобы: один для подачи, второй — для себя.
+      </Text>
+      <View style={{ height: 1, backgroundColor: colors.border, marginVertical: 4 }} />
       {!text ? (
         <>
           <Field
@@ -58,19 +62,42 @@ export function ComplaintForm({
         </>
       ) : (
         <>
-          <Field
-            label="Текст обращения"
-            multiline
-            value={text}
-            onChangeText={setText}
-            style={localStyles.documentInput}
-          />
+          <View style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 12 }}>
+            <View style={{ flex: 1, gap: 6 }}>
+              <Text accessibilityRole="header" style={[s.sectionTitle, { marginBottom: 8 }]}>
+                Сведения
+              </Text>
+              <Text style={s.text}>Адресат: {recipient || 'Не указан'}</Text>
+              <Text style={s.text}>Наблюдатель: {name || 'Не указан'}</Text>
+              {variableFields.map((key) => (
+                <Text key={key} style={s.text}>
+                  {key === 'time' ? 'Время события' : key}: {variables[key] || 'Не указано'}
+                </Text>
+              ))}
+              {!!facts && <Text style={s.text}>{facts}</Text>}
+            </View>
+            <IconButton
+              name="edit-2"
+              label="Изменить сведения"
+              color={colors.red}
+              onPress={() => setText('')}
+            />
+          </View>
+          <View style={{ height: 1, backgroundColor: colors.border, marginVertical: 4 }} />
+          <View style={{ gap: 12 }}>
+            <Text accessibilityRole="header" style={s.sectionTitle}>
+              Текст обращения
+            </Text>
+            <TextInput
+              accessibilityLabel="Текст обращения"
+              multiline
+              value={text}
+              onChangeText={setText}
+              style={[s.input, localStyles.documentInput]}
+            />
+          </View>
           <Button title="Сохранить черновик" icon="save" onPress={() => save()} />
-          <Text style={s.small}>
-            Подготовьте два экземпляра жалобы: один для подачи, второй — для себя.
-          </Text>
           <Button title="Подано" icon="check" onPress={() => save(true)} />
-          <Button title="Изменить сведения" secondary onPress={() => setText('')} />
         </>
       )}
     </Sheet>
