@@ -86,6 +86,7 @@ export interface RoadmapConfig {
   anytime: { id: string; blockId: string; repeatable: boolean }[];
 }
 export interface Election {
+  complaintIds?: string[];
   id: string;
   title: string;
   dates: string[];
@@ -137,6 +138,16 @@ export interface CampaignFile extends Omit<Campaign, 'commissions'> {
   commissionsFile: string;
 }
 export interface Catalog {
+  complaintTemplates?: Table<Omit<ComplaintTemplate, 'checkbox_items'>>;
+  complaints?: Table<{
+    id: string;
+    templateId: string;
+    title: string;
+    description: string;
+    text: string;
+    lawIds: string[];
+  }>;
+
   problemSolving: ProblemSolvingConfig;
   schemaVersion: 1;
   revision: string;

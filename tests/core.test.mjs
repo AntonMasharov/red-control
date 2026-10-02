@@ -14,12 +14,16 @@ import {
   contactsFor,
 } from '../src/data/model.ts';
 import { configuredPrecincts } from '../src/content/catalog.ts';
-import { composeComplaint } from '../src/content/complaint-template.ts';
+import { generateComplaint } from '../src/features/complaints/engine.ts';
+import { catalog } from '../src/content/catalog.ts';
 import { parsePrecinctCatalog } from '../src/data/precinct-catalog.ts';
 
 test('admin catalog restores canonical fields and preserves previous snapshot', () => {
   const raw = JSON.parse(JSON.stringify(freshState()));
-  assert.equal(raw.precincts.filter((p) => p.demo).length, configuredPrecincts.filter((p) => p.demo).length);
+  assert.equal(
+    raw.precincts.filter((p) => p.demo).length,
+    configuredPrecincts.filter((p) => p.demo).length,
+  );
   const station = raw.precincts.find((p) => p.demo);
   const address = station.address;
   station.address = 'Локальное изменение';
@@ -108,14 +112,18 @@ test('roadmap advances and clamps at election boundaries', () => {
     assert.equal(currentRoadmapDay(s, date), day);
 });
 test('complaint works without optional facts, preserves requests and receipt block', () => {
-  const text = composeComplaint({
-    recipient: '',
-    name: '',
-    precinct: '',
-    selected: ['register', 'list'],
-    facts: '',
-    date: '24.09.2026',
-  });
+  const text = generateComplaint(
+    Object.values(catalog.campaigns).flatMap((c) => c.complaints ?? [])[0],
+    ['register', 'list'],
+    {
+      recipient: 'УИК',
+      observer_name: 'Наблюдатель',
+      uik_number: '____',
+      facts: '',
+      date: '24.09.2026',
+    },
+    catalog.laws,
+  );
   assert.match(text, /реестром заявлений/);
   assert.match(text, /списком избирателей/);
   assert.match(text, /немедленно провести заседание УИК/);

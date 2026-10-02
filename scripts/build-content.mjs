@@ -2,9 +2,15 @@ import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { resolve, relative, dirname, isAbsolute, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
+import { selectComplaintIds } from './complaint-selection.mjs';
 import { parse } from 'yaml';
 import { validateCatalog, validateCampaignFile } from './catalog-validation.mjs';
-import { generateSourceAssets, generateLessonVideos, lessonVideoSources, mergeSourceTables } from './source-assets.mjs';
+import {
+  generateSourceAssets,
+  generateLessonVideos,
+  lessonVideoSources,
+  mergeSourceTables,
+} from './source-assets.mjs';
 const root = fileURLToPath(new URL('../src/content/', import.meta.url));
 const read = (p) => parse(readFileSync(resolve(root, p), 'utf8'), { uniqueKeys: true });
 const manifest = read('catalog-manifest.yaml');
@@ -20,8 +26,10 @@ for (const key of [
   'documents',
   'headquarters',
   'contacts',
+  'complaints',
+  'complaint-templates',
 ])
-  catalog[key] = read(
+  catalog[key === 'complaint-templates' ? 'complaintTemplates' : key] = read(
     'global/' + (key === 'laws' ? 'laws/' : key === 'sources' ? 'documents/' : '') + key + '.yaml',
   );
 catalog.problemSolving = read('global/problem-solving.yaml');
@@ -46,23 +54,6 @@ for (const path of manifest.campaigns) {
     'Commission file must be relative and stay inside the content directory',
   );
   const campaign = { ...definition, commissions: read(commissionsPath) };
-  campaign.complaints = read(
-    relative(root, resolve(dirname(resolve(root, path)), 'complaints.yaml')),
-  ).templates;
-  assert.ok(Array.isArray(campaign.complaints), 'Complaint templates must be an array');
-  for (const template of campaign.complaints) {
-    assert.ok(
-      typeof template.header_template === 'string' && typeof template.footer_template === 'string',
-    );
-    assert.ok(Array.isArray(template.checkbox_items) && template.checkbox_items.length);
-    const ids = new Set();
-    for (const item of template.checkbox_items) {
-      assert.ok(typeof item.id === 'string' && !ids.has(item.id), 'Duplicate complaint checkbox');
-      ids.add(item.id);
-      assert.ok(typeof item.inserted_text === 'string' && typeof item.label === 'string');
-      assert.ok(Array.isArray(item.law_references));
-    }
-  }
   // Optional campaign-local tables support nested content without global file collisions.
   const local = resolve(root, path, '..', 'content');
   for (const key of ['sources', 'laws', 'topics', 'tasks', 'blocks', 'roadmaps', 'documents']) {
@@ -107,15 +98,21 @@ for (const campaign of Object.values(catalog.campaigns)) {
       return catalog.tasks[id];
     });
   });
+  // Roadmap tasks select complaints; legal references do not select them.
+  election.complaintIds = selectComplaintIds(
+    catalog.complaints,
+    tasks,
+    election.complaintIds,
+  );
+  const complaints = election.complaintIds.map((id) => {
+    assert.ok(catalog.complaints[id], 'Unknown complaint: ' + id);
+    return catalog.complaints[id];
+  });
   election.lawIds = [
     ...new Set(
       [...topics, ...tasks]
         .flatMap((row) => row.lawIds)
-        .concat(
-          campaign.complaints.flatMap((template) =>
-            template.checkbox_items.flatMap((item) => item.law_references),
-          ),
-        ),
+        .concat(complaints.flatMap((row) => row.lawIds)),
     ),
   ];
   const laws = election.lawIds.map((id) => {
@@ -144,11 +141,19 @@ for (const topic of Object.values(catalog.topics))
     assert.ok(videoIds.has(topic.videoId), 'Unknown or unpublished video ID: ' + topic.videoId);
 const assetsTarget = resolve(root, 'source-assets.generated.ts');
 if (process.argv.includes('--check'))
-  assert.equal(readFileSync(assetsTarget, 'utf8'), assets, 'Source assets are stale. Run npm run build:content.');
+  assert.equal(
+    readFileSync(assetsTarget, 'utf8'),
+    assets,
+    'Source assets are stale. Run npm run build:content.',
+  );
 else writeFileSync(assetsTarget, assets);
 const videosTarget = resolve(root, 'lesson-videos.generated.ts');
 if (process.argv.includes('--check'))
-  assert.equal(readFileSync(videosTarget, 'utf8'), videos, 'Lesson videos are stale. Run npm run build:content.');
+  assert.equal(
+    readFileSync(videosTarget, 'utf8'),
+    videos,
+    'Lesson videos are stale. Run npm run build:content.',
+  );
 else writeFileSync(videosTarget, videos);
 
 const output = JSON.stringify(catalog, null, 2) + '\n';

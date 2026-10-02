@@ -13,7 +13,8 @@ Run `npm run build:content` after editing YAML, then `npm run check:content` to 
 - Other global YAML tables contain reusable theory, tasks, stages, roadmaps, contacts and headquarters.
 - `src/content/elections/<id>/manifest.yaml` identifies a campaign and its theory and roadmap selections.
 - `commissions.yaml` stores the campaign's commission tree through stable parent IDs.
-- `complaints.yaml` contains header/footer templates, selectable violations, text and legal references.
+- `global/complaints.yaml` contains reusable bodies, `templateId` and `lawIds`.
+- `global/complaint-templates.yaml` contains reusable headers/footers. Election `complaintIds` adds complaints manually; links from selected roadmap tasks (`complaintId`) are added automatically. Laws do not select complaints.
 - Optional `content/<table>/*.yaml` files override nothing: they add campaign-prefixed entries to global tables.
 
 Use YAML block scalars (`|-`) for Markdown and multiline complaint text. Preserve IDs once users have observations; changing an ID creates a new record identity. Duplicate keys, broken references, impossible dates, hierarchy cycles and missing bundled asset keys cause the build to fail.

@@ -1,0 +1,18 @@
+observer-complaint:
+  id: observer-complaint
+  title: Примеры жалоб наблюдателя
+  category: Жалоба
+  header_template: |-
+    В {{recipient}}
+    От наблюдателя {{observer_name}}
+
+    ЖАЛОБА
+    УИК № {{uik_number}}
+  footer_template: >-
+    Прошу рассмотреть данную жалобу, принять мотивированное решение и
+    предоставить мне его заверенную копию.
+
+
+    Дата: {{date}}
+
+    Подпись: ____________________

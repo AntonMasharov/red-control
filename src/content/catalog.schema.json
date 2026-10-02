@@ -122,6 +122,86 @@
         "stages"
       ],
       "additionalProperties": false
+    },
+    "complaints": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "templateId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "lawIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "templateId",
+          "title",
+          "description",
+          "text",
+          "lawIds"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "complaintTemplates": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category": {
+            "type": "string",
+            "minLength": 1
+          },
+          "header_template": {
+            "type": "string",
+            "minLength": 1
+          },
+          "footer_template": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "category",
+          "header_template",
+          "footer_template"
+        ],
+        "additionalProperties": false
+      }
     }
   },
   "required": [
@@ -848,6 +928,14 @@
                 "minLength": 1
               },
               "uniqueItems": true
+            },
+            "complaintIds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
             }
           },
           "required": [
@@ -1037,6 +1125,14 @@
               "uniqueItems": true
             },
             "documentIds": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "uniqueItems": true
+            },
+            "complaintIds": {
               "type": "array",
               "items": {
                 "type": "string",

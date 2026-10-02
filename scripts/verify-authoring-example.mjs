@@ -12,7 +12,12 @@ try {
   cpSync(join(workspace, 'src/content'), join(staging, 'src/content'), { recursive: true });
   mkdirSync(join(staging, 'src/core/constants'), { recursive: true });
   mkdirSync(join(staging, 'scripts'));
-  for (const file of ['build-content.mjs', 'catalog-validation.mjs', 'source-assets.mjs']) {
+  for (const file of [
+    'build-content.mjs',
+    'catalog-validation.mjs',
+    'source-assets.mjs',
+    'complaint-selection.mjs',
+  ]) {
     cpSync(join(workspace, 'scripts', file), join(staging, 'scripts', file));
   }
   cpSync(join(workspace, 'examples/authoring', id), join(staging, 'src/content/elections', id), {
@@ -21,8 +26,22 @@ try {
   const headquartersPath = join(staging, 'src/content/global/headquarters.yaml');
   const headquarters = parse(readFileSync(headquartersPath, 'utf8'));
   if (!headquarters.shared) {
-    const exampleHeadquarters = parse(readFileSync(join(workspace, 'examples/authoring/global/headquarters.yaml'), 'utf8'));
+    const exampleHeadquarters = parse(
+      readFileSync(join(workspace, 'examples/authoring/global/headquarters.yaml'), 'utf8'),
+    );
     writeFileSync(headquartersPath, stringify({ ...headquarters, ...exampleHeadquarters }));
+  }
+  for (const name of ['complaints', 'complaint-templates']) {
+    const path = join(staging, 'src/content/global', name + '.yaml');
+    writeFileSync(
+      path,
+      stringify({
+        ...parse(readFileSync(path, 'utf8')),
+        ...parse(
+          readFileSync(join(workspace, 'examples/authoring/global', name + '.yaml'), 'utf8'),
+        ),
+      }),
+    );
   }
   const manifestPath = join(staging, 'src/content/catalog-manifest.yaml');
   const manifest = parse(readFileSync(manifestPath, 'utf8'));
@@ -31,12 +50,19 @@ try {
   const builder = join(staging, 'scripts/build-content.mjs');
   execFileSync(process.execPath, [builder], { cwd: workspace, stdio: 'inherit' });
   execFileSync(process.execPath, [builder, '--check'], { cwd: workspace, stdio: 'inherit' });
-  const catalog = JSON.parse(readFileSync(join(staging, 'src/content/catalog.generated.json'), 'utf8'));
+  const catalog = JSON.parse(
+    readFileSync(join(staging, 'src/content/catalog.generated.json'), 'utf8'),
+  );
+
   assert.ok(catalog.campaigns[id], 'Starter election was not included');
   assert.ok(catalog.laws[`${id}:example-law`], 'Starter legal entry was not included');
   console.log('Starter election builds successfully. Active content was not modified.');
 } finally {
   const localPath = relative(workspace, staging);
-  assert.ok(localPath.startsWith('.authoring-check-') && !localPath.includes('..') && !isAbsolute(localPath));
+  assert.ok(
+    localPath.startsWith('.authoring-check-') &&
+      !localPath.includes('..') &&
+      !isAbsolute(localPath),
+  );
   rmSync(staging, { recursive: true, force: true });
 }

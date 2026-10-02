@@ -34,13 +34,16 @@ export function useComplaintGenerator() {
   const markSubmitted = (entry: Complaint, submitted = true) =>
     run(() => actions.setComplaintSubmitted(entry.id, submitted));
   const complaints = state.complaints.filter((c) => inContext(state, c));
-  const template = campaignContent(state.electionId).complaints[0];
+  const templates = campaignContent(state.electionId).complaints;
+  const template = templates.find((t) => t.checkbox_items.some((i) => i.id === selected[0]));
   const options =
-    template?.checkbox_items.map((item) => ({
-      id: item.id,
-      title: item.label,
-      description: item.description,
-    })) ?? [];
+    templates
+      .flatMap((t) => t.checkbox_items)
+      .map((item) => ({
+        id: item.id,
+        title: item.label,
+        description: item.description,
+      })) ?? [];
   const variableFields = template
     ? complaintVariables(template, selected).filter(
         (key) => !['recipient', 'observer_name', 'uik_number', 'date'].includes(key),
@@ -53,6 +56,7 @@ export function useComplaintGenerator() {
   const setVariable = (key: string, value: string) =>
     update({ variables: { ...variables, [key]: value } });
   const compose = (ids: string[], complaintFacts = facts) => {
+    const template = templates.find((t) => t.checkbox_items.some((i) => i.id === ids[0]));
     if (!template) throw new Error('Шаблон жалобы недоступен.');
     if (ids.length !== 1) throw new Error('Откройте одно нарушение из списка.');
     return generateComplaint(

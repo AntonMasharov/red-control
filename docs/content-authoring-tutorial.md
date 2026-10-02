@@ -49,7 +49,6 @@ src/content/
     YOUR-ELECTION-ID/
       manifest.yaml                    REQUIRED: election name, dates and selections
       commissions.yaml                 REQUIRED: commissions and polling stations
-      complaints.yaml                  REQUIRED: complaint wording and checkboxes
       content/                         OPTIONAL: material specific to this election
         topics/*.yaml                  Lessons
         tasks/*.yaml                   Checklist questions
@@ -370,26 +369,11 @@ YAML supports aliases such as `&a1` and `*a1`: `*a1` reuses the object marked `&
 
 ## 8. Complaints and legal references
 
-Open [starter complaint](../examples/authoring/example-city-2027/complaints.yaml) and [starter legal entry](../examples/authoring/example-city-2027/content/laws/index.yaml).
+Open [starter complaint](../examples/authoring/global/complaints.yaml) and [starter template](../examples/authoring/global/complaint-templates.yaml).
 
-A complaint has:
+Bodies live in `global/complaints.yaml`: `id`, `templateId`, `title`, `description`, `text`, `lawIds`. Templates live in `global/complaint-templates.yaml`: `id`, `title`, `category`, `header_template`, `footer_template`.
 
-- `header_template`: the opening text;
-- `checkbox_items`: individual violation examples (the field retains its older name), each with `id`, `label`, `description`, `inserted_text`, `law_references`;
-- `footer_template`: the closing text and requests.
-
-Example violation to add inside the existing `checkbox_items` list:
-
-```yaml
-- id: another-issue
-  label: Краткое название нарушения
-  description: Пояснение для наблюдателя
-  inserted_text: |-
-    В {{time}} [вставьте проверенную формулировку события].
-  law_references: []
-```
-
-Clicking one violation immediately opens its own editable complaint text. The app uses the shared header, the single selected entry, its legal references and the shared footer. Violations are not combined. Put requests specific to that violation in its `inserted_text`.
+Complaints are selected automatically by `complaintId` links in tasks used by the election roadmap. Election `complaintIds` adds entries manually. Duplicates are removed. `lawIds` provides legal citations only; laws do not select complaints. Task `complaintId` also opens its complaint directly.
 
 | Placeholder | Filled from |
 |---|---|
@@ -402,14 +386,14 @@ Clicking one violation immediately opens its own editable complaint text. The ap
 
 Extra placeholder names must use letters, numbers or underscores. Blank observer names are shown as an editable placeholder. Use «Изменить сведения» to enter the recipient, observer name, time and facts, then regenerate the individual complaint. Facts entered by the observer are appended as literal text.
 
-**Current limitation:** the screen uses the first entry in `templates`. Add violation entries to that template; adding a second template currently will not create a second category menu. The dedicated original-template button opens the shared `complaint-source` file.
+Multiple templates are supported using `templateId`. The dedicated original-template button opens the shared `complaint-source` file.
 
 ### How a law reaches the Laws screen
 
 ```text
 selected lesson's lawIds
 OR selected route's task lawIds
-OR complaint checkbox law_references
+OR selected complaint lawIds
     → legal entry
         → its sourceIds
             → original document
@@ -559,7 +543,7 @@ If a file currently contains only `{}`, replace it with the new entries; do not 
 | Remove an original file | Remove every legal/media/document reference and its source entry; remove the matching code registration; then delete the physical file |
 | Remove a default contact | Remove it from every headquarters `contactIds` list, then delete its entry |
 
-Do not delete the required `manifest.yaml`, `commissions.yaml`, or `complaints.yaml` while the election is still registered. Do not delete an entire required global table file; use `{}` for an empty table where appropriate. Global roadmaps/content still need to satisfy all registered elections.
+Do not delete the required `manifest.yaml` or `commissions.yaml` while the election is still registered. Do not delete an entire required global table file; use `{}` for an empty table where appropriate. Global roadmaps/content still need to satisfy all registered elections.
 
 Deleting content does not erase device observations. Removing an election/station requires a new valid selection; historical observations may remain in local storage. It also does not recall an older already-distributed app bundle.
 

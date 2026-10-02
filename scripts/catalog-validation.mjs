@@ -50,6 +50,20 @@ export function validateShape(value, rule = schema, path = '$') {
 }
 export function validateCatalog(c) {
   validateShape(c);
+  for (const [id, template] of Object.entries(c.complaintTemplates || {}))
+    assert.equal(id, template.id);
+  for (const [id, complaint] of Object.entries(c.complaints || {})) {
+    assert.equal(id, complaint.id);
+    assert.ok(
+      c.complaintTemplates?.[complaint.templateId],
+      'Unknown complaint template: ' + complaint.templateId,
+    );
+    complaint.lawIds.forEach((id) => assert.ok(c.laws[id], 'Unknown complaint law: ' + id));
+  }
+  for (const campaign of Object.values(c.campaigns)) {
+    for (const id of campaign.election.complaintIds || [])
+      assert.ok(c.complaints?.[id], 'Unknown complaint: ' + id);
+  }
   for (const block of Object.values(c.blocks)) {
     const anchors = new Set();
     for (const heading of block.headings || []) {
@@ -76,7 +90,8 @@ export function validateCatalog(c) {
         c.blocks[step.blockId].taskIds.map((id) => c.tasks[id]),
       );
       const complaints = new Set(
-        (campaign.complaints || []).flatMap((t) => t.checkbox_items.map((i) => i.id)),
+        campaign.election.complaintIds ??
+          (campaign.complaints || []).flatMap((t) => t.checkbox_items.map((i) => i.id)),
       );
       tasks.forEach((task) => {
         if (task.complaintId)

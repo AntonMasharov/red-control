@@ -16,6 +16,10 @@ election:
     - theory-counting
     - theory-protocol-copy
   documentIds: []
+  # Дополнительно к жалобам, автоматически выбранным по задачам маршрута.
+  complaintIds:
+    - voter-book-access
+    - home-box-opening-act-copy
 info:
   id: deputy-2026:info
   title: Депутатские выборы 2026

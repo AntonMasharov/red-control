@@ -1,3 +1,4 @@
+import type { ComplaintTemplate } from '../../features/complaints/engine';
 import type { Catalog } from '../architecture/entities';
 
 export function resolveContent(catalog: Catalog, electionId: string) {
@@ -11,7 +12,24 @@ export function resolveContent(catalog: Catalog, electionId: string) {
   const tasks = [...new Set(blockIds)].flatMap((id) =>
     catalog.blocks[id].taskIds.map((taskId) => catalog.tasks[taskId]),
   );
-  const complaintLawIds = (campaign?.complaints ?? []).flatMap((template) =>
+  const complaints: ComplaintTemplate[] = catalog.complaints
+    ? Object.values(catalog.complaintTemplates || {})
+        .map((template) => ({
+          ...template,
+          checkbox_items: (election?.complaintIds || [])
+            .map((id) => catalog.complaints![id])
+            .filter((row) => row.templateId === template.id)
+            .map((row) => ({
+              id: row.id,
+              label: row.title,
+              description: row.description,
+              inserted_text: row.text,
+              law_references: row.lawIds,
+            })),
+        }))
+        .filter((template) => template.checkbox_items.length > 0)
+    : (campaign?.complaints ?? []);
+  const complaintLawIds = complaints.flatMap((template) =>
     template.checkbox_items.flatMap((item) => item.law_references),
   );
   const lawIds = new Set(
@@ -22,7 +40,7 @@ export function resolveContent(catalog: Catalog, electionId: string) {
   return {
     info: campaign?.info,
     topics,
-    complaints: campaign?.complaints ?? [],
+    complaints,
     laws,
     sources: [...sourceIds].map((id) => catalog.sources[id]),
     documents: (election?.documentIds ?? []).map((id) => catalog.documents[id]),

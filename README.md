@@ -26,7 +26,8 @@
 | `src/content/catalog-manifest.yaml` | Список кампаний и ревизия каталога |
 | `src/content/elections/<id>/manifest.yaml` | Название, даты и подборка материалов кампании |
 | `src/content/elections/<id>/commissions.yaml` | Иерархия комиссий и участки |
-| `src/content/elections/<id>/complaints.yaml` | Нарушения, шаблоны жалоб и правовые ссылки |
+| `src/content/global/complaints.yaml` | Общие жалобы, ссылки на законы и шаблоны |
+| `src/content/global/complaint-templates.yaml` | Общая шапка и концовка жалоб |
 | `src/content/global/` | Общие темы, задачи, этапы, маршруты, контакты и настройки |
 | `src/content/global/laws/laws.yaml` | Правовые нормы |
 | `src/content/global/documents/`, `src/content/global/videos/` | Оригиналы документов, видео и их регистрации |
