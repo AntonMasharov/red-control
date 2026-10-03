@@ -9,7 +9,6 @@ import {
   validNoteTarget,
   taskRecordId,
 } from '../src/data/model';
-import { exportText } from '../src/data/export';
 import React from 'react';
 import { act, render, screen, fireEvent, renderHook } from '@testing-library/react-native';
 import { FeedbackContext } from '../src/ui/feedback';

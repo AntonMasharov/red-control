@@ -11,3 +11,6 @@ export function formatPhone(value: string): string {
     ? normalized.replace(/^\+7(\d{3})(\d{3})(\d{2})(\d{2})$/, '+7 ($1) $2-$3-$4')
     : value;
 }
+export function validPhone(value: string): boolean {
+  return /^\+?[\d\s().-]+$/.test(value.trim()) && value.replace(/\D/g, '').length >= 3;
+}

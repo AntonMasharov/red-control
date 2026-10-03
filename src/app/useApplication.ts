@@ -20,7 +20,9 @@ export function useApplication() {
         if (acts.some((a) => id.startsWith(a.id + '/'))) setLinkedNorm(id);
       } catch {}
     };
-    void Linking.getInitialURL().then(open);
+    void Linking.getInitialURL()
+      .then(open)
+      .catch(() => {});
     const listener = Linking.addEventListener('url', (event) => open(event.url));
     return () => listener.remove();
   }, []);

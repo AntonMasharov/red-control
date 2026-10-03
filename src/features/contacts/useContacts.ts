@@ -1,4 +1,4 @@
-import { normalizePhone } from '../../data/phone';
+import { normalizePhone, validPhone } from '../../data/phone';
 import { useState } from 'react';
 import { contactsFor } from '../../data/model';
 import { actions, useStore } from '../../data/store';
@@ -15,7 +15,7 @@ export function useContacts() {
   const [phone, setPhone] = useState('');
   const contacts = contactsFor(state);
   const save = () => {
-    if (!/^\+?[\d\s().-]+$/.test(phone.trim()) || phone.replace(/\D/g, '').length < 3) {
+    if (!validPhone(phone)) {
       notify('Введите корректный номер телефона.');
       return;
     }

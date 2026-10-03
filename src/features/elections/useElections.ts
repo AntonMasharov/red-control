@@ -9,7 +9,6 @@ export function useElections(onSaved: () => void) {
   const [precinctId, setPrecinctId] = useState<string>();
   const [name, setName] = useState(state.profile.name);
   const [query, setQuery] = useState('');
-  const [preview, setPreview] = useState(false);
   const election = electionCatalog.find((e) => e.id === electionId);
   const precinct = precinctCatalog.find((p) => p.id === precinctId && p.electionId === electionId);
   const changed =
@@ -37,8 +36,6 @@ export function useElections(onSaved: () => void) {
     setName,
     query,
     setQuery,
-    preview,
-    setPreview,
     election,
     precinct,
     changed,

@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import appConfig from '../../app.json';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { acts } from '../content/acts';
 import { storageFailure } from '../data/store';
@@ -92,12 +93,18 @@ function Application() {
               <View style={localStyles.offlineDetails}>
                 <View style={s.row}>
                   <View style={styles.dot} />
-                  <Text style={s.small}>Автономный режим</Text>
+                  <Text style={s.small}>
+                    {Platform.OS === 'web' ? 'Записи на этом устройстве' : 'Автономный режим'}
+                  </Text>
                 </View>
                 <Text style={[s.small, localStyles.offlineDescription]}>
-                  Материалы и ваши записи{'\n'}всегда под рукой.
+                  {Platform.OS === 'web'
+                    ? 'Для загрузки сайта требуется сеть.'
+                    : 'Материалы и ваши записи\nвсегда под рукой.'}
                 </Text>
-                <Text style={[s.small, localStyles.versionLabel]}>ПЕРВАЯ ВЕРСИЯ · 0.1</Text>
+                <Text style={[s.small, localStyles.versionLabel]}>
+                  ВЕРСИЯ · {appConfig.expo.version}
+                </Text>
               </View>
             </View>
           )}

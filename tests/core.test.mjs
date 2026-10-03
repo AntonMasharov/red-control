@@ -16,7 +16,6 @@ import {
 import { configuredPrecincts } from '../src/content/catalog.ts';
 import { generateComplaint } from '../src/features/complaints/engine.ts';
 import { catalog } from '../src/content/catalog.ts';
-import { parsePrecinctCatalog } from '../src/data/precinct-catalog.ts';
 
 test('admin catalog restores canonical fields and preserves previous snapshot', () => {
   const raw = JSON.parse(JSON.stringify(freshState()));
@@ -35,22 +34,6 @@ test('admin catalog restores canonical fields and preserves previous snapshot', 
     'Локальное изменение',
   );
   assert.equal(upgraded.contextSelected, false);
-});
-
-test('precinct catalog validates the whole import and normalizes contacts', () => {
-  const source = [
-    {
-      number: ' 7 ',
-      region: ' Регион ',
-      address: ' Адрес ',
-      contacts: [{ role: 'Юрист', phone: '+7 (000) 000-00-00' }],
-    },
-  ];
-  const rows = parsePrecinctCatalog(JSON.stringify(source));
-  assert.equal(rows[0].number, '7');
-  assert.equal(rows[0].contacts[0].phone, '+70000000000');
-  assert.throws(() => parsePrecinctCatalog(JSON.stringify([...source, { number: '8' }])));
-  assert.throws(() => parsePrecinctCatalog(JSON.stringify([...source, ...source])));
 });
 
 test('v1 migration retains old logs, notes, contacts and commission text', () => {

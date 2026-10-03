@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { campaignContent, catalog } from '../../content/catalog';
-import { exportText } from '../../data/export';
 import { activePrecinct, inContext, type Complaint } from '../../data/model';
 import { actions, useStore } from '../../data/store';
 import { useFeedback } from '../../ui/feedback';
@@ -112,11 +111,6 @@ export function useComplaintGenerator() {
       setDraft(saved!);
     }
   };
-  const share = (entry: Complaint) => {
-    void exportText(`zayavlenie-${entry.id.slice(0, 8)}.txt`, entry.text).catch(() =>
-      notify('Не удалось экспортировать документ.'),
-    );
-  };
   return {
     variableFields,
     variables,
@@ -142,7 +136,6 @@ export function useComplaintGenerator() {
     complaints,
     prepare,
     save,
-    share,
     markSubmitted,
   };
 }

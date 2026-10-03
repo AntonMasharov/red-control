@@ -23,7 +23,9 @@
     "preandroid": "npm run build:content",
     "preios": "npm run build:content",
     "build:mobile": "expo export --platform android --platform ios --output-dir dist-native",
-    "prebuild:mobile": "npm run build:content"
+    "prebuild:mobile": "npm run build:content",
+    "test:coverage": "jest --runInBand --coverage",
+    "check": "npm run check:content && npm run typecheck && npm test && npm run test:coverage"
   },
   "dependencies": {
     "@expo/metro-runtime": "~57.0.16",
@@ -31,7 +33,6 @@
     "expo": "~57.0.25",
     "expo-asset": "~57.0.18",
     "expo-crypto": "~57.0.3",
-    "expo-document-picker": "~57.0.2",
     "expo-file-system": "~57.0.7",
     "expo-haptics": "~57.0.3",
     "expo-intent-launcher": "~57.0.1",
@@ -55,6 +56,7 @@
     }
   },
   "devDependencies": {
+    "@react-native/jest-preset": "^0.86.3",
     "@testing-library/react-native": "^14.0.1",
     "@types/react": "~19.2.2",
     "cypress": "^16.1.1",
@@ -62,6 +64,7 @@
     "jest-expo": "^57.0.5",
     "prettier": "^3.9.9",
     "react-test-renderer": "^19.2.3",
+    "test-renderer": "1.2.0",
     "typescript": "~5.9.2",
     "yaml": "^2.9.1"
   }

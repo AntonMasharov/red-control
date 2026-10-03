@@ -11,7 +11,7 @@ export function BottomNavigation({
 }: {
   controller: ReturnType<typeof useApplication>;
 }) {
-  const { tab, navigate, count, setTurnout, due, increment } = controller;
+  const { tab, navigate, count, setTurnout, setProfile, contextReady, due, increment } = controller;
   return (
     <View style={styles.bottom}>
       <SafeAreaView edges={['bottom']} style={localStyles.safeArea}>
@@ -22,7 +22,7 @@ export function BottomNavigation({
             <Pressable
               accessibilityRole="button"
               accessibilityLabel={`Явка ${count}. Открыть подробности`}
-              onPress={() => setTurnout(true)}
+              onPress={() => (contextReady ? setTurnout(true) : setProfile(true))}
               style={styles.counterPill}
             >
               <Text accessibilityLiveRegion="polite" style={localStyles.countText}>

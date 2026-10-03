@@ -1,6 +1,7 @@
 import { useSyncExternalStore } from 'react';
 import { randomUUID } from 'expo-crypto';
 import { load, persist } from './storage';
+import { validPhone } from './phone';
 import {
   AppState,
   ComplaintComposer,
@@ -135,11 +136,7 @@ export const actions = {
       !current.personalContacts?.some((contact) => contact.id === id && inContext(current, contact))
     )
       throw new Error('Контакт не найден.');
-    if (
-      !name.trim() ||
-      !/^\+?[\d\s().-]+$/.test(phone.trim()) ||
-      phone.replace(/\D/g, '').length < 3
-    )
+    if (!name.trim() || !validPhone(phone))
       throw new Error('Укажите имя и корректный номер телефона.');
     const fields = { name: name.trim(), role: role.trim(), phone: phone.trim() };
     commit('contact.edit', { id, ...fields }, (s) => ({
@@ -160,11 +157,7 @@ export const actions = {
     }));
   },
   addContact: (name: string, role: string, phone: string) => {
-    if (
-      !name.trim() ||
-      !/^\+?[\d\s().-]+$/.test(phone.trim()) ||
-      phone.replace(/\D/g, '').length < 3
-    )
+    if (!name.trim() || !validPhone(phone))
       throw new Error('Укажите имя и корректный номер телефона.');
     const contact = {
       id: randomUUID(),
@@ -295,11 +288,16 @@ export const actions = {
     };
     commit('note.copy', entry, (s) => ({ ...s, noteCopies: [...s.noteCopies, entry] }));
   },
-  updateNoteCopy: (id: string, text: string) =>
-    commit('note.update', { id }, (s) => ({
+  updateNoteCopy: (id: string, text: string) => {
+    const note = current.noteCopies.find((entry) => entry.id === id);
+    const context = note ? JSON.parse(note.targetKey) : [];
+    if (context[0] !== current.electionId || context[1] !== current.precinctId)
+      throw new Error('Заметка не найдена.');
+    commit('note.update', { id, text }, (s) => ({
       ...s,
       noteCopies: s.noteCopies.map((n) => (n.id === id ? { ...n, text } : n)),
-    })),
+    }));
+  },
   noteTemplate: (title: string, text: string) => {
     if (!title.trim() || !text.trim()) throw new Error('Заполните шаблон.');
     const entry = { id: randomUUID(), title: title.trim(), text };

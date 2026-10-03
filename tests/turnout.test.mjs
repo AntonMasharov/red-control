@@ -5,13 +5,17 @@ import { randomUUID } from 'node:crypto';
 import vm from 'node:vm';
 import ts from 'typescript';
 import * as model from '../src/data/model.ts';
+import * as phone from '../src/data/phone.ts';
 
 const source = readFileSync(new URL('../src/data/store.ts', import.meta.url), 'utf8');
 const code = ts.transpileModule(source, {
   compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
 }).outputText;
 const manifest = JSON.parse(
-  readFileSync(new URL('../src/core/constants/app-settings.generated.json', import.meta.url), 'utf8'),
+  readFileSync(
+    new URL('../src/core/constants/app-settings.generated.json', import.meta.url),
+    'utf8',
+  ),
 );
 
 function harness() {
@@ -34,6 +38,7 @@ function harness() {
         if (name === 'expo-crypto') return { randomUUID };
         if (name === './storage') return storage;
         if (name === './model') return model;
+        if (name === './phone') return phone;
         if (name === '../core/constants/app-settings.generated.json') return { default: manifest };
         throw new Error(`Unexpected import ${name}`);
       },
@@ -170,4 +175,53 @@ test('setup and station members survive restart, export and station changes', ()
   assert.ok(!model.membersFor(store.getState()).some((m) => m.id === 'custom-member'));
   choose(store);
   assert.equal(model.membersFor(store.getState())[0].party, 'Affiliation');
+});
+
+test('note copies reject unknown IDs and other stations without publishing changes', () => {
+  const h = harness();
+  const store = h.restart();
+  choose(store);
+  store.actions.copyNote('room', 'Original');
+  const id = store.getState().noteCopies[0].id;
+  store.actions.updateNoteCopy(id, 'Edited');
+  assert.equal(h.restart().getState().noteCopies[0].text, 'Edited');
+  assert.equal(store.getState().outbox.at(-1).payload.text, 'Edited');
+  choose(store, second);
+  const before = store.getState();
+  assert.throws(() => store.actions.updateNoteCopy(id, 'Other station'));
+  assert.throws(() => store.actions.updateNoteCopy('missing', 'Unknown'));
+  assert.equal(store.getState(), before);
+  choose(store);
+  h.fail();
+  const saved = store.getState();
+  assert.throws(() => store.actions.updateNoteCopy(id, 'Failed write'));
+  assert.equal(store.getState(), saved);
+});
+
+test('invalid actions preserve state and do not append journal events', () => {
+  const store = harness().restart();
+  choose(store);
+  const invalid = [
+    () => store.actions.correct(-1, 'Reason'),
+    () => store.actions.correct(1, ''),
+    () => store.actions.correct(1.5, 'Reason'),
+    () => store.actions.day(0),
+    () => store.actions.day(32),
+    () => store.actions.reconcile('99:99', 1),
+    () => store.actions.reconcile('20:00', -1),
+    () => store.actions.trip('missing'),
+    () => store.actions.check('missing', 'missing'),
+    () => store.actions.note('missing', 'Text'),
+    () => store.actions.copyNote('room', ' '),
+    () => store.actions.noteTemplate('', 'Text'),
+    () => store.actions.addContact('', '', '+79991234567'),
+    () => store.actions.addContact('Name', '', 'abc'),
+    () => store.actions.setComplaintSubmitted('missing', true),
+    () => store.actions.complaint({ text: ' ', title: '', selected: [] }),
+  ];
+  for (const action of invalid) {
+    const before = store.getState();
+    assert.throws(action);
+    assert.equal(store.getState(), before);
+  }
 });

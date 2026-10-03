@@ -6,10 +6,11 @@ import { AppState, readState, serializeState } from './model';
 let db: ReturnType<typeof openDatabaseSync> | undefined;
 function database() {
   if (!db) {
-    db = openDatabaseSync('red-control.db');
-    db.execSync(
+    const connection = openDatabaseSync('red-control.db');
+    connection.execSync(
       'PRAGMA journal_mode = WAL; CREATE TABLE IF NOT EXISTS app_state (id INTEGER PRIMARY KEY CHECK(id=1), value TEXT NOT NULL);',
     );
+    db = connection;
   }
   return db;
 }
