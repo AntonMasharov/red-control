@@ -28,8 +28,8 @@ function Brand() {
         <Icon name="check" color={c.white} size={19} />
       </View>
       <View>
-        <Text style={styles.brandText}>КРАСНЫЙ</Text>
-        <Text style={styles.brandText}>КОНТРОЛЬ</Text>
+        <Text style={styles.brandText}>Красный</Text>
+        <Text style={styles.brandText}>Контроль</Text>
       </View>
     </View>
   );
@@ -156,7 +156,7 @@ function Application() {
                   </Pressable>
                 )}
                 <Text style={[s.small, localStyles.appSignature]}>
-                  КРАСНЫЙ КОНТРОЛЬ / ПРИЛОЖЕНИЕ НАБЛЮДАТЕЛЯ
+                  Красный Контроль / ПРИЛОЖЕНИЕ НАБЛЮДАТЕЛЯ
                 </Text>
               </View>
             </ScrollView>

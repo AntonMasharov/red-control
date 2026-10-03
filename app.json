@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Красный контроль",
+    "name": "Красный Контроль",
     "slug": "red-control",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -19,7 +19,7 @@
     },
     "web": {
       "bundler": "metro",
-      "name": "Красный контроль",
+      "name": "Красный Контроль",
       "favicon": "./assets/app-icon.png"
     },
     "plugins": [
